@@ -1,56 +1,31 @@
 flowchart LR
-  S[복습 진입 점검]
-  GP[공용 Guide Packet Pool\nDONE / VERIFIED만 진입에 사용]
+  G00["G00 guide-git 01~06"]
 
-  subgraph C[C TRACK]
-    C1[P01 c-foundation] --> C2[P02 buffered-line-reader] --> C3[P03 format-printer]
-    C3 --> C4[P04 signal-message-bus] --> C5[P05 small-shell] --> C6[P06 thread-dining]
-    C1 -. P01 + GA-CORE .-> CX[P09 stack-sort]
+  subgraph C["C TRACK"]
+    direction LR
+    CG01["C-G01<br/>G01 01~04·06"] --> P01["P01"] --> CG02["C-G02<br/>G02 01~03"] --> P02["P02"] --> CG03["C-G03<br/>G01 05"] --> P03["P03"] --> CG04["C-G04<br/>G01 08 + G02 04"] --> P04["P04"] --> CG05["C-G05<br/>G01 07·09 + G02 05~06"] --> P05["P05"] --> CG06["C-G06<br/>G01 10 + G04 01~06"] --> P06["P06"] --> CG07["C-G07<br/>G02 07~09 + G04 07~10"] --> CS01["C-S01<br/>CPP-G02 동기화"] --> P09["P09"] --> CEND["C 완료"]
   end
 
-  subgraph CPP[C++ TRACK]
-    P7[P07 cpp-foundation] --> P8[P08 stl-container] --> P10[P10 ray-scene-tracer] --> P11[P11 irc-relay-server]
+  subgraph CPP["C++ TRACK"]
+    direction LR
+    XG01["CPP-G01<br/>G03 01~05"] --> P07["P07"] --> XG02["CPP-G02<br/>G03 06~07 + G05 01~11"] --> P08["P08"] --> XG03["CPP-G03<br/>G05 12~16 + G06 01~10"] --> P10["P10"] --> XG04["CPP-G04<br/>G03 08~09 + G07 01~11"] --> P11["P11"] --> XEND["C++ 완료"]
   end
 
-  subgraph WEB[WEB TRACK]
-    P12[P12 container-stack] --> P13[P13 web-boundary-inspector] --> P14[P14 portfolio-site]
-    P14 --> B3{B3 WEB hard gate} --> P15[P15 pong-pong]
+  subgraph WEB["WEB TRACK"]
+    direction LR
+    WG01["WEB-G01<br/>G08 01~07"] --> P12["P12"] --> WG02["WEB-G02<br/>G09 00~06"] --> P13["P13"] --> WG03["WEB-G03<br/>G10 00~04"] --> P14["P14"] --> WS01["WEB-S01<br/>CPP-G04 동기화"] --> WG04["WEB-G04<br/>G07 12 + G09 07~09 + G11 01~12"] --> P15["P15"] --> WEND["WEB 완료"]
   end
 
-  B1[B1 시스템·네트워크 감사]
-  B2[B2 알고리즘·구조 감사]
-  L[L trigger queue]
-  B4[B4 Guide closure]
-  POST[P16~P24 기본 PATH]
+  G00 --> CG01
+  G00 --> XG01
+  G00 --> WG01
+  XG02 ==>|"Algorithms 01~10"| CS01
+  XG04 ==>|"Networks 01~11"| WS01
+  CG01 -.->|"C 기초 재사용"| XG01
+  P11 -.->|"event loop·partial I/O 비교"| P13
 
-  S --> C1
-  S --> P7
-  S --> P12
-  S -.-> GP
-  GP -. 필요한 packet .-> C1
-  GP -. 필요한 packet .-> P7
-  GP -. 필요한 packet .-> P12
-
-  C5 -.-> B1
-  C6 -.-> B1
-  P11 -.-> B1
-  P12 -.-> B1
-  P13 -.-> B1
-
-  CX -.-> B2
-  P8 -.-> B2
-  P10 -.-> B2
-
-  GP -. trigger .-> L
-  P14 -. L14 .-> L
-  B1 -.-> L
-  B2 -.-> L
-
-  C6 -.-> B4
-  CX -.-> B4
-  P11 -.-> B4
-  P15 -.-> B4
-  B1 -.-> B4
-  B2 -.-> B4
-  GP -.-> B4
-  B4 --> POST
+  M{"3트랙 합류<br/>P01~P15 + G00~G11 완료"}
+  CEND --> M
+  XEND --> M
+  WEND --> M
+  M --> POST["G12 → P16 → G13 → P17 → P18 → P19<br/>→ G14 → P20 → P21 → P22 → P23 → P24"]

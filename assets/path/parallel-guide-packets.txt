@@ -1,17 +1,25 @@
-가이드 패킷 선택 모델
+C TRACK
+C-G01 → P01 → C-G02 → P02 → C-G03 → P03
+→ C-G04 → P04 → C-G05 → P05 → C-G06 → P06
+→ C-G07 → C-S01 → P09
 
-Guide branch
-  → 장·예제·누적 실습에서 의존성 폐쇄 Packet 정의
-  → 기억과 증거 점검
-     ├─ DONE: 본문 + 실습 + 검사
-     ├─ VERIFIED: 자료 없는 설명 + 좁은 검사 + 근거
-     └─ DEFERRED / MISSING: 프로젝트 진입 차단
-  → DONE / VERIFIED packet만 C·C++·WEB project slot에 제공
-  → 프로젝트에서 state·ownership·failure·verification evidence 생성
-  → Packet ledger 갱신
-  → 최종 Guide closure
+C++ TRACK
+CPP-G01 → P07 → CPP-G02 → P08 → CPP-G03 → P10 → CPP-G04 → P11
 
-최종 조건
-- 필수 packet의 DEFERRED / MISSING = 0
-- 누적 실습은 중간 stage부터 적용하지 않음
-- 여기서 체리피킹은 Git cherry-pick이 아니라 가이드 내부 선택 복습을 의미
+WEB TRACK
+WEB-G01 → P12 → WEB-G02 → P13 → WEB-G03 → P14
+→ WEB-S01 → WEB-G04 → P15
+
+GUIDE COVERAGE
+G00: guide-git 01~06
+G01: guide-c 01~10
+G02: guide-unix-systems 01~09
+G03: guide-cpp 01~09
+G04: guide-operating-systems 01~10
+G05: guide-algorithms 01~16
+G06: guide-computer-architecture 01~10
+G07: guide-computer-networks 01~12
+G08: guide-web-infrastructure 01~07
+G09: guide-web-applications 00~09
+G10: guide-frontend-react-nextjs 00~04
+G11: guide-database-systems 01~12

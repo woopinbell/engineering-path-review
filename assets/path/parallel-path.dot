@@ -1,107 +1,85 @@
-digraph ParallelPath {
-  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.42", ranksep="0.52",
+digraph ParallelPathOverview {
+  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.42", ranksep="0.55",
     fontname="Noto Sans CJK KR", fontsize=22,
-    label="복습용 C · C++ · WEB 3트랙 병렬 PATH", labelloc=t, splines=polyline];
+    label="C · C++ · WEB 3트랙 병렬 PATH", labelloc=t, splines=polyline];
   node [shape=box, style="rounded,filled", fontname="Noto Sans CJK KR", fontsize=12,
     margin="0.15,0.10", color="#64748b", fillcolor="#f8fafc"];
   edge [fontname="Noto Sans CJK KR", fontsize=9, color="#64748b", arrowsize=0.72, penwidth=1.15];
 
-  START [label="복습 진입 점검\nC 기초 · C++ 객체 · WEB runtime", fillcolor="#f1f5f9", color="#475569", penwidth=1.6];
-  GP [shape=plain, label=<
-    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#7c8aa0">
-      <TR><TD BGCOLOR="#eef2ff"><B>공용 Guide Packet Pool</B></TD></TR>
-      <TR><TD ALIGN="LEFT">현재 프로젝트에 필요한 의존성 폐쇄 패킷만 선택</TD></TR>
-      <TR><TD ALIGN="LEFT"><B>DONE / VERIFIED</B>만 프로젝트 진입에 사용</TD></TR>
-      <TR><TD ALIGN="LEFT">DEFERRED / MISSING은 최종 폐쇄 전 0개</TD></TR>
-    </TABLE>
-  >];
+  START [label="G00 guide-git 01~06\n세 트랙 공통 완료", fillcolor="#e2e8f0", color="#475569", penwidth=1.8];
 
   TRACKS [shape=plain, label=<
     <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="18" CELLPADDING="0">
       <TR>
         <TD VALIGN="TOP">
-          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#2457a6">
-            <TR><TD BGCOLOR="#dcecff"><FONT POINT-SIZE="16"><B>C TRACK</B></FONT><BR/>프로젝트 단위 원자성</TD></TR>
-            <TR><TD BGCOLOR="#eaf2ff"><B>P01</B> c-foundation</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf2ff"><B>P02</B> buffered-line-reader</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf2ff"><B>P03</B> format-printer</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf2ff"><B>P04</B> signal-message-bus</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf2ff"><B>P05</B> small-shell</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf2ff"><B>P06</B> thread-dining</TD></TR>
-            <TR><TD BGCOLOR="#fff4d6"><B>P09 교차</B> stack-sort<BR/><FONT POINT-SIZE="9">P01 + GA-CORE 뒤 C slot에서 실행</FONT></TD></TR>
-            <TR><TD BGCOLOR="#dcecff"><B>완료: P01~P06 + P09</B></TD></TR>
+          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#2563eb">
+            <TR><TD BGCOLOR="#dbeafe"><FONT POINT-SIZE="17"><B>C TRACK</B></FONT></TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G01</B> C 01~04·06</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P01</B> c-foundation</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G02</B> Unix 01~03</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P02</B> buffered-line-reader</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G03</B> C 05</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P03</B> format-printer</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G04</B> C 08 + Unix 04</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P04</B> signal-message-bus</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G05</B> C 07·09 + Unix 05~06</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P05</B> small-shell</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G06</B> C 10 + OS 01~06</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P06</B> thread-dining</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>C-G07</B> Unix 07~09 + OS 07~10</TD></TR>
+            <TR><TD BGCOLOR="#fef3c7"><B>C-S01</B> CPP-G02 동기화</TD></TR>
+            <TR><TD BGCOLOR="#dbeafe"><B>P09</B> stack-sort</TD></TR>
+            <TR><TD BGCOLOR="#bfdbfe"><B>C 완료</B></TD></TR>
           </TABLE>
         </TD>
         <TD VALIGN="TOP">
-          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#6b46a5">
-            <TR><TD BGCOLOR="#e9ddff"><FONT POINT-SIZE="16"><B>C++ TRACK</B></FONT><BR/>프로젝트 단위 원자성</TD></TR>
-            <TR><TD BGCOLOR="#f3edff"><B>P07</B> cpp-foundation</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#f3edff"><B>P08</B> stl-container</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#f3edff"><B>P10</B> ray-scene-tracer</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#f3edff"><B>P11</B> irc-relay-server</TD></TR>
-            <TR><TD BGCOLOR="#fff4d6"><FONT POINT-SIZE="9">P10과 P11은 P07 + 필수 packet 뒤 순서 교환 가능</FONT></TD></TR>
-            <TR><TD BGCOLOR="#e9ddff"><B>완료: P07·P08·P10·P11</B></TD></TR>
+          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#7c3aed">
+            <TR><TD BGCOLOR="#ede9fe"><FONT POINT-SIZE="17"><B>C++ TRACK</B></FONT></TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>CPP-G01</B> C++ 01~05</TD></TR>
+            <TR><TD BGCOLOR="#ede9fe"><B>P07</B> cpp-foundation</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>CPP-G02</B><BR/>C++ 06~07 + Algorithms 01~11</TD></TR>
+            <TR><TD BGCOLOR="#ede9fe"><B>P08</B> stl-container</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>CPP-G03</B><BR/>Algorithms 12~16 + Architecture 01~10</TD></TR>
+            <TR><TD BGCOLOR="#ede9fe"><B>P10</B> ray-scene-tracer</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>CPP-G04</B><BR/>C++ 08~09 + Networks 01~11</TD></TR>
+            <TR><TD BGCOLOR="#ede9fe"><B>P11</B> irc-relay-server</TD></TR>
+            <TR><TD BGCOLOR="#ddd6fe"><B>C++ 완료</B></TD></TR>
           </TABLE>
         </TD>
         <TD VALIGN="TOP">
-          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#2f7d32">
-            <TR><TD BGCOLOR="#dff5e6"><FONT POINT-SIZE="16"><B>WEB TRACK</B></FONT><BR/>프로젝트 단위 원자성</TD></TR>
-            <TR><TD BGCOLOR="#eaf8ee"><B>P12</B> container-stack</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf8ee"><B>P13</B> web-boundary-inspector</TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#dff5e6"><B>P14</B> portfolio-site<BR/><FONT POINT-SIZE="9">첫 일반 지원</FONT></TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#fff4d6"><B>B3 hard gate</B><BR/><FONT POINT-SIZE="9">P12~P14 + API/DB/Auth/RT packets</FONT></TD></TR>
-            <TR><TD>↓</TD></TR>
-            <TR><TD BGCOLOR="#eaf8ee"><B>P15</B> pong-pong</TD></TR>
-            <TR><TD BGCOLOR="#dff5e6"><B>완료: P12~P15</B></TD></TR>
+          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#059669">
+            <TR><TD BGCOLOR="#d1fae5"><FONT POINT-SIZE="17"><B>WEB TRACK</B></FONT></TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>WEB-G01</B> Web Infra 01~07</TD></TR>
+            <TR><TD BGCOLOR="#d1fae5"><B>P12</B> container-stack</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>WEB-G02</B> Web Apps 00~06</TD></TR>
+            <TR><TD BGCOLOR="#d1fae5"><B>P13</B> web-boundary-inspector</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>WEB-G03</B> Frontend 00~04</TD></TR>
+            <TR><TD BGCOLOR="#a7f3d0"><B>P14</B> portfolio-site<BR/><FONT POINT-SIZE="9">첫 일반 지원</FONT></TD></TR>
+            <TR><TD BGCOLOR="#fef3c7"><B>WEB-S01</B> CPP-G04 동기화</TD></TR>
+            <TR><TD BGCOLOR="#f8fafc"><B>WEB-G04</B><BR/>Networks 12 + Web Apps 07~09 + DB 01~12</TD></TR>
+            <TR><TD BGCOLOR="#d1fae5"><B>P15</B> pong-pong</TD></TR>
+            <TR><TD BGCOLOR="#a7f3d0"><B>WEB 완료</B></TD></TR>
           </TABLE>
         </TD>
       </TR>
     </TABLE>
   >];
 
-  BARRIERS [shape=plain, label=<
-    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="14" CELLPADDING="0">
-      <TR>
-        <TD VALIGN="TOP">
-          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#b7791f">
-            <TR><TD BGCOLOR="#fff7e6"><B>B1 · 시스템·네트워크 폐쇄 감사</B></TD></TR>
-            <TR><TD ALIGN="LEFT">P05 · P06 · P11 · P12 · P13</TD></TR>
-            <TR><TD ALIGN="LEFT">process/thread · FD/socket · partial I/O · shutdown</TD></TR>
-          </TABLE>
-        </TD>
-        <TD VALIGN="TOP">
-          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#b7791f">
-            <TR><TD BGCOLOR="#fff7e6"><B>B2 · 알고리즘·구조 폐쇄 감사</B></TD></TR>
-            <TR><TD ALIGN="LEFT">P09 · P08 · P10</TD></TR>
-            <TR><TD ALIGN="LEFT">invariant · complexity · tree/BVH · oracle</TD></TR>
-          </TABLE>
-        </TD>
-        <TD VALIGN="TOP">
-          <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#a66b00">
-            <TR><TD BGCOLOR="#fff6df"><B>L trigger queue</B></TD></TR>
-            <TR><TD ALIGN="LEFT">GA-CORE → 코딩 테스트</TD></TR>
-            <TR><TD ALIGN="LEFT">B1/B2 → 연결 감사</TD></TR>
-            <TR><TD ALIGN="LEFT">P14 → 첫 지원 준비</TD></TR>
-          </TABLE>
-        </TD>
-      </TR>
+  SYNC [shape=plain, label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#dc2626">
+      <TR><TD BGCOLOR="#fee2e2" COLSPAN="2"><B>트랙 간 하드 동기화는 두 곳만 유지</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>CPP-G02 → P09</B></TD><TD ALIGN="LEFT">Algorithms 01~10 완료</TD></TR>
+      <TR><TD ALIGN="LEFT"><B>CPP-G04 → WEB-G04</B></TD><TD ALIGN="LEFT">Networks 01~11 뒤 12장 진행</TD></TR>
     </TABLE>
   >];
 
-  CLOSE [label="B4 · Guide closure\n필수 packet: DONE / VERIFIED / N/A\nDEFERRED / MISSING = 0", fillcolor="#eef2f7", color="#475569", penwidth=1.6];
-  POST [label="P16~P24\n기본 PATH의 Java·Spring·Sportsbook 구간", fillcolor="#f1f5f9", color="#475569"];
+  RULE [shape=note, label="P만 원자적\nG는 장 단위 분할 가능\n필수 G 장·실습 생략 금지", fillcolor="#f8fafc", color="#475569"];
 
-  START -> GP -> TRACKS -> BARRIERS -> CLOSE -> POST;
-  GP -> BARRIERS [style=dashed, color="#a66b00", label="packet / barrier trigger", constraint=false];
+  MERGE [label="◇ 3트랙 합류\nP01~P15 + G00~G11 필수 범위 완료", shape=diamond,
+    fillcolor="#fde68a", color="#b45309", penwidth=2];
+  POST [label="G12 → P16 → G13 → P17 → P18 → P19\n→ G14 → P20 → P21 → P22 → P23 → P24",
+    fillcolor="#fee2e2", color="#b91c1c", penwidth=1.8];
+
+  START -> TRACKS -> SYNC -> MERGE -> POST;
+  RULE -> TRACKS [style=dashed, color="#94a3b8", constraint=false];
 }

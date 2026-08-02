@@ -61,6 +61,23 @@ REQUIRED = {
 PROJECT_IDS = [f"P{i:02d}" for i in range(1, 25)]
 GUIDE_IDS = [f"G{i:02d}" for i in range(0, 15)]
 L_IDS = [f"L{i:02d}" for i in range(1, 16)]
+PARALLEL_GUIDE_COVERAGE = {
+    "guide-git": "01~06",
+    "guide-c": "01~10 전체",
+    "guide-unix-systems": "01~09 전체",
+    "guide-operating-systems": "01~10 전체",
+    "guide-cpp": "01~09 전체",
+    "guide-algorithms": "01~16 전체",
+    "guide-computer-architecture": "01~10 전체",
+    "guide-computer-networks": "01~12 전체",
+    "guide-web-infrastructure": "01~07 전체",
+    "guide-web-applications": "00~09 전체",
+    "guide-frontend-react-nextjs": "00~04 전체",
+    "guide-database-systems": "01~12 전체",
+}
+PARALLEL_FORBIDDEN_TERMS = (
+    "`VERIFIED`", "`MISSING`", "`DEFERRED`", "가이드 풀", "개념 패킷 단위",
+)
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 AUTOLINK_RE = re.compile(r"<((?:https?|file|javascript|data|sandbox):[^>]+)>", re.I)
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
@@ -263,6 +280,32 @@ def check_path_ids(errors: list[str]) -> None:
             errors.append(f"{item} must appear once in L table")
 
 
+def check_parallel_path(errors: list[str]) -> None:
+    path = ROOT / "docs/11-PARALLEL-PATH.md"
+    text = path.read_text(encoding="utf-8")
+    required_phrases = (
+        "C·C++·WEB 3트랙 병렬 PATH",
+        "프로젝트만 원자적으로 완료한다",
+        "필수 범위는 생략하지 않고",
+        "G와 P를 선형",
+        "CPP-G02 → P09",
+        "CPP-G04 → WEB-G04",
+    )
+    for phrase in required_phrases:
+        if phrase not in text:
+            errors.append(f"parallel PATH missing required rule: {phrase}")
+    for term in PARALLEL_FORBIDDEN_TERMS:
+        if term in text:
+            errors.append(f"parallel PATH contains obsolete skip/status model: {term}")
+    for guide, coverage in PARALLEL_GUIDE_COVERAGE.items():
+        pattern = rf"^\| `{re.escape(guide)}` \| .* \| {re.escape(coverage)} \|$"
+        if not re.search(pattern, text, re.M):
+            errors.append(f"parallel PATH missing mandatory guide coverage: {guide} {coverage}")
+    for project in [f"P{i:02d}" for i in range(1, 16)]:
+        if project not in text:
+            errors.append(f"parallel PATH missing project: {project}")
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
@@ -408,6 +451,7 @@ def main() -> int:
         check_text_security(errors)
         check_markdown_links(errors)
         check_path_ids(errors)
+        check_parallel_path(errors)
         check_render_manifest(errors)
         check_workflows(errors)
         check_source_syntax(errors)

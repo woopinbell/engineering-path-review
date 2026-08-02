@@ -1,43 +1,39 @@
-복습용 C · C++ · WEB 3트랙 병렬 PATH
-
-공통 원칙
-- 프로젝트: 각 트랙 안에서 한 번에 하나만 활성화하고 원자적으로 완료
-- 가이드: 전체 저장소가 아니라 의존성 폐쇄 packet을 필요한 시점에 선택
-- packet: DONE 또는 VERIFIED만 프로젝트 진입에 사용
-- L: 코딩 테스트·감사·지원 준비를 trigger가 있을 때만 한 회차 실행
+COMMON
+G00 guide-git 01~06
+  ├─ C TRACK
+  ├─ C++ TRACK
+  └─ WEB TRACK
 
 C TRACK
-P01 c-foundation
-  → P02 buffered-line-reader
-  → P03 format-printer
-  → P04 signal-message-bus
-  → P05 small-shell
-  → P06 thread-dining
-P09 stack-sort: P01 + GA-CORE 뒤 C slot에서 실행
+C-G01 guide-c 01~04·06 → P01
+→ C-G02 guide-unix-systems 01~03 → P02
+→ C-G03 guide-c 05 → P03
+→ C-G04 guide-c 08 + Unix 04 → P04
+→ C-G05 guide-c 07·09 + Unix 05~06 → P05
+→ C-G06 guide-c 10 + OS 01~06 → P06
+→ C-G07 Unix 07~09 + OS 07~10
+→ C-S01 wait for CPP-G02 Algorithms 01~10 → P09 → C complete
 
 C++ TRACK
-P07 cpp-foundation
-  → P08 stl-container
-  → P10 ray-scene-tracer
-  → P11 irc-relay-server
-P10과 P11은 P07과 필수 packet이 닫혔다면 순서 교환 가능
+CPP-G01 guide-cpp 01~05 → P07
+→ CPP-G02 guide-cpp 06~07 + guide-algorithms 01~11 → P08
+→ CPP-G03 guide-algorithms 12~16 + guide-computer-architecture 01~10 → P10
+→ CPP-G04 guide-cpp 08~09 + guide-computer-networks 01~11 → P11 → C++ complete
 
 WEB TRACK
-P12 container-stack
-  → P13 web-boundary-inspector
-  → P14 portfolio-site [첫 일반 지원]
-  → B3 WEB hard gate
-  → P15 pong-pong
+WEB-G01 guide-web-infrastructure 01~07 → P12
+→ WEB-G02 guide-web-applications 00~06 → P13
+→ WEB-G03 guide-frontend-react-nextjs 00~04 → P14
+→ WEB-S01 wait for CPP-G04 Networks 01~11
+→ WEB-G04 Networks 12 + Web Apps 07~09 + Database 01~12 → P15 → WEB complete
 
-B1 시스템·네트워크 감사
-P05 + P06 + P11 + P12 + P13
+HARD CROSS-TRACK SYNCHRONIZATION
+CPP-G02 → P09
+CPP-G04 → WEB-G04
 
-B2 알고리즘·구조 감사
-P09 + P08 + P10
+MERGE
+P01~P15 + mandatory G00~G11 coverage complete
+→ P16~P24 default Java·Spring·Sportsbook PATH
 
-B4 Guide closure
-필수 packet은 DONE / VERIFIED / N/A
-DEFERRED / MISSING 0개
-
-합류 뒤
-P16~P24는 docs/01-PATH.md의 기본 Java·Spring·Sportsbook 구간을 따른다.
+RULE
+Only projects are atomic. Guides may be split by chapter, but no mandatory chapter or exercise is skipped.

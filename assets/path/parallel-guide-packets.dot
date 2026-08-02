@@ -1,45 +1,76 @@
-digraph GuidePackets {
-  graph [rankdir=TB, newrank=true, bgcolor="white", pad="0.35", nodesep="0.42", ranksep="0.55",
+digraph ParallelTrackDetail {
+  graph [rankdir=TB, newrank=true, bgcolor="white", pad="0.35", nodesep="0.38", ranksep="0.48",
     fontname="Noto Sans CJK KR", fontsize=21,
-    label="가이드 전체 원자성 해제 · 의존성 폐쇄 패킷 선택 모델", labelloc=t, splines=spline];
-  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK KR", fontsize=12,
-    margin="0.15,0.10", color="#64748b", fillcolor="#f8fafc"];
-  edge [fontname="Noto Sans CJK KR", fontsize=9, color="#64748b", arrowsize=0.72, penwidth=1.15];
+    label="3트랙 상세 — 필수 가이드 구간과 프로젝트의 선형 순서", labelloc=t, splines=polyline];
+  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK KR", fontsize=11,
+    margin="0.13,0.08", color="#64748b", fillcolor="#f8fafc"];
+  edge [fontname="Noto Sans CJK KR", fontsize=9, color="#64748b", arrowsize=0.68, penwidth=1.1];
 
-  GUIDE [label="Guide branch\n장 · 예제 · 누적 실습", fillcolor="#eef2ff", color="#4f46a5"];
-  PACKET [label="의존성 폐쇄 Packet\nrequires · unlocks · completion", fillcolor="#f3edff", color="#6b46a5"];
-  CHECK [shape=diamond, label="기억과 증거가\n충분한가?", fillcolor="#fff4d6", color="#a66b00"];
-  DONE [label="DONE\n본문 + 실습 + 검사", fillcolor="#eaf8ee", color="#2f7d32"];
-  VERIFIED [label="VERIFIED\n설명 + 좁은 검사 + 근거", fillcolor="#eaf8ee", color="#2f7d32"];
-  BLOCK [label="DEFERRED / MISSING\n프로젝트 진입 차단", fillcolor="#fdecec", color="#a63d40"];
+  G00 [label="G00 guide-git 01~06\n세 트랙 공통 완료", fillcolor="#e2e8f0", color="#475569", penwidth=1.8];
 
-  C [label="C project slot\nP01~P06 · P09", fillcolor="#eaf2ff", color="#2457a6"];
-  CPP [label="C++ project slot\nP07·P08·P10·P11", fillcolor="#f3edff", color="#6b46a5"];
-  WEB [label="WEB project slot\nP12~P15", fillcolor="#eaf8ee", color="#2f7d32"];
-  EVIDENCE [label="프로젝트 evidence\nstate · ownership · failure · verification", fillcolor="#f1f5f9", color="#475569"];
-  LEDGER [label="Packet ledger 갱신\n경로 · 명령 · 결론 · 다음 감사", fillcolor="#fff6df", color="#a66b00"];
-  CLOSURE [label="최종 Guide closure\n필수 packet의 DEFERRED / MISSING = 0", fillcolor="#eef2f7", color="#475569", penwidth=1.6];
+  subgraph cluster_c {
+    label="C TRACK"; color="#2563eb"; penwidth=2; style="rounded";
+    C1 [label="C-G01\nguide-c 01~04·06"];
+    C2 [label="P01", fillcolor="#dbeafe", penwidth=2];
+    C3 [label="C-G02\nUnix 01~03"];
+    C4 [label="P02", fillcolor="#dbeafe", penwidth=2];
+    C5 [label="C-G03\nC 05"];
+    C6 [label="P03", fillcolor="#dbeafe", penwidth=2];
+    C7 [label="C-G04\nC 08 + Unix 04"];
+    C8 [label="P04", fillcolor="#dbeafe", penwidth=2];
+    C9 [label="C-G05\nC 07·09 + Unix 05~06"];
+    C10 [label="P05", fillcolor="#dbeafe", penwidth=2];
+    C11 [label="C-G06\nC 10 + OS 01~06"];
+    C12 [label="P06", fillcolor="#dbeafe", penwidth=2];
+    C13 [label="C-G07\nUnix 07~09 + OS 07~10\nG01·G02·G04 폐쇄"];
+    C14 [label="C-S01\nCPP-G02 동기화", fillcolor="#fef3c7"];
+    C15 [label="P09", fillcolor="#dbeafe", penwidth=2];
+    C16 [label="C 완료", shape=octagon, fillcolor="#bfdbfe"];
+    C1 -> C2 -> C3 -> C4 -> C5 -> C6 -> C7 -> C8 -> C9 -> C10 -> C11 -> C12 -> C13 -> C14 -> C15 -> C16;
+  }
 
-  GUIDE -> PACKET -> CHECK;
-  CHECK -> DONE [label="새로 복습"];
-  CHECK -> VERIFIED [label="기억 검증"];
-  CHECK -> BLOCK [label="근거 부족"];
-  BLOCK -> PACKET [label="필요 범위 완료"];
+  subgraph cluster_cpp {
+    label="C++ TRACK"; color="#7c3aed"; penwidth=2; style="rounded";
+    X1 [label="CPP-G01\nC++ 01~05"];
+    X2 [label="P07", fillcolor="#ede9fe", penwidth=2];
+    X3 [label="CPP-G02\nC++ 06~07 + Algorithms 01~11"];
+    X4 [label="P08", fillcolor="#ede9fe", penwidth=2];
+    X5 [label="CPP-G03\nAlgorithms 12~16 + Architecture 01~10\nG05·G06 폐쇄"];
+    X6 [label="P10", fillcolor="#ede9fe", penwidth=2];
+    X7 [label="CPP-G04\nC++ 08~09 + Networks 01~11\nG03 폐쇄"];
+    X8 [label="P11", fillcolor="#ede9fe", penwidth=2];
+    X9 [label="C++ 완료", shape=octagon, fillcolor="#ddd6fe"];
+    X1 -> X2 -> X3 -> X4 -> X5 -> X6 -> X7 -> X8 -> X9;
+  }
 
-  {rank=same; DONE; VERIFIED; BLOCK;}
-  {rank=same; C; CPP; WEB;}
-  C -> CPP -> WEB [style=invis, weight=100];
+  subgraph cluster_web {
+    label="WEB TRACK"; color="#059669"; penwidth=2; style="rounded";
+    W1 [label="WEB-G01\nWeb Infra 01~07\nG08 폐쇄"];
+    W2 [label="P12", fillcolor="#d1fae5", penwidth=2];
+    W3 [label="WEB-G02\nWeb Apps 00~06"];
+    W4 [label="P13", fillcolor="#d1fae5", penwidth=2];
+    W5 [label="WEB-G03\nFrontend 00~04\nG10 폐쇄"];
+    W6 [label="P14", fillcolor="#d1fae5", penwidth=2];
+    W7 [label="WEB-S01\nCPP-G04 동기화", fillcolor="#fef3c7"];
+    W8 [label="WEB-G04\nNetworks 12 + Web Apps 07~09 + DB 01~12\nG07·G09·G11 폐쇄"];
+    W9 [label="P15", fillcolor="#d1fae5", penwidth=2];
+    W10 [label="WEB 완료", shape=octagon, fillcolor="#a7f3d0"];
+    W1 -> W2 -> W3 -> W4 -> W5 -> W6 -> W7 -> W8 -> W9 -> W10;
+  }
 
-  DONE -> C;
-  DONE -> CPP;
-  DONE -> WEB;
-  VERIFIED -> C;
-  VERIFIED -> CPP;
-  VERIFIED -> WEB;
+  G00 -> C1 [color="#2563eb"];
+  G00 -> X1 [color="#7c3aed"];
+  G00 -> W1 [color="#059669"];
+  X3 -> C14 [label="Algorithms 01~10", color="#dc2626", penwidth=2, constraint=false];
+  X7 -> W7 [label="Networks 01~11", color="#dc2626", penwidth=2, constraint=false];
+  C1 -> X1 [style=dashed, label="기초 재사용", color="#94a3b8", constraint=false];
+  X8 -> W4 [style=dashed, label="I/O 비교", color="#94a3b8", constraint=false];
 
-  C -> EVIDENCE;
-  CPP -> EVIDENCE;
-  WEB -> EVIDENCE;
-  EVIDENCE -> LEDGER -> CLOSURE;
-  PACKET -> CLOSURE [style=dashed, label="남은 필수 범위"];
+  MERGE [label="◇ 3트랙 완료\n필수 G00~G11 전체 커버리지", shape=diamond,
+    fillcolor="#fde68a", color="#b45309", penwidth=2];
+  C16 -> MERGE;
+  X9 -> MERGE;
+  W10 -> MERGE;
+  POST [label="P16~P24는 기본 PATH의 Java·Spring·Sportsbook 순서", fillcolor="#fee2e2", color="#b91c1c"];
+  MERGE -> POST;
 }

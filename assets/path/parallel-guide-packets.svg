@@ -1,209 +1,540 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Title: GuidePackets Pages: 1 -->
-<svg width="702pt" height="737pt"
- viewBox="0.00 0.00 702.40 737.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 712.2)">
-<title>GuidePackets</title>
-<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-712.2 677.2,-712.2 677.2,25.2 -25.2,25.2"/>
-<text text-anchor="middle" x="326" y="-666.2" font-family="Noto Sans CJK KR" font-size="21.00">가이드 전체 원자성 해제 · 의존성 폐쇄 패킷 선택 모델</text>
-<!-- GUIDE -->
+<!-- Title: ParallelTrackDetail Pages: 1 -->
+<svg width="791pt" height="1635pt"
+ viewBox="0.00 0.00 791.40 1635.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 1610.2)">
+<title>ParallelTrackDetail</title>
+<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-1610.2 766.2,-1610.2 766.2,25.2 -25.2,25.2"/>
+<text text-anchor="middle" x="370.5" y="-1564.2" font-family="Noto Sans CJK KR" font-size="21.00">3트랙 상세 — 필수 가이드 구간과 프로젝트의 선형 순서</text>
+<g id="clust1" class="cluster">
+<title>cluster_c</title>
+<path fill="white" stroke="#2563eb" stroke-width="2" d="M20,-174C20,-174 144,-174 144,-174 150,-174 156,-180 156,-186 156,-186 156,-1473 156,-1473 156,-1479 150,-1485 144,-1485 144,-1485 20,-1485 20,-1485 14,-1485 8,-1479 8,-1473 8,-1473 8,-186 8,-186 8,-180 14,-174 20,-174"/>
+<text text-anchor="middle" x="82" y="-1464.2" font-family="Noto Sans CJK KR" font-size="21.00">C TRACK</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_cpp</title>
+<path fill="white" stroke="#7c3aed" stroke-width="2" d="M176,-713C176,-713 382,-713 382,-713 388,-713 394,-719 394,-725 394,-725 394,-1473 394,-1473 394,-1479 388,-1485 382,-1485 382,-1485 176,-1485 176,-1485 170,-1485 164,-1479 164,-1473 164,-1473 164,-725 164,-725 164,-719 170,-713 176,-713"/>
+<text text-anchor="middle" x="279" y="-1464.2" font-family="Noto Sans CJK KR" font-size="21.00">C++ TRACK</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_web</title>
+<path fill="white" stroke="#059669" stroke-width="2" d="M414,-605C414,-605 640,-605 640,-605 646,-605 652,-611 652,-617 652,-617 652,-1479 652,-1479 652,-1485 646,-1491 640,-1491 640,-1491 414,-1491 414,-1491 408,-1491 402,-1485 402,-1479 402,-1479 402,-617 402,-617 402,-611 408,-605 414,-605"/>
+<text text-anchor="middle" x="527" y="-1470.2" font-family="Noto Sans CJK KR" font-size="21.00">WEB TRACK</text>
+</g>
+<!-- G00 -->
 <g id="node1" class="node">
-<title>GUIDE</title>
-<path fill="#eef2ff" stroke="#4f46a5" d="M468,-656C468,-656 362,-656 362,-656 356,-656 350,-650 350,-644 350,-644 350,-628 350,-628 350,-622 356,-616 362,-616 362,-616 468,-616 468,-616 474,-616 480,-622 480,-628 480,-628 480,-644 480,-644 480,-650 474,-656 468,-656"/>
-<text text-anchor="middle" x="415" y="-639.4" font-family="Noto Sans CJK KR" font-size="12.00">Guide branch</text>
-<text text-anchor="middle" x="415" y="-626.4" font-family="Noto Sans CJK KR" font-size="12.00">장 · 예제 · 누적 실습</text>
+<title>G00</title>
+<path fill="#e2e8f0" stroke="#475569" stroke-width="1.8" d="M326,-1554C326,-1554 232,-1554 232,-1554 226,-1554 220,-1548 220,-1542 220,-1542 220,-1530 220,-1530 220,-1524 226,-1518 232,-1518 232,-1518 326,-1518 326,-1518 332,-1518 338,-1524 338,-1530 338,-1530 338,-1542 338,-1542 338,-1548 332,-1554 326,-1554"/>
+<text text-anchor="middle" x="279" y="-1539.2" font-family="Noto Sans CJK KR" font-size="11.00">G00 guide&#45;git 01~06</text>
+<text text-anchor="middle" x="279" y="-1527.2" font-family="Noto Sans CJK KR" font-size="11.00">세 트랙 공통 완료</text>
 </g>
-<!-- PACKET -->
+<!-- C1 -->
 <g id="node2" class="node">
-<title>PACKET</title>
-<path fill="#f3edff" stroke="#6b46a5" d="M504.5,-575C504.5,-575 325.5,-575 325.5,-575 319.5,-575 313.5,-569 313.5,-563 313.5,-563 313.5,-547 313.5,-547 313.5,-541 319.5,-535 325.5,-535 325.5,-535 504.5,-535 504.5,-535 510.5,-535 516.5,-541 516.5,-547 516.5,-547 516.5,-563 516.5,-563 516.5,-569 510.5,-575 504.5,-575"/>
-<text text-anchor="middle" x="415" y="-558.4" font-family="Noto Sans CJK KR" font-size="12.00">의존성 폐쇄 Packet</text>
-<text text-anchor="middle" x="415" y="-545.4" font-family="Noto Sans CJK KR" font-size="12.00">requires · unlocks · completion</text>
+<title>C1</title>
+<path fill="#f8fafc" stroke="#64748b" d="M136,-1446C136,-1446 54,-1446 54,-1446 48,-1446 42,-1440 42,-1434 42,-1434 42,-1422 42,-1422 42,-1416 48,-1410 54,-1410 54,-1410 136,-1410 136,-1410 142,-1410 148,-1416 148,-1422 148,-1422 148,-1434 148,-1434 148,-1440 142,-1446 136,-1446"/>
+<text text-anchor="middle" x="95" y="-1431.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G01</text>
+<text text-anchor="middle" x="95" y="-1419.2" font-family="Noto Sans CJK KR" font-size="11.00">guide&#45;c 01~04·06</text>
 </g>
-<!-- GUIDE&#45;&gt;PACKET -->
-<g id="edge1" class="edge">
-<title>GUIDE&#45;&gt;PACKET</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M415,-615.88C415,-605.86 415,-593.43 415,-582.5"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="417.52,-582.42 415,-575.22 412.48,-582.42 417.52,-582.42"/>
+<!-- G00&#45;&gt;C1 -->
+<g id="edge33" class="edge">
+<title>G00&#45;&gt;C1</title>
+<path fill="none" stroke="#2563eb" stroke-width="1.1" d="M232.22,-1517.99C198.17,-1505.61 158,-1491 158,-1491 158,-1491 135.6,-1468.96 117.51,-1451.16"/>
+<polygon fill="#2563eb" stroke="#2563eb" stroke-width="1.1" points="119.07,-1449.34 112.55,-1446.27 115.73,-1452.74 119.07,-1449.34"/>
 </g>
-<!-- CHECK -->
+<!-- X1 -->
+<g id="node18" class="node">
+<title>X1</title>
+<path fill="#f8fafc" stroke="#64748b" d="M302,-1446C302,-1446 256,-1446 256,-1446 250,-1446 244,-1440 244,-1434 244,-1434 244,-1422 244,-1422 244,-1416 250,-1410 256,-1410 256,-1410 302,-1410 302,-1410 308,-1410 314,-1416 314,-1422 314,-1422 314,-1434 314,-1434 314,-1440 308,-1446 302,-1446"/>
+<text text-anchor="middle" x="279" y="-1431.2" font-family="Noto Sans CJK KR" font-size="11.00">CPP&#45;G01</text>
+<text text-anchor="middle" x="279" y="-1419.2" font-family="Noto Sans CJK KR" font-size="11.00">C++ 01~05</text>
+</g>
+<!-- G00&#45;&gt;X1 -->
+<g id="edge34" class="edge">
+<title>G00&#45;&gt;X1</title>
+<path fill="none" stroke="#7c3aed" stroke-width="1.1" d="M279,-1517.97C279,-1500.46 279,-1473.02 279,-1453.25"/>
+<polygon fill="#7c3aed" stroke="#7c3aed" stroke-width="1.1" points="281.38,-1453.14 279,-1446.34 276.62,-1453.14 281.38,-1453.14"/>
+</g>
+<!-- W1 -->
+<g id="node27" class="node">
+<title>W1</title>
+<path fill="#f8fafc" stroke="#64748b" d="M497.5,-1452C497.5,-1452 422.5,-1452 422.5,-1452 416.5,-1452 410.5,-1446 410.5,-1440 410.5,-1440 410.5,-1416 410.5,-1416 410.5,-1410 416.5,-1404 422.5,-1404 422.5,-1404 497.5,-1404 497.5,-1404 503.5,-1404 509.5,-1410 509.5,-1416 509.5,-1416 509.5,-1440 509.5,-1440 509.5,-1446 503.5,-1452 497.5,-1452"/>
+<text text-anchor="middle" x="460" y="-1437.2" font-family="Noto Sans CJK KR" font-size="11.00">WEB&#45;G01</text>
+<text text-anchor="middle" x="460" y="-1425.2" font-family="Noto Sans CJK KR" font-size="11.00">Web Infra 01~07</text>
+<text text-anchor="middle" x="460" y="-1413.2" font-family="Noto Sans CJK KR" font-size="11.00">G08 폐쇄</text>
+</g>
+<!-- G00&#45;&gt;W1 -->
+<g id="edge35" class="edge">
+<title>G00&#45;&gt;W1</title>
+<path fill="none" stroke="#059669" stroke-width="1.1" d="M325.78,-1517.99C359.83,-1505.61 400,-1491 400,-1491 400,-1491 416.92,-1473.52 432.79,-1457.12"/>
+<polygon fill="#059669" stroke="#059669" stroke-width="1.1" points="434.64,-1458.63 437.66,-1452.09 431.22,-1455.32 434.64,-1458.63"/>
+</g>
+<!-- C2 -->
 <g id="node3" class="node">
-<title>CHECK</title>
-<path fill="#fff4d6" stroke="#a66b00" d="M403.98,-489.26C403.98,-489.26 333.02,-458.74 333.02,-458.74 327.51,-456.37 327.51,-451.63 333.02,-449.26 333.02,-449.26 403.98,-418.74 403.98,-418.74 409.49,-416.37 420.51,-416.37 426.02,-418.74 426.02,-418.74 496.98,-449.26 496.98,-449.26 502.49,-451.63 502.49,-456.37 496.98,-458.74 496.98,-458.74 426.02,-489.26 426.02,-489.26 420.51,-491.63 409.49,-491.63 403.98,-489.26"/>
-<text text-anchor="middle" x="415" y="-457.4" font-family="Noto Sans CJK KR" font-size="12.00">기억과 증거가</text>
-<text text-anchor="middle" x="415" y="-444.4" font-family="Noto Sans CJK KR" font-size="12.00">충분한가?</text>
+<title>C2</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M109,-1367C109,-1367 79,-1367 79,-1367 73,-1367 67,-1361 67,-1355 67,-1355 67,-1343 67,-1343 67,-1337 73,-1331 79,-1331 79,-1331 109,-1331 109,-1331 115,-1331 121,-1337 121,-1343 121,-1343 121,-1355 121,-1355 121,-1361 115,-1367 109,-1367"/>
+<text text-anchor="middle" x="94" y="-1346.2" font-family="Noto Sans CJK KR" font-size="11.00">P01</text>
 </g>
-<!-- PACKET&#45;&gt;CHECK -->
-<g id="edge2" class="edge">
-<title>PACKET&#45;&gt;CHECK</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M415,-534.91C415,-525.33 415,-513.26 415,-501.42"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="417.52,-501.31 415,-494.11 412.48,-501.31 417.52,-501.31"/>
+<!-- C1&#45;&gt;C2 -->
+<g id="edge1" class="edge">
+<title>C1&#45;&gt;C2</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M94.78,-1409.91C94.64,-1399.34 94.46,-1385.62 94.31,-1373.98"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="96.69,-1373.81 94.22,-1367.04 91.93,-1373.87 96.69,-1373.81"/>
 </g>
-<!-- CLOSURE -->
-<g id="node12" class="node">
-<title>CLOSURE</title>
-<path fill="#eef2f7" stroke="#475569" stroke-width="1.6" d="M226,-40C226,-40 12,-40 12,-40 6,-40 0,-34 0,-28 0,-28 0,-12 0,-12 0,-6 6,0 12,0 12,0 226,0 226,0 232,0 238,-6 238,-12 238,-12 238,-28 238,-28 238,-34 232,-40 226,-40"/>
-<text text-anchor="middle" x="119" y="-23.4" font-family="Noto Sans CJK KR" font-size="12.00">최종 Guide closure</text>
-<text text-anchor="middle" x="119" y="-10.4" font-family="Noto Sans CJK KR" font-size="12.00">필수 packet의 DEFERRED / MISSING = 0</text>
+<!-- C1&#45;&gt;X1 -->
+<g id="edge38" class="edge">
+<title>C1&#45;&gt;X1</title>
+<path fill="none" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="5,2" d="M148.22,-1428C176.48,-1428 210.7,-1428 237.05,-1428"/>
+<polygon fill="#94a3b8" stroke="#94a3b8" stroke-width="1.1" points="237.12,-1430.38 243.92,-1428 237.12,-1425.62 237.12,-1430.38"/>
+<text text-anchor="middle" x="196" y="-1433.8" font-family="Noto Sans CJK KR" font-size="9.00">기초 재사용</text>
 </g>
-<!-- PACKET&#45;&gt;CLOSURE -->
-<g id="edge20" class="edge">
-<title>PACKET&#45;&gt;CLOSURE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" stroke-dasharray="5,2" d="M313.49,-541.64C221.75,-527.54 101,-500.37 101,-455 101,-455 101,-455 101,-100 101,-82.11 105.44,-62.5 109.91,-47.29"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="112.39,-47.82 112.09,-40.2 107.57,-46.34 112.39,-47.82"/>
-<text text-anchor="middle" x="128.5" y="-260.8" font-family="Noto Sans CJK KR" font-size="9.00">남은 필수 범위</text>
-</g>
-<!-- DONE -->
+<!-- C3 -->
 <g id="node4" class="node">
-<title>DONE</title>
-<path fill="#eaf8ee" stroke="#2f7d32" d="M461,-364C461,-364 369,-364 369,-364 363,-364 357,-358 357,-352 357,-352 357,-336 357,-336 357,-330 363,-324 369,-324 369,-324 461,-324 461,-324 467,-324 473,-330 473,-336 473,-336 473,-352 473,-352 473,-358 467,-364 461,-364"/>
-<text text-anchor="middle" x="415" y="-347.4" font-family="Noto Sans CJK KR" font-size="12.00">DONE</text>
-<text text-anchor="middle" x="415" y="-334.4" font-family="Noto Sans CJK KR" font-size="12.00">본문 + 실습 + 검사</text>
+<title>C3</title>
+<path fill="#f8fafc" stroke="#64748b" d="M115,-1294C115,-1294 65,-1294 65,-1294 59,-1294 53,-1288 53,-1282 53,-1282 53,-1270 53,-1270 53,-1264 59,-1258 65,-1258 65,-1258 115,-1258 115,-1258 121,-1258 127,-1264 127,-1270 127,-1270 127,-1282 127,-1282 127,-1288 121,-1294 115,-1294"/>
+<text text-anchor="middle" x="90" y="-1279.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G02</text>
+<text text-anchor="middle" x="90" y="-1267.2" font-family="Noto Sans CJK KR" font-size="11.00">Unix 01~03</text>
 </g>
-<!-- CHECK&#45;&gt;DONE -->
-<g id="edge3" class="edge">
-<title>CHECK&#45;&gt;DONE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M415,-413.7C415,-399.72 415,-384.31 415,-371.63"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="417.52,-371.33 415,-364.13 412.48,-371.33 417.52,-371.33"/>
-<text text-anchor="middle" x="433" y="-386.8" font-family="Noto Sans CJK KR" font-size="9.00">새로 복습</text>
+<!-- C2&#45;&gt;C3 -->
+<g id="edge2" class="edge">
+<title>C2&#45;&gt;C3</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M93.03,-1330.81C92.53,-1321.83 91.9,-1310.69 91.35,-1300.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="93.72,-1300.68 90.96,-1294.03 88.97,-1300.95 93.72,-1300.68"/>
 </g>
-<!-- VERIFIED -->
+<!-- C4 -->
 <g id="node5" class="node">
-<title>VERIFIED</title>
-<path fill="#eaf8ee" stroke="#2f7d32" d="M314.5,-364C314.5,-364 197.5,-364 197.5,-364 191.5,-364 185.5,-358 185.5,-352 185.5,-352 185.5,-336 185.5,-336 185.5,-330 191.5,-324 197.5,-324 197.5,-324 314.5,-324 314.5,-324 320.5,-324 326.5,-330 326.5,-336 326.5,-336 326.5,-352 326.5,-352 326.5,-358 320.5,-364 314.5,-364"/>
-<text text-anchor="middle" x="256" y="-347.4" font-family="Noto Sans CJK KR" font-size="12.00">VERIFIED</text>
-<text text-anchor="middle" x="256" y="-334.4" font-family="Noto Sans CJK KR" font-size="12.00">설명 + 좁은 검사 + 근거</text>
+<title>C4</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M103,-1221C103,-1221 73,-1221 73,-1221 67,-1221 61,-1215 61,-1209 61,-1209 61,-1197 61,-1197 61,-1191 67,-1185 73,-1185 73,-1185 103,-1185 103,-1185 109,-1185 115,-1191 115,-1197 115,-1197 115,-1209 115,-1209 115,-1215 109,-1221 103,-1221"/>
+<text text-anchor="middle" x="88" y="-1200.2" font-family="Noto Sans CJK KR" font-size="11.00">P02</text>
 </g>
-<!-- CHECK&#45;&gt;VERIFIED -->
-<g id="edge4" class="edge">
-<title>CHECK&#45;&gt;VERIFIED</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M379.71,-429.03C353.03,-410.91 316.61,-386.17 290.2,-368.23"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="291.42,-366.01 284.05,-364.05 288.59,-370.18 291.42,-366.01"/>
-<text text-anchor="middle" x="344" y="-386.8" font-family="Noto Sans CJK KR" font-size="9.00">기억 검증</text>
+<!-- C3&#45;&gt;C4 -->
+<g id="edge3" class="edge">
+<title>C3&#45;&gt;C4</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M89.52,-1257.81C89.26,-1248.83 88.95,-1237.69 88.67,-1227.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="91.05,-1227.76 88.48,-1221.03 86.29,-1227.89 91.05,-1227.76"/>
 </g>
-<!-- BLOCK -->
+<!-- C5 -->
 <g id="node6" class="node">
-<title>BLOCK</title>
-<path fill="#fdecec" stroke="#a63d40" d="M631,-364C631,-364 515,-364 515,-364 509,-364 503,-358 503,-352 503,-352 503,-336 503,-336 503,-330 509,-324 515,-324 515,-324 631,-324 631,-324 637,-324 643,-330 643,-336 643,-336 643,-352 643,-352 643,-358 637,-364 631,-364"/>
-<text text-anchor="middle" x="573" y="-347.4" font-family="Noto Sans CJK KR" font-size="12.00">DEFERRED / MISSING</text>
-<text text-anchor="middle" x="573" y="-334.4" font-family="Noto Sans CJK KR" font-size="12.00">프로젝트 진입 차단</text>
+<title>C5</title>
+<path fill="#f8fafc" stroke="#64748b" d="M102,-1142C102,-1142 72,-1142 72,-1142 66,-1142 60,-1136 60,-1130 60,-1130 60,-1118 60,-1118 60,-1112 66,-1106 72,-1106 72,-1106 102,-1106 102,-1106 108,-1106 114,-1112 114,-1118 114,-1118 114,-1130 114,-1130 114,-1136 108,-1142 102,-1142"/>
+<text text-anchor="middle" x="87" y="-1127.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G03</text>
+<text text-anchor="middle" x="87" y="-1115.2" font-family="Noto Sans CJK KR" font-size="11.00">C 05</text>
 </g>
-<!-- CHECK&#45;&gt;BLOCK -->
-<g id="edge5" class="edge">
-<title>CHECK&#45;&gt;BLOCK</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M448.41,-428.22C466.7,-414.84 489.88,-398.21 511,-384 518.9,-378.68 527.49,-373.14 535.68,-367.95"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="537.1,-370.04 541.85,-364.07 534.42,-365.77 537.1,-370.04"/>
-<text text-anchor="middle" x="529" y="-386.8" font-family="Noto Sans CJK KR" font-size="9.00">근거 부족</text>
+<!-- C4&#45;&gt;C5 -->
+<g id="edge4" class="edge">
+<title>C4&#45;&gt;C5</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M87.78,-1184.91C87.64,-1174.34 87.46,-1160.62 87.31,-1148.98"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="89.69,-1148.81 87.22,-1142.04 84.93,-1148.87 89.69,-1148.81"/>
 </g>
-<!-- C -->
+<!-- C6 -->
 <g id="node7" class="node">
-<title>C</title>
-<path fill="#eaf2ff" stroke="#2457a6" d="M279.5,-283C279.5,-283 198.5,-283 198.5,-283 192.5,-283 186.5,-277 186.5,-271 186.5,-271 186.5,-255 186.5,-255 186.5,-249 192.5,-243 198.5,-243 198.5,-243 279.5,-243 279.5,-243 285.5,-243 291.5,-249 291.5,-255 291.5,-255 291.5,-271 291.5,-271 291.5,-277 285.5,-283 279.5,-283"/>
-<text text-anchor="middle" x="239" y="-266.4" font-family="Noto Sans CJK KR" font-size="12.00">C project slot</text>
-<text text-anchor="middle" x="239" y="-253.4" font-family="Noto Sans CJK KR" font-size="12.00">P01~P06 · P09</text>
+<title>C6</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M101,-1063C101,-1063 71,-1063 71,-1063 65,-1063 59,-1057 59,-1051 59,-1051 59,-1039 59,-1039 59,-1033 65,-1027 71,-1027 71,-1027 101,-1027 101,-1027 107,-1027 113,-1033 113,-1039 113,-1039 113,-1051 113,-1051 113,-1057 107,-1063 101,-1063"/>
+<text text-anchor="middle" x="86" y="-1042.2" font-family="Noto Sans CJK KR" font-size="11.00">P03</text>
 </g>
-<!-- DONE&#45;&gt;C -->
-<g id="edge9" class="edge">
-<title>DONE&#45;&gt;C</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M372.4,-323.88C346.98,-312.47 314.61,-297.94 288.12,-286.05"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="289.12,-283.73 281.52,-283.08 287.05,-288.33 289.12,-283.73"/>
+<!-- C5&#45;&gt;C6 -->
+<g id="edge5" class="edge">
+<title>C5&#45;&gt;C6</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M86.78,-1105.91C86.64,-1095.34 86.46,-1081.62 86.31,-1069.98"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="88.69,-1069.81 86.22,-1063.04 83.93,-1069.87 88.69,-1069.81"/>
 </g>
-<!-- CPP -->
+<!-- C7 -->
 <g id="node8" class="node">
-<title>CPP</title>
-<path fill="#f3edff" stroke="#6b46a5" d="M466.5,-283C466.5,-283 363.5,-283 363.5,-283 357.5,-283 351.5,-277 351.5,-271 351.5,-271 351.5,-255 351.5,-255 351.5,-249 357.5,-243 363.5,-243 363.5,-243 466.5,-243 466.5,-243 472.5,-243 478.5,-249 478.5,-255 478.5,-255 478.5,-271 478.5,-271 478.5,-277 472.5,-283 466.5,-283"/>
-<text text-anchor="middle" x="415" y="-266.4" font-family="Noto Sans CJK KR" font-size="12.00">C++ project slot</text>
-<text text-anchor="middle" x="415" y="-253.4" font-family="Noto Sans CJK KR" font-size="12.00">P07·P08·P10·P11</text>
+<title>C7</title>
+<path fill="#f8fafc" stroke="#64748b" d="M118,-984C118,-984 54,-984 54,-984 48,-984 42,-978 42,-972 42,-972 42,-960 42,-960 42,-954 48,-948 54,-948 54,-948 118,-948 118,-948 124,-948 130,-954 130,-960 130,-960 130,-972 130,-972 130,-978 124,-984 118,-984"/>
+<text text-anchor="middle" x="86" y="-969.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G04</text>
+<text text-anchor="middle" x="86" y="-957.2" font-family="Noto Sans CJK KR" font-size="11.00">C 08 + Unix 04</text>
 </g>
-<!-- DONE&#45;&gt;CPP -->
-<g id="edge10" class="edge">
-<title>DONE&#45;&gt;CPP</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M415,-323.88C415,-313.86 415,-301.43 415,-290.5"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="417.52,-290.42 415,-283.22 412.48,-290.42 417.52,-290.42"/>
-</g>
-<!-- WEB -->
-<g id="node9" class="node">
-<title>WEB</title>
-<path fill="#eaf8ee" stroke="#2f7d32" d="M640,-283C640,-283 550,-283 550,-283 544,-283 538,-277 538,-271 538,-271 538,-255 538,-255 538,-249 544,-243 550,-243 550,-243 640,-243 640,-243 646,-243 652,-249 652,-255 652,-255 652,-271 652,-271 652,-277 646,-283 640,-283"/>
-<text text-anchor="middle" x="595" y="-266.4" font-family="Noto Sans CJK KR" font-size="12.00">WEB project slot</text>
-<text text-anchor="middle" x="595" y="-253.4" font-family="Noto Sans CJK KR" font-size="12.00">P12~P15</text>
-</g>
-<!-- DONE&#45;&gt;WEB -->
-<g id="edge11" class="edge">
-<title>DONE&#45;&gt;WEB</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M458.57,-323.88C484.57,-312.47 517.68,-297.94 544.77,-286.05"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="545.94,-288.29 551.52,-283.08 543.91,-283.67 545.94,-288.29"/>
-</g>
-<!-- VERIFIED&#45;&gt;C -->
-<g id="edge12" class="edge">
-<title>VERIFIED&#45;&gt;C</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M251.88,-323.88C249.73,-313.86 247.06,-301.43 244.7,-290.5"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="247.11,-289.73 243.14,-283.22 242.19,-290.79 247.11,-289.73"/>
-</g>
-<!-- VERIFIED&#45;&gt;CPP -->
-<g id="edge13" class="edge">
-<title>VERIFIED&#45;&gt;CPP</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M294.49,-323.88C317.26,-312.56 346.2,-298.18 370.02,-286.35"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="371.26,-288.54 376.59,-283.08 369.02,-284.03 371.26,-288.54"/>
-</g>
-<!-- VERIFIED&#45;&gt;WEB -->
-<g id="edge14" class="edge">
-<title>VERIFIED&#45;&gt;WEB</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M326.65,-326.54C386.76,-312.53 472.36,-292.58 530.6,-279.01"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="531.48,-281.39 537.92,-277.3 530.34,-276.48 531.48,-281.39"/>
-</g>
-<!-- BLOCK&#45;&gt;PACKET -->
+<!-- C6&#45;&gt;C7 -->
 <g id="edge6" class="edge">
-<title>BLOCK&#45;&gt;PACKET</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M571.04,-364.07C567.01,-394.66 555.28,-455.19 523,-494 509.81,-509.86 491.28,-522.28 473.29,-531.59"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="472.02,-529.41 466.7,-534.88 474.27,-533.92 472.02,-529.41"/>
-<text text-anchor="middle" x="589.5" y="-451.8" font-family="Noto Sans CJK KR" font-size="9.00">필요 범위 완료</text>
+<title>C6&#45;&gt;C7</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M86,-1026.91C86,-1016.34 86,-1002.62 86,-990.98"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="88.38,-990.84 86,-984.04 83.62,-990.84 88.38,-990.84"/>
 </g>
-<!-- C&#45;&gt;CPP -->
-<!-- EVIDENCE -->
+<!-- C8 -->
+<g id="node9" class="node">
+<title>C8</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M101,-899C101,-899 71,-899 71,-899 65,-899 59,-893 59,-887 59,-887 59,-875 59,-875 59,-869 65,-863 71,-863 71,-863 101,-863 101,-863 107,-863 113,-869 113,-875 113,-875 113,-887 113,-887 113,-893 107,-899 101,-899"/>
+<text text-anchor="middle" x="86" y="-878.2" font-family="Noto Sans CJK KR" font-size="11.00">P04</text>
+</g>
+<!-- C7&#45;&gt;C8 -->
+<g id="edge7" class="edge">
+<title>C7&#45;&gt;C8</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M86,-947.8C86,-935.78 86,-919.57 86,-906.24"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="88.38,-905.98 86,-899.18 83.62,-905.98 88.38,-905.98"/>
+</g>
+<!-- C9 -->
 <g id="node10" class="node">
-<title>EVIDENCE</title>
-<path fill="#f1f5f9" stroke="#475569" d="M460.5,-202C460.5,-202 237.5,-202 237.5,-202 231.5,-202 225.5,-196 225.5,-190 225.5,-190 225.5,-174 225.5,-174 225.5,-168 231.5,-162 237.5,-162 237.5,-162 460.5,-162 460.5,-162 466.5,-162 472.5,-168 472.5,-174 472.5,-174 472.5,-190 472.5,-190 472.5,-196 466.5,-202 460.5,-202"/>
-<text text-anchor="middle" x="349" y="-185.4" font-family="Noto Sans CJK KR" font-size="12.00">프로젝트 evidence</text>
-<text text-anchor="middle" x="349" y="-172.4" font-family="Noto Sans CJK KR" font-size="12.00">state · ownership · failure · verification</text>
+<title>C9</title>
+<path fill="#f8fafc" stroke="#64748b" d="M136,-811C136,-811 36,-811 36,-811 30,-811 24,-805 24,-799 24,-799 24,-787 24,-787 24,-781 30,-775 36,-775 36,-775 136,-775 136,-775 142,-775 148,-781 148,-787 148,-787 148,-799 148,-799 148,-805 142,-811 136,-811"/>
+<text text-anchor="middle" x="86" y="-796.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G05</text>
+<text text-anchor="middle" x="86" y="-784.2" font-family="Noto Sans CJK KR" font-size="11.00">C 07·09 + Unix 05~06</text>
 </g>
-<!-- C&#45;&gt;EVIDENCE -->
-<g id="edge15" class="edge">
-<title>C&#45;&gt;EVIDENCE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M265.63,-242.88C280.78,-231.99 299.9,-218.26 316,-206.7"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="317.86,-208.47 322.24,-202.22 314.92,-204.37 317.86,-208.47"/>
+<!-- C8&#45;&gt;C9 -->
+<g id="edge8" class="edge">
+<title>C8&#45;&gt;C9</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M86,-862.6C86,-849.81 86,-832.27 86,-818.13"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="88.38,-817.88 86,-811.08 83.62,-817.88 88.38,-817.88"/>
 </g>
-<!-- CPP&#45;&gt;WEB -->
-<!-- CPP&#45;&gt;EVIDENCE -->
-<g id="edge16" class="edge">
-<title>CPP&#45;&gt;EVIDENCE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M399.02,-242.88C390.25,-232.38 379.27,-219.23 369.83,-207.94"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="371.61,-206.13 365.06,-202.22 367.74,-209.36 371.61,-206.13"/>
-</g>
-<!-- WEB&#45;&gt;EVIDENCE -->
-<g id="edge17" class="edge">
-<title>WEB&#45;&gt;EVIDENCE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M537.94,-243.68C501.33,-231.92 453.65,-216.61 415.35,-204.31"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="415.94,-201.85 408.31,-202.05 414.4,-206.65 415.94,-201.85"/>
-</g>
-<!-- LEDGER -->
+<!-- C10 -->
 <g id="node11" class="node">
-<title>LEDGER</title>
-<path fill="#fff6df" stroke="#a66b00" d="M331,-121C331,-121 179,-121 179,-121 173,-121 167,-115 167,-109 167,-109 167,-93 167,-93 167,-87 173,-81 179,-81 179,-81 331,-81 331,-81 337,-81 343,-87 343,-93 343,-93 343,-109 343,-109 343,-115 337,-121 331,-121"/>
-<text text-anchor="middle" x="255" y="-104.4" font-family="Noto Sans CJK KR" font-size="12.00">Packet ledger 갱신</text>
-<text text-anchor="middle" x="255" y="-91.4" font-family="Noto Sans CJK KR" font-size="12.00">경로 · 명령 · 결론 · 다음 감사</text>
+<title>C10</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M100,-703C100,-703 70,-703 70,-703 64,-703 58,-697 58,-691 58,-691 58,-679 58,-679 58,-673 64,-667 70,-667 70,-667 100,-667 100,-667 106,-667 112,-673 112,-679 112,-679 112,-691 112,-691 112,-697 106,-703 100,-703"/>
+<text text-anchor="middle" x="85" y="-682.2" font-family="Noto Sans CJK KR" font-size="11.00">P05</text>
 </g>
-<!-- EVIDENCE&#45;&gt;LEDGER -->
+<!-- C9&#45;&gt;C10 -->
+<g id="edge9" class="edge">
+<title>C9&#45;&gt;C10</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M85.84,-774.97C85.67,-757.46 85.42,-730.02 85.23,-710.25"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="87.61,-710.12 85.16,-703.34 82.85,-710.16 87.61,-710.12"/>
+</g>
+<!-- C11 -->
+<g id="node12" class="node">
+<title>C11</title>
+<path fill="#f8fafc" stroke="#64748b" d="M119.5,-595C119.5,-595 46.5,-595 46.5,-595 40.5,-595 34.5,-589 34.5,-583 34.5,-583 34.5,-571 34.5,-571 34.5,-565 40.5,-559 46.5,-559 46.5,-559 119.5,-559 119.5,-559 125.5,-559 131.5,-565 131.5,-571 131.5,-571 131.5,-583 131.5,-583 131.5,-589 125.5,-595 119.5,-595"/>
+<text text-anchor="middle" x="83" y="-580.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G06</text>
+<text text-anchor="middle" x="83" y="-568.2" font-family="Noto Sans CJK KR" font-size="11.00">C 10 + OS 01~06</text>
+</g>
+<!-- C10&#45;&gt;C11 -->
+<g id="edge10" class="edge">
+<title>C10&#45;&gt;C11</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M84.68,-666.97C84.35,-649.46 83.83,-622.02 83.46,-602.25"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="85.84,-602.09 83.33,-595.34 81.08,-602.18 85.84,-602.09"/>
+</g>
+<!-- C12 -->
+<g id="node13" class="node">
+<title>C12</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M98,-522C98,-522 68,-522 68,-522 62,-522 56,-516 56,-510 56,-510 56,-498 56,-498 56,-492 62,-486 68,-486 68,-486 98,-486 98,-486 104,-486 110,-492 110,-498 110,-498 110,-510 110,-510 110,-516 104,-522 98,-522"/>
+<text text-anchor="middle" x="83" y="-501.2" font-family="Noto Sans CJK KR" font-size="11.00">P06</text>
+</g>
+<!-- C11&#45;&gt;C12 -->
+<g id="edge11" class="edge">
+<title>C11&#45;&gt;C12</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M83,-558.81C83,-549.83 83,-538.69 83,-528.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="85.38,-528.83 83,-522.03 80.62,-528.83 85.38,-528.83"/>
+</g>
+<!-- C13 -->
+<g id="node14" class="node">
+<title>C13</title>
+<path fill="#f8fafc" stroke="#64748b" d="M136,-449C136,-449 28,-449 28,-449 22,-449 16,-443 16,-437 16,-437 16,-413 16,-413 16,-407 22,-401 28,-401 28,-401 136,-401 136,-401 142,-401 148,-407 148,-413 148,-413 148,-437 148,-437 148,-443 142,-449 136,-449"/>
+<text text-anchor="middle" x="82" y="-434.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;G07</text>
+<text text-anchor="middle" x="82" y="-422.2" font-family="Noto Sans CJK KR" font-size="11.00">Unix 07~09 + OS 07~10</text>
+<text text-anchor="middle" x="82" y="-410.2" font-family="Noto Sans CJK KR" font-size="11.00">G01·G02·G04 폐쇄</text>
+</g>
+<!-- C12&#45;&gt;C13 -->
+<g id="edge12" class="edge">
+<title>C12&#45;&gt;C13</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M82.78,-485.91C82.66,-477.13 82.52,-466.16 82.39,-456.02"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="84.77,-455.94 82.3,-449.17 80.01,-456 84.77,-455.94"/>
+</g>
+<!-- C14 -->
+<g id="node15" class="node">
+<title>C14</title>
+<path fill="#fef3c7" stroke="#64748b" d="M127,-364C127,-364 57,-364 57,-364 51,-364 45,-358 45,-352 45,-352 45,-340 45,-340 45,-334 51,-328 57,-328 57,-328 127,-328 127,-328 133,-328 139,-334 139,-340 139,-340 139,-352 139,-352 139,-358 133,-364 127,-364"/>
+<text text-anchor="middle" x="92" y="-349.2" font-family="Noto Sans CJK KR" font-size="11.00">C&#45;S01</text>
+<text text-anchor="middle" x="92" y="-337.2" font-family="Noto Sans CJK KR" font-size="11.00">CPP&#45;G02 동기화</text>
+</g>
+<!-- C13&#45;&gt;C14 -->
+<g id="edge13" class="edge">
+<title>C13&#45;&gt;C14</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M85,-400.9C86.21,-391.58 87.61,-380.82 88.83,-371.37"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="91.22,-371.5 89.73,-364.45 86.5,-370.89 91.22,-371.5"/>
+</g>
+<!-- C15 -->
+<g id="node16" class="node">
+<title>C15</title>
+<path fill="#dbeafe" stroke="#64748b" stroke-width="2" d="M119,-291C119,-291 89,-291 89,-291 83,-291 77,-285 77,-279 77,-279 77,-267 77,-267 77,-261 83,-255 89,-255 89,-255 119,-255 119,-255 125,-255 131,-261 131,-267 131,-267 131,-279 131,-279 131,-285 125,-291 119,-291"/>
+<text text-anchor="middle" x="104" y="-270.2" font-family="Noto Sans CJK KR" font-size="11.00">P09</text>
+</g>
+<!-- C14&#45;&gt;C15 -->
+<g id="edge14" class="edge">
+<title>C14&#45;&gt;C15</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M94.9,-327.81C96.42,-318.83 98.31,-307.69 99.96,-297.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="102.34,-298.13 101.12,-291.03 97.64,-297.34 102.34,-298.13"/>
+</g>
+<!-- C16 -->
+<g id="node17" class="node">
+<title>C16</title>
+<path fill="#bfdbfe" stroke="#64748b" d="M147.25,-197.51C147.25,-197.51 147.25,-202.49 147.25,-202.49 147.25,-204.97 145.05,-208.61 142.85,-209.77 142.85,-209.77 131.59,-215.69 131.59,-215.69 129.39,-216.84 124.7,-218 122.22,-218 122.22,-218 103.78,-218 103.78,-218 101.3,-218 96.61,-216.84 94.41,-215.69 94.41,-215.69 83.15,-209.77 83.15,-209.77 80.95,-208.61 78.75,-204.97 78.75,-202.49 78.75,-202.49 78.75,-197.51 78.75,-197.51 78.75,-195.03 80.95,-191.39 83.15,-190.23 83.15,-190.23 94.41,-184.31 94.41,-184.31 96.61,-183.16 101.3,-182 103.78,-182 103.78,-182 122.22,-182 122.22,-182 124.7,-182 129.39,-183.16 131.59,-184.31 131.59,-184.31 142.85,-190.23 142.85,-190.23 145.05,-191.39 147.25,-195.03 147.25,-197.51"/>
+<text text-anchor="middle" x="113" y="-197.2" font-family="Noto Sans CJK KR" font-size="11.00">C 완료</text>
+</g>
+<!-- C15&#45;&gt;C16 -->
+<g id="edge15" class="edge">
+<title>C15&#45;&gt;C16</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M106.18,-254.81C107.32,-245.83 108.73,-234.69 109.97,-224.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="112.35,-225.07 110.84,-218.03 107.63,-224.48 112.35,-225.07"/>
+</g>
+<!-- MERGE -->
+<g id="node37" class="node">
+<title>MERGE</title>
+<path fill="#fde68a" stroke="#b45309" stroke-width="2" d="M267.34,-142.16C267.34,-142.16 142.66,-111.84 142.66,-111.84 136.83,-110.42 136.83,-107.58 142.66,-106.16 142.66,-106.16 267.34,-75.84 267.34,-75.84 273.17,-74.42 284.83,-74.42 290.66,-75.84 290.66,-75.84 415.34,-106.16 415.34,-106.16 421.17,-107.58 421.17,-110.42 415.34,-111.84 415.34,-111.84 290.66,-142.16 290.66,-142.16 284.83,-143.58 273.17,-143.58 267.34,-142.16"/>
+<text text-anchor="middle" x="279" y="-112.2" font-family="Noto Sans CJK KR" font-size="11.00">◇ 3트랙 완료</text>
+<text text-anchor="middle" x="279" y="-100.2" font-family="Noto Sans CJK KR" font-size="11.00">필수 G00~G11 전체 커버리지</text>
+</g>
+<!-- C16&#45;&gt;MERGE -->
+<g id="edge40" class="edge">
+<title>C16&#45;&gt;MERGE</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M136.08,-186.62C159.72,-173.95 197.23,-153.84 227.9,-137.4"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="229.07,-139.47 233.93,-134.16 226.82,-135.28 229.07,-139.47"/>
+</g>
+<!-- X2 -->
+<g id="node19" class="node">
+<title>X2</title>
+<path fill="#ede9fe" stroke="#64748b" stroke-width="2" d="M294,-1367C294,-1367 264,-1367 264,-1367 258,-1367 252,-1361 252,-1355 252,-1355 252,-1343 252,-1343 252,-1337 258,-1331 264,-1331 264,-1331 294,-1331 294,-1331 300,-1331 306,-1337 306,-1343 306,-1343 306,-1355 306,-1355 306,-1361 300,-1367 294,-1367"/>
+<text text-anchor="middle" x="279" y="-1346.2" font-family="Noto Sans CJK KR" font-size="11.00">P07</text>
+</g>
+<!-- X1&#45;&gt;X2 -->
+<g id="edge16" class="edge">
+<title>X1&#45;&gt;X2</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-1409.91C279,-1399.34 279,-1385.62 279,-1373.98"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-1373.84 279,-1367.04 276.62,-1373.84 281.38,-1373.84"/>
+</g>
+<!-- X3 -->
+<g id="node20" class="node">
+<title>X3</title>
+<path fill="#f8fafc" stroke="#64748b" d="M351.5,-1294C351.5,-1294 206.5,-1294 206.5,-1294 200.5,-1294 194.5,-1288 194.5,-1282 194.5,-1282 194.5,-1270 194.5,-1270 194.5,-1264 200.5,-1258 206.5,-1258 206.5,-1258 351.5,-1258 351.5,-1258 357.5,-1258 363.5,-1264 363.5,-1270 363.5,-1270 363.5,-1282 363.5,-1282 363.5,-1288 357.5,-1294 351.5,-1294"/>
+<text text-anchor="middle" x="279" y="-1279.2" font-family="Noto Sans CJK KR" font-size="11.00">CPP&#45;G02</text>
+<text text-anchor="middle" x="279" y="-1267.2" font-family="Noto Sans CJK KR" font-size="11.00">C++ 06~07 + Algorithms 01~11</text>
+</g>
+<!-- X2&#45;&gt;X3 -->
+<g id="edge17" class="edge">
+<title>X2&#45;&gt;X3</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-1330.81C279,-1321.83 279,-1310.69 279,-1300.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-1300.83 279,-1294.03 276.62,-1300.83 281.38,-1300.83"/>
+</g>
+<!-- X3&#45;&gt;C14 -->
+<g id="edge36" class="edge">
+<title>X3&#45;&gt;C14</title>
+<path fill="none" stroke="#dc2626" stroke-width="2" d="M363.72,-1262.69C382.02,-1260.03 396,-1258 396,-1258 396,-1258 656,-1221 656,-1221 656,-1221 674,-1204 674,-1204 674,-1204 674,-1204 674,-1008 674,-1008 656,-605 656,-605 656,-605 415,-467 415,-467 415,-467 235.81,-400.43 144.36,-366.45"/>
+<polygon fill="#dc2626" stroke="#dc2626" stroke-width="2" points="145.14,-364.2 137.93,-364.07 143.48,-368.66 145.14,-364.2"/>
+<text text-anchor="middle" x="703.5" y="-831.8" font-family="Noto Sans CJK KR" font-size="9.00">Algorithms 01~10</text>
+</g>
+<!-- X4 -->
+<g id="node21" class="node">
+<title>X4</title>
+<path fill="#ede9fe" stroke="#64748b" stroke-width="2" d="M294,-1221C294,-1221 264,-1221 264,-1221 258,-1221 252,-1215 252,-1209 252,-1209 252,-1197 252,-1197 252,-1191 258,-1185 264,-1185 264,-1185 294,-1185 294,-1185 300,-1185 306,-1191 306,-1197 306,-1197 306,-1209 306,-1209 306,-1215 300,-1221 294,-1221"/>
+<text text-anchor="middle" x="279" y="-1200.2" font-family="Noto Sans CJK KR" font-size="11.00">P08</text>
+</g>
+<!-- X3&#45;&gt;X4 -->
 <g id="edge18" class="edge">
-<title>EVIDENCE&#45;&gt;LEDGER</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M326.25,-161.88C313.41,-151.09 297.25,-137.51 283.57,-126.01"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="285,-123.92 277.87,-121.22 281.76,-127.78 285,-123.92"/>
+<title>X3&#45;&gt;X4</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-1257.81C279,-1248.83 279,-1237.69 279,-1227.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-1227.83 279,-1221.03 276.62,-1227.83 281.38,-1227.83"/>
 </g>
-<!-- LEDGER&#45;&gt;CLOSURE -->
+<!-- X5 -->
+<g id="node22" class="node">
+<title>X5</title>
+<path fill="#f8fafc" stroke="#64748b" d="M374,-1148C374,-1148 184,-1148 184,-1148 178,-1148 172,-1142 172,-1136 172,-1136 172,-1112 172,-1112 172,-1106 178,-1100 184,-1100 184,-1100 374,-1100 374,-1100 380,-1100 386,-1106 386,-1112 386,-1112 386,-1136 386,-1136 386,-1142 380,-1148 374,-1148"/>
+<text text-anchor="middle" x="279" y="-1133.2" font-family="Noto Sans CJK KR" font-size="11.00">CPP&#45;G03</text>
+<text text-anchor="middle" x="279" y="-1121.2" font-family="Noto Sans CJK KR" font-size="11.00">Algorithms 12~16 + Architecture 01~10</text>
+<text text-anchor="middle" x="279" y="-1109.2" font-family="Noto Sans CJK KR" font-size="11.00">G05·G06 폐쇄</text>
+</g>
+<!-- X4&#45;&gt;X5 -->
 <g id="edge19" class="edge">
-<title>LEDGER&#45;&gt;CLOSURE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M222.08,-80.88C202.93,-69.75 178.66,-55.66 158.49,-43.94"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="159.58,-41.66 152.09,-40.22 157.05,-46.02 159.58,-41.66"/>
+<title>X4&#45;&gt;X5</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-1184.91C279,-1176.13 279,-1165.16 279,-1155.02"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-1154.97 279,-1148.17 276.62,-1154.97 281.38,-1154.97"/>
+</g>
+<!-- X6 -->
+<g id="node23" class="node">
+<title>X6</title>
+<path fill="#ede9fe" stroke="#64748b" stroke-width="2" d="M294,-1063C294,-1063 264,-1063 264,-1063 258,-1063 252,-1057 252,-1051 252,-1051 252,-1039 252,-1039 252,-1033 258,-1027 264,-1027 264,-1027 294,-1027 294,-1027 300,-1027 306,-1033 306,-1039 306,-1039 306,-1051 306,-1051 306,-1057 300,-1063 294,-1063"/>
+<text text-anchor="middle" x="279" y="-1042.2" font-family="Noto Sans CJK KR" font-size="11.00">P10</text>
+</g>
+<!-- X5&#45;&gt;X6 -->
+<g id="edge20" class="edge">
+<title>X5&#45;&gt;X6</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-1099.9C279,-1090.58 279,-1079.82 279,-1070.37"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-1070.25 279,-1063.45 276.62,-1070.25 281.38,-1070.25"/>
+</g>
+<!-- X7 -->
+<g id="node24" class="node">
+<title>X7</title>
+<path fill="#f8fafc" stroke="#64748b" d="M348.5,-990C348.5,-990 209.5,-990 209.5,-990 203.5,-990 197.5,-984 197.5,-978 197.5,-978 197.5,-954 197.5,-954 197.5,-948 203.5,-942 209.5,-942 209.5,-942 348.5,-942 348.5,-942 354.5,-942 360.5,-948 360.5,-954 360.5,-954 360.5,-978 360.5,-978 360.5,-984 354.5,-990 348.5,-990"/>
+<text text-anchor="middle" x="279" y="-975.2" font-family="Noto Sans CJK KR" font-size="11.00">CPP&#45;G04</text>
+<text text-anchor="middle" x="279" y="-963.2" font-family="Noto Sans CJK KR" font-size="11.00">C++ 08~09 + Networks 01~11</text>
+<text text-anchor="middle" x="279" y="-951.2" font-family="Noto Sans CJK KR" font-size="11.00">G03 폐쇄</text>
+</g>
+<!-- X6&#45;&gt;X7 -->
+<g id="edge21" class="edge">
+<title>X6&#45;&gt;X7</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-1026.91C279,-1018.13 279,-1007.16 279,-997.02"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-996.97 279,-990.17 276.62,-996.97 281.38,-996.97"/>
+</g>
+<!-- X8 -->
+<g id="node25" class="node">
+<title>X8</title>
+<path fill="#ede9fe" stroke="#64748b" stroke-width="2" d="M294,-899C294,-899 264,-899 264,-899 258,-899 252,-893 252,-887 252,-887 252,-875 252,-875 252,-869 258,-863 264,-863 264,-863 294,-863 294,-863 300,-863 306,-869 306,-875 306,-875 306,-887 306,-887 306,-893 300,-899 294,-899"/>
+<text text-anchor="middle" x="279" y="-878.2" font-family="Noto Sans CJK KR" font-size="11.00">P11</text>
+</g>
+<!-- X7&#45;&gt;X8 -->
+<g id="edge22" class="edge">
+<title>X7&#45;&gt;X8</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-941.88C279,-930.78 279,-917.49 279,-906.25"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-906.01 279,-899.21 276.62,-906.01 281.38,-906.01"/>
+</g>
+<!-- W7 -->
+<g id="node33" class="node">
+<title>W7</title>
+<path fill="#fef3c7" stroke="#64748b" d="M551,-984C551,-984 481,-984 481,-984 475,-984 469,-978 469,-972 469,-972 469,-960 469,-960 469,-954 475,-948 481,-948 481,-948 551,-948 551,-948 557,-948 563,-954 563,-960 563,-960 563,-972 563,-972 563,-978 557,-984 551,-984"/>
+<text text-anchor="middle" x="516" y="-969.2" font-family="Noto Sans CJK KR" font-size="11.00">WEB&#45;S01</text>
+<text text-anchor="middle" x="516" y="-957.2" font-family="Noto Sans CJK KR" font-size="11.00">CPP&#45;G04 동기화</text>
+</g>
+<!-- X7&#45;&gt;W7 -->
+<g id="edge37" class="edge">
+<title>X7&#45;&gt;W7</title>
+<path fill="none" stroke="#dc2626" stroke-width="2" d="M360.56,-966C394.03,-966 431.87,-966 461.83,-966"/>
+<polygon fill="#dc2626" stroke="#dc2626" stroke-width="2" points="462.08,-968.38 468.88,-966 462.08,-963.62 462.08,-968.38"/>
+<text text-anchor="middle" x="414.75" y="-971.8" font-family="Noto Sans CJK KR" font-size="9.00">Networks 01~11</text>
+</g>
+<!-- X9 -->
+<g id="node26" class="node">
+<title>X9</title>
+<path fill="#ddd6fe" stroke="#64748b" d="M321.68,-736.51C321.68,-736.51 321.68,-741.49 321.68,-741.49 321.68,-743.97 319.39,-747.42 317.1,-748.39 317.1,-748.39 301.26,-755.07 301.26,-755.07 298.97,-756.03 294.19,-757 291.71,-757 291.71,-757 266.29,-757 266.29,-757 263.81,-757 259.03,-756.03 256.74,-755.07 256.74,-755.07 240.9,-748.39 240.9,-748.39 238.61,-747.42 236.32,-743.97 236.32,-741.49 236.32,-741.49 236.32,-736.51 236.32,-736.51 236.32,-734.03 238.61,-730.58 240.9,-729.61 240.9,-729.61 256.74,-722.93 256.74,-722.93 259.03,-721.97 263.81,-721 266.29,-721 266.29,-721 291.71,-721 291.71,-721 294.19,-721 298.97,-721.97 301.26,-722.93 301.26,-722.93 317.1,-729.61 317.1,-729.61 319.39,-730.58 321.68,-734.03 321.68,-736.51"/>
+<text text-anchor="middle" x="279" y="-736.2" font-family="Noto Sans CJK KR" font-size="11.00">C++ 완료</text>
+</g>
+<!-- X8&#45;&gt;X9 -->
+<g id="edge23" class="edge">
+<title>X8&#45;&gt;X9</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-862.83C279,-838.17 279,-792.58 279,-764.41"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-764.11 279,-757.31 276.62,-764.11 281.38,-764.11"/>
+</g>
+<!-- W4 -->
+<g id="node30" class="node">
+<title>W4</title>
+<path fill="#d1fae5" stroke="#64748b" stroke-width="2" d="M499,-1221C499,-1221 469,-1221 469,-1221 463,-1221 457,-1215 457,-1209 457,-1209 457,-1197 457,-1197 457,-1191 463,-1185 469,-1185 469,-1185 499,-1185 499,-1185 505,-1185 511,-1191 511,-1197 511,-1197 511,-1209 511,-1209 511,-1215 505,-1221 499,-1221"/>
+<text text-anchor="middle" x="484" y="-1200.2" font-family="Noto Sans CJK KR" font-size="11.00">P13</text>
+</g>
+<!-- X8&#45;&gt;W4 -->
+<g id="edge39" class="edge">
+<title>X8&#45;&gt;W4</title>
+<path fill="none" stroke="#94a3b8" stroke-width="1.1" stroke-dasharray="5,2" d="M306.24,-887.48C379.8,-902.3 577,-942 577,-942 577,-942 577,-990 577,-990 577,-990 552,-1148 552,-1148 552,-1148 530.18,-1165.32 511.27,-1180.35"/>
+<polygon fill="#94a3b8" stroke="#94a3b8" stroke-width="1.1" points="509.36,-1178.82 505.52,-1184.91 512.32,-1182.55 509.36,-1178.82"/>
+<text text-anchor="middle" x="587.5" y="-1042.8" font-family="Noto Sans CJK KR" font-size="9.00">I/O 비교</text>
+</g>
+<!-- X9&#45;&gt;MERGE -->
+<g id="edge41" class="edge">
+<title>X9&#45;&gt;MERGE</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-720.97C279,-691.01 279,-632 279,-632 279,-632 279,-632 279,-199 279,-199 279,-175.23 279,-152.25"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-151.98 279,-145.18 276.62,-151.98 281.38,-151.98"/>
+</g>
+<!-- W2 -->
+<g id="node28" class="node">
+<title>W2</title>
+<path fill="#d1fae5" stroke="#64748b" stroke-width="2" d="M479,-1367C479,-1367 449,-1367 449,-1367 443,-1367 437,-1361 437,-1355 437,-1355 437,-1343 437,-1343 437,-1337 443,-1331 449,-1331 449,-1331 479,-1331 479,-1331 485,-1331 491,-1337 491,-1343 491,-1343 491,-1355 491,-1355 491,-1361 485,-1367 479,-1367"/>
+<text text-anchor="middle" x="464" y="-1346.2" font-family="Noto Sans CJK KR" font-size="11.00">P12</text>
+</g>
+<!-- W1&#45;&gt;W2 -->
+<g id="edge24" class="edge">
+<title>W1&#45;&gt;W2</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M461.2,-1403.9C461.68,-1394.58 462.24,-1383.82 462.73,-1374.37"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="465.12,-1374.37 463.09,-1367.45 460.36,-1374.12 465.12,-1374.37"/>
+</g>
+<!-- W3 -->
+<g id="node29" class="node">
+<title>W3</title>
+<path fill="#f8fafc" stroke="#64748b" d="M513.5,-1294C513.5,-1294 436.5,-1294 436.5,-1294 430.5,-1294 424.5,-1288 424.5,-1282 424.5,-1282 424.5,-1270 424.5,-1270 424.5,-1264 430.5,-1258 436.5,-1258 436.5,-1258 513.5,-1258 513.5,-1258 519.5,-1258 525.5,-1264 525.5,-1270 525.5,-1270 525.5,-1282 525.5,-1282 525.5,-1288 519.5,-1294 513.5,-1294"/>
+<text text-anchor="middle" x="475" y="-1279.2" font-family="Noto Sans CJK KR" font-size="11.00">WEB&#45;G02</text>
+<text text-anchor="middle" x="475" y="-1267.2" font-family="Noto Sans CJK KR" font-size="11.00">Web Apps 00~06</text>
+</g>
+<!-- W2&#45;&gt;W3 -->
+<g id="edge25" class="edge">
+<title>W2&#45;&gt;W3</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M466.66,-1330.81C468.05,-1321.83 469.78,-1310.69 471.3,-1300.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="473.67,-1301.11 472.36,-1294.03 468.97,-1300.38 473.67,-1301.11"/>
+</g>
+<!-- W3&#45;&gt;W4 -->
+<g id="edge26" class="edge">
+<title>W3&#45;&gt;W4</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M477.18,-1257.81C478.32,-1248.83 479.73,-1237.69 480.97,-1227.89"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="483.35,-1228.07 481.84,-1221.03 478.63,-1227.48 483.35,-1228.07"/>
+</g>
+<!-- W5 -->
+<g id="node31" class="node">
+<title>W5</title>
+<path fill="#f8fafc" stroke="#64748b" d="M526,-1148C526,-1148 452,-1148 452,-1148 446,-1148 440,-1142 440,-1136 440,-1136 440,-1112 440,-1112 440,-1106 446,-1100 452,-1100 452,-1100 526,-1100 526,-1100 532,-1100 538,-1106 538,-1112 538,-1112 538,-1136 538,-1136 538,-1142 532,-1148 526,-1148"/>
+<text text-anchor="middle" x="489" y="-1133.2" font-family="Noto Sans CJK KR" font-size="11.00">WEB&#45;G03</text>
+<text text-anchor="middle" x="489" y="-1121.2" font-family="Noto Sans CJK KR" font-size="11.00">Frontend 00~04</text>
+<text text-anchor="middle" x="489" y="-1109.2" font-family="Noto Sans CJK KR" font-size="11.00">G10 폐쇄</text>
+</g>
+<!-- W4&#45;&gt;W5 -->
+<g id="edge27" class="edge">
+<title>W4&#45;&gt;W5</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M485.11,-1184.91C485.68,-1176.13 486.39,-1165.16 487.05,-1155.02"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="489.43,-1155.11 487.5,-1148.17 484.68,-1154.81 489.43,-1155.11"/>
+</g>
+<!-- W6 -->
+<g id="node32" class="node">
+<title>W6</title>
+<path fill="#d1fae5" stroke="#64748b" stroke-width="2" d="M520,-1063C520,-1063 490,-1063 490,-1063 484,-1063 478,-1057 478,-1051 478,-1051 478,-1039 478,-1039 478,-1033 484,-1027 490,-1027 490,-1027 520,-1027 520,-1027 526,-1027 532,-1033 532,-1039 532,-1039 532,-1051 532,-1051 532,-1057 526,-1063 520,-1063"/>
+<text text-anchor="middle" x="505" y="-1042.2" font-family="Noto Sans CJK KR" font-size="11.00">P14</text>
+</g>
+<!-- W5&#45;&gt;W6 -->
+<g id="edge28" class="edge">
+<title>W5&#45;&gt;W6</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M493.8,-1099.9C495.74,-1090.58 497.97,-1079.82 499.94,-1070.37"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="502.32,-1070.6 501.37,-1063.45 497.66,-1069.63 502.32,-1070.6"/>
+</g>
+<!-- W6&#45;&gt;W7 -->
+<g id="edge29" class="edge">
+<title>W6&#45;&gt;W7</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M507.44,-1026.91C508.95,-1016.34 510.91,-1002.62 512.57,-990.98"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="514.96,-991.11 513.57,-984.04 510.25,-990.44 514.96,-991.11"/>
+</g>
+<!-- W8 -->
+<g id="node34" class="node">
+<title>W8</title>
+<path fill="#f8fafc" stroke="#64748b" d="M632,-905C632,-905 422,-905 422,-905 416,-905 410,-899 410,-893 410,-893 410,-869 410,-869 410,-863 416,-857 422,-857 422,-857 632,-857 632,-857 638,-857 644,-863 644,-869 644,-869 644,-893 644,-893 644,-899 638,-905 632,-905"/>
+<text text-anchor="middle" x="527" y="-890.2" font-family="Noto Sans CJK KR" font-size="11.00">WEB&#45;G04</text>
+<text text-anchor="middle" x="527" y="-878.2" font-family="Noto Sans CJK KR" font-size="11.00">Networks 12 + Web Apps 07~09 + DB 01~12</text>
+<text text-anchor="middle" x="527" y="-866.2" font-family="Noto Sans CJK KR" font-size="11.00">G07·G09·G11 폐쇄</text>
+</g>
+<!-- W7&#45;&gt;W8 -->
+<g id="edge30" class="edge">
+<title>W7&#45;&gt;W8</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M518.28,-947.8C519.65,-937.48 521.42,-924.07 523.02,-912.04"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="525.4,-912.21 523.93,-905.16 520.68,-911.59 525.4,-912.21"/>
+</g>
+<!-- W9 -->
+<g id="node35" class="node">
+<title>W9</title>
+<path fill="#d1fae5" stroke="#64748b" stroke-width="2" d="M533,-811C533,-811 503,-811 503,-811 497,-811 491,-805 491,-799 491,-799 491,-787 491,-787 491,-781 497,-775 503,-775 503,-775 533,-775 533,-775 539,-775 545,-781 545,-787 545,-787 545,-799 545,-799 545,-805 539,-811 533,-811"/>
+<text text-anchor="middle" x="518" y="-790.2" font-family="Noto Sans CJK KR" font-size="11.00">P15</text>
+</g>
+<!-- W8&#45;&gt;W9 -->
+<g id="edge31" class="edge">
+<title>W8&#45;&gt;W9</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M524.59,-856.95C523.33,-844.89 521.78,-830.14 520.51,-817.95"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="522.86,-817.62 519.79,-811.1 518.13,-818.12 522.86,-817.62"/>
+</g>
+<!-- W10 -->
+<g id="node36" class="node">
+<title>W10</title>
+<path fill="#a7f3d0" stroke="#64748b" d="M520.44,-628.51C520.44,-628.51 520.44,-633.49 520.44,-633.49 520.44,-635.97 518.12,-639.35 515.81,-640.25 515.81,-640.25 497.87,-647.2 497.87,-647.2 495.55,-648.1 490.75,-649 488.27,-649 488.27,-649 459.73,-649 459.73,-649 457.25,-649 452.45,-648.1 450.13,-647.2 450.13,-647.2 432.19,-640.25 432.19,-640.25 429.88,-639.35 427.56,-635.97 427.56,-633.49 427.56,-633.49 427.56,-628.51 427.56,-628.51 427.56,-626.03 429.88,-622.65 432.19,-621.75 432.19,-621.75 450.13,-614.8 450.13,-614.8 452.45,-613.9 457.25,-613 459.73,-613 459.73,-613 488.27,-613 488.27,-613 490.75,-613 495.55,-613.9 497.87,-614.8 497.87,-614.8 515.81,-621.75 515.81,-621.75 518.12,-622.65 520.44,-626.03 520.44,-628.51"/>
+<text text-anchor="middle" x="474" y="-628.2" font-family="Noto Sans CJK KR" font-size="11.00">WEB 완료</text>
+</g>
+<!-- W9&#45;&gt;W10 -->
+<g id="edge32" class="edge">
+<title>W9&#45;&gt;W10</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M513.29,-774.88C505.43,-746.28 489.6,-688.71 480.62,-656.06"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="482.91,-655.41 478.81,-649.48 478.32,-656.67 482.91,-655.41"/>
+</g>
+<!-- W10&#45;&gt;MERGE -->
+<g id="edge42" class="edge">
+<title>W10&#45;&gt;MERGE</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M458.77,-612.84C435.81,-586.98 395,-541 395,-541 395,-541 395,-541 395,-199 395,-199 352.98,-166.76 319.52,-141.08"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="320.65,-138.95 313.8,-136.7 317.75,-142.73 320.65,-138.95"/>
+</g>
+<!-- POST -->
+<g id="node38" class="node">
+<title>POST</title>
+<path fill="#fee2e2" stroke="#b91c1c" d="M410,-36C410,-36 148,-36 148,-36 142,-36 136,-30 136,-24 136,-24 136,-12 136,-12 136,-6 142,0 148,0 148,0 410,0 410,0 416,0 422,-6 422,-12 422,-12 422,-24 422,-24 422,-30 416,-36 410,-36"/>
+<text text-anchor="middle" x="279" y="-15.2" font-family="Noto Sans CJK KR" font-size="11.00">P16~P24는 기본 PATH의 Java·Spring·Sportsbook 순서</text>
+</g>
+<!-- MERGE&#45;&gt;POST -->
+<g id="edge43" class="edge">
+<title>MERGE&#45;&gt;POST</title>
+<path fill="none" stroke="#64748b" stroke-width="1.1" d="M279,-72.82C279,-62.86 279,-52.24 279,-43.08"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.1" points="281.38,-42.9 279,-36.1 276.62,-42.9 281.38,-42.9"/>
 </g>
 </g>
 </svg>

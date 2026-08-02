@@ -1,21 +1,28 @@
-flowchart LR
-  G[Guide branch\n장·예제·누적 실습] --> P[의존성 폐쇄 Packet\nrequires·unlocks·completion]
-  P --> Q{기억과 증거가 충분한가?}
-  Q -->|새로 복습| D[DONE\n본문+실습+검사]
-  Q -->|기억 검증| V[VERIFIED\n설명+좁은 검사+근거]
-  Q -->|근거 부족| M[DEFERRED / MISSING\n프로젝트 진입 차단]
-  M --> P
+flowchart TB
+  G00["G00 guide-git 01~06"]
 
-  D --> C[C project slot]
-  D --> CPP[C++ project slot]
-  D --> W[WEB project slot]
-  V --> C
-  V --> CPP
-  V --> W
+  subgraph C["C TRACK — G/P 선형"]
+    direction TB
+    C1["C-G01: C 01~04·06"] --> C2["P01"] --> C3["C-G02: Unix 01~03"] --> C4["P02"] --> C5["C-G03: C 05"] --> C6["P03"] --> C7["C-G04: C 08 + Unix 04"] --> C8["P04"] --> C9["C-G05: C 07·09 + Unix 05~06"] --> C10["P05"] --> C11["C-G06: C 10 + OS 01~06"] --> C12["P06"] --> C13["C-G07: Unix 07~09 + OS 07~10"] --> C14["C-S01"] --> C15["P09"] --> C16["C 완료"]
+  end
 
-  C --> E[프로젝트 evidence]
-  CPP --> E
-  W --> E
-  E --> L[Packet ledger 갱신]
-  L --> F[최종 Guide closure\nDEFERRED / MISSING = 0]
-  P -. 남은 필수 범위 .-> F
+  subgraph CPP["C++ TRACK — G/P 선형"]
+    direction TB
+    X1["CPP-G01: C++ 01~05"] --> X2["P07"] --> X3["CPP-G02: C++ 06~07 + Algorithms 01~11"] --> X4["P08"] --> X5["CPP-G03: Algorithms 12~16 + Architecture 01~10"] --> X6["P10"] --> X7["CPP-G04: C++ 08~09 + Networks 01~11"] --> X8["P11"] --> X9["C++ 완료"]
+  end
+
+  subgraph WEB["WEB TRACK — G/P 선형"]
+    direction TB
+    W1["WEB-G01: Web Infra 01~07"] --> W2["P12"] --> W3["WEB-G02: Web Apps 00~06"] --> W4["P13"] --> W5["WEB-G03: Frontend 00~04"] --> W6["P14"] --> W7["WEB-S01"] --> W8["WEB-G04: Networks 12 + Web Apps 07~09 + DB 01~12"] --> W9["P15"] --> W10["WEB 완료"]
+  end
+
+  G00 --> C1
+  G00 --> X1
+  G00 --> W1
+  X3 ==>|"Algorithms 01~10"| C14
+  X7 ==>|"Networks 01~11"| W7
+  M{"필수 G00~G11 전체 완료"}
+  C16 --> M
+  X9 --> M
+  W10 --> M
+  M --> POST["P16~P24 후속 PATH"]
