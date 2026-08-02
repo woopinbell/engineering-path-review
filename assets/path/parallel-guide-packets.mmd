@@ -1,0 +1,21 @@
+flowchart LR
+  G[Guide branch\n장·예제·누적 실습] --> P[의존성 폐쇄 Packet\nrequires·unlocks·completion]
+  P --> Q{기억과 증거가 충분한가?}
+  Q -->|새로 복습| D[DONE\n본문+실습+검사]
+  Q -->|기억 검증| V[VERIFIED\n설명+좁은 검사+근거]
+  Q -->|근거 부족| M[DEFERRED / MISSING\n프로젝트 진입 차단]
+  M --> P
+
+  D --> C[C project slot]
+  D --> CPP[C++ project slot]
+  D --> W[WEB project slot]
+  V --> C
+  V --> CPP
+  V --> W
+
+  C --> E[프로젝트 evidence]
+  CPP --> E
+  W --> E
+  E --> L[Packet ledger 갱신]
+  L --> F[최종 Guide closure\nDEFERRED / MISSING = 0]
+  P -. 남은 필수 범위 .-> F

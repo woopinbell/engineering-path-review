@@ -1,0 +1,43 @@
+복습용 C · C++ · WEB 3트랙 병렬 PATH
+
+공통 원칙
+- 프로젝트: 각 트랙 안에서 한 번에 하나만 활성화하고 원자적으로 완료
+- 가이드: 전체 저장소가 아니라 의존성 폐쇄 packet을 필요한 시점에 선택
+- packet: DONE 또는 VERIFIED만 프로젝트 진입에 사용
+- L: 코딩 테스트·감사·지원 준비를 trigger가 있을 때만 한 회차 실행
+
+C TRACK
+P01 c-foundation
+  → P02 buffered-line-reader
+  → P03 format-printer
+  → P04 signal-message-bus
+  → P05 small-shell
+  → P06 thread-dining
+P09 stack-sort: P01 + GA-CORE 뒤 C slot에서 실행
+
+C++ TRACK
+P07 cpp-foundation
+  → P08 stl-container
+  → P10 ray-scene-tracer
+  → P11 irc-relay-server
+P10과 P11은 P07과 필수 packet이 닫혔다면 순서 교환 가능
+
+WEB TRACK
+P12 container-stack
+  → P13 web-boundary-inspector
+  → P14 portfolio-site [첫 일반 지원]
+  → B3 WEB hard gate
+  → P15 pong-pong
+
+B1 시스템·네트워크 감사
+P05 + P06 + P11 + P12 + P13
+
+B2 알고리즘·구조 감사
+P09 + P08 + P10
+
+B4 Guide closure
+필수 packet은 DONE / VERIFIED / N/A
+DEFERRED / MISSING 0개
+
+합류 뒤
+P16~P24는 docs/01-PATH.md의 기본 Java·Spring·Sportsbook 구간을 따른다.

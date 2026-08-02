@@ -1,0 +1,45 @@
+digraph GuidePackets {
+  graph [rankdir=TB, newrank=true, bgcolor="white", pad="0.35", nodesep="0.42", ranksep="0.55",
+    fontname="Noto Sans CJK KR", fontsize=21,
+    label="가이드 전체 원자성 해제 · 의존성 폐쇄 패킷 선택 모델", labelloc=t, splines=spline];
+  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK KR", fontsize=12,
+    margin="0.15,0.10", color="#64748b", fillcolor="#f8fafc"];
+  edge [fontname="Noto Sans CJK KR", fontsize=9, color="#64748b", arrowsize=0.72, penwidth=1.15];
+
+  GUIDE [label="Guide branch\n장 · 예제 · 누적 실습", fillcolor="#eef2ff", color="#4f46a5"];
+  PACKET [label="의존성 폐쇄 Packet\nrequires · unlocks · completion", fillcolor="#f3edff", color="#6b46a5"];
+  CHECK [shape=diamond, label="기억과 증거가\n충분한가?", fillcolor="#fff4d6", color="#a66b00"];
+  DONE [label="DONE\n본문 + 실습 + 검사", fillcolor="#eaf8ee", color="#2f7d32"];
+  VERIFIED [label="VERIFIED\n설명 + 좁은 검사 + 근거", fillcolor="#eaf8ee", color="#2f7d32"];
+  BLOCK [label="DEFERRED / MISSING\n프로젝트 진입 차단", fillcolor="#fdecec", color="#a63d40"];
+
+  C [label="C project slot\nP01~P06 · P09", fillcolor="#eaf2ff", color="#2457a6"];
+  CPP [label="C++ project slot\nP07·P08·P10·P11", fillcolor="#f3edff", color="#6b46a5"];
+  WEB [label="WEB project slot\nP12~P15", fillcolor="#eaf8ee", color="#2f7d32"];
+  EVIDENCE [label="프로젝트 evidence\nstate · ownership · failure · verification", fillcolor="#f1f5f9", color="#475569"];
+  LEDGER [label="Packet ledger 갱신\n경로 · 명령 · 결론 · 다음 감사", fillcolor="#fff6df", color="#a66b00"];
+  CLOSURE [label="최종 Guide closure\n필수 packet의 DEFERRED / MISSING = 0", fillcolor="#eef2f7", color="#475569", penwidth=1.6];
+
+  GUIDE -> PACKET -> CHECK;
+  CHECK -> DONE [label="새로 복습"];
+  CHECK -> VERIFIED [label="기억 검증"];
+  CHECK -> BLOCK [label="근거 부족"];
+  BLOCK -> PACKET [label="필요 범위 완료"];
+
+  {rank=same; DONE; VERIFIED; BLOCK;}
+  {rank=same; C; CPP; WEB;}
+  C -> CPP -> WEB [style=invis, weight=100];
+
+  DONE -> C;
+  DONE -> CPP;
+  DONE -> WEB;
+  VERIFIED -> C;
+  VERIFIED -> CPP;
+  VERIFIED -> WEB;
+
+  C -> EVIDENCE;
+  CPP -> EVIDENCE;
+  WEB -> EVIDENCE;
+  EVIDENCE -> LEDGER -> CLOSURE;
+  PACKET -> CLOSURE [style=dashed, label="남은 필수 범위"];
+}

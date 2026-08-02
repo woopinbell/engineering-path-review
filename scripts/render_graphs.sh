@@ -9,7 +9,7 @@ command -v dot >/dev/null 2>&1 || {
   exit 1
 }
 
-for name in master-path l-lane career-expansion; do
+for name in master-path l-lane career-expansion parallel-path parallel-guide-packets; do
   dot -Tsvg "$asset_dir/$name.dot" -o "$asset_dir/$name.svg.tmp"
   dot -Tpng -Gdpi=170 "$asset_dir/$name.dot" -o "$asset_dir/$name.png.tmp"
   NAME="$name" ASSET_DIR="$asset_dir" python3 - <<'PY'
@@ -44,7 +44,7 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 manifest = {}
-for name in ("master-path", "l-lane", "career-expansion"):
+for name in ("master-path", "l-lane", "career-expansion", "parallel-path", "parallel-guide-packets"):
     manifest[name] = {
         "dot_sha256": digest(asset / f"{name}.dot"),
         "svg_sha256": digest(asset / f"{name}.svg"),

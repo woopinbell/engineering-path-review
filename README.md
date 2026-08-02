@@ -8,16 +8,17 @@
 
 | 순서 | 문서 | 결정 대상 |
 |---:|---|---|
-| 1 | [선형·병렬 PATH](docs/01-PATH.md) | P·G의 선형 진행, 하드 게이트, 채용 마일스톤 |
-| 2 | [L 작업 레인](docs/02-L-LANE.md) | 코딩 테스트·감사·지원 준비를 언제 한 회차씩 여는지 |
-| 3 | [저장소·orphan branch 전략](docs/03-REPOSITORY-STRATEGY.md) | `42`, `guides`, 독립 저장소의 단일 정본과 보안 한계 |
-| 4 | [채용 지원 전략](docs/04-APPLICATION-STRATEGY.md) | P14 첫 지원과 이후 직군 확장 |
-| 5 | [채용 공고 스냅숏](docs/05-JOBS-2026-08-03.md) | 기준일 당시 공고중·만료·등급·최소 PATH |
-| 6 | [검토·확정 절차](docs/06-REVIEW-PROCESS.md) | P0/P1 처리와 최종 이전 순서 |
-| 7 | [보안·무결성 기준](docs/07-SECURITY-AND-INTEGRITY.md) | 계정·ruleset·Actions·secret·release 설정 |
-| 8 | [위협 모델](docs/08-THREAT-MODEL.md) | 이 구조에서 실제로 방어할 실패와 비범위 |
-| 9 | [근거 등록부](docs/09-SOURCES.md) | 제공 자료·GitHub·웹 조사·분석 판단의 구분 |
-| 10 | [결정 기록](docs/10-DECISIONS.md) | 확정 사항과 변경이 필요한 조건 |
+| 1 | [선형·병렬 PATH](docs/01-PATH.md) | 보수적 기본 P·G 진행, 하드 게이트, 채용 마일스톤 |
+| 2 | [복습용 3트랙 병렬 PATH](docs/11-PARALLEL-PATH.md) | C·C++·WEB 동시 진행과 가이드 개념 패킷 선택 |
+| 3 | [L 작업 레인](docs/02-L-LANE.md) | 코딩 테스트·감사·지원 준비를 언제 한 회차씩 여는지 |
+| 4 | [저장소·orphan branch 전략](docs/03-REPOSITORY-STRATEGY.md) | `42`, `guides`, 독립 저장소의 단일 정본과 보안 한계 |
+| 5 | [채용 지원 전략](docs/04-APPLICATION-STRATEGY.md) | P14 첫 지원과 이후 직군 확장 |
+| 6 | [채용 공고 스냅숏](docs/05-JOBS-2026-08-03.md) | 기준일 당시 공고중·만료·등급·최소 PATH |
+| 7 | [검토·확정 절차](docs/06-REVIEW-PROCESS.md) | P0/P1 처리와 최종 이전 순서 |
+| 8 | [보안·무결성 기준](docs/07-SECURITY-AND-INTEGRITY.md) | 계정·ruleset·Actions·secret·release 설정 |
+| 9 | [위협 모델](docs/08-THREAT-MODEL.md) | 이 구조에서 실제로 방어할 실패와 비범위 |
+| 10 | [근거 등록부](docs/09-SOURCES.md) | 제공 자료·GitHub·웹 조사·분석 판단의 구분 |
+| 11 | [결정 기록](docs/10-DECISIONS.md) | 확정 사항과 변경이 필요한 조건 |
 
 ## 최종 저장소로 옮길 후보 문서 세트
 
@@ -30,7 +31,7 @@
 
 ## 레인 규칙
 
-> **각 병렬 레인 내부에서는 블록을 원자적으로 완료한다. 서로 의존하지 않는 다른 레인의 블록은 동시에 진행할 수 있다.**
+> **기본 PATH는 P·G 레인 내부의 블록을 원자적으로 완료한다. 복습용 가속 모드에서는 C·C++·WEB 프로젝트를 각각 원자적으로 완료하고, 가이드는 의존성이 닫힌 개념 패킷 단위로 완료한다.**
 
 ```text
 P: 프로젝트 1개
@@ -38,7 +39,7 @@ G: 가이드 1개
 L: 조건이 충족됐을 때 여는 한정 작업 1회
 ```
 
-`L`은 세 번째 장기 학습 spine이 아니다. 코딩 테스트, 연결 감사, 지원 준비처럼 **명시된 트리거가 생겼을 때만 열고 한 회차에서 닫는 작업 큐**다.
+`L`은 세 번째 장기 학습 spine이 아니다. 코딩 테스트, 연결 감사, 지원 준비처럼 **명시된 트리거가 생겼을 때만 열고 한 회차에서 닫는 작업 큐**다. 복습용 가속 모드의 상세 WIP와 패킷 상태는 [3트랙 병렬 PATH](docs/11-PARALLEL-PATH.md)를 따른다.
 
 ```text
 현재 P: ________ | 현재 G: ________ | 이번 L: ________ | 다음 하드 게이트: ________

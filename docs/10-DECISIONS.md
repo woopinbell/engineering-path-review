@@ -40,6 +40,13 @@
 - **결정:** 검토 중 private, 공개 전 secret scanning·push protection·private vulnerability reporting·ruleset을 설정한다.
 - **결과:** workflow 최소 권한, action full SHA, symlink/secret/path traversal 검사와 결정론적 package manifest를 사용한다.
 
+## D09 — 복습용 3트랙 병렬 모드
+
+- **결정:** 기본 PATH와 별도로 C·C++·WEB 프로젝트를 병렬 진행하는 가속 모드를 제공한다.
+- **결과:** 프로젝트는 각 트랙에서 원자적으로 완료하고, 가이드는 저장소 전체가 아니라 의존성이 닫힌 개념 패킷을 `DONE/VERIFIED`한 뒤 사용한다.
+- **경계:** P09는 C 교차 프로젝트로 재배치할 수 있지만 P 번호와 정본은 바꾸지 않는다. P16~P24는 기본 PATH를 유지한다.
+- **복귀:** 증거 누락·반복 재작업·정본 혼선이 발생하면 완료 근거를 보존한 채 기본 PATH로 돌아간다.
+
 ## 변경 기록 형식
 
 ```text

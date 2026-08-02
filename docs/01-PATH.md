@@ -1,5 +1,7 @@
 # 선형·병렬 PATH
 
+이 문서는 신규 학습과 보수적인 복습에 사용하는 기본 실행안이다. 42 과정을 이미 수료했고 C·C++·WEB 프로젝트 세 개를 동시에 유지할 수 있다면 [복습용 3트랙 병렬 PATH](11-PARALLEL-PATH.md)를 대체 실행 모드로 사용할 수 있다.
+
 ## 실행 그래프
 
 [전체 SVG](../assets/path/master-path.svg) · [전체 PNG](../assets/path/master-path.png) · [Mermaid](../assets/path/master-path.mmd) · [Graphviz DOT](../assets/path/master-path.dot) · [텍스트](../assets/path/master-path.txt) · [L 레인 상세](02-L-LANE.md)

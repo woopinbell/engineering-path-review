@@ -23,6 +23,7 @@ REQUIRED = {
     "docs/04-APPLICATION-STRATEGY.md", "docs/05-JOBS-2026-08-03.md",
     "docs/06-REVIEW-PROCESS.md", "docs/07-SECURITY-AND-INTEGRITY.md",
     "docs/08-THREAT-MODEL.md", "docs/09-SOURCES.md", "docs/10-DECISIONS.md",
+    "docs/11-PARALLEL-PATH.md",
     "data/jobs-2026-08-03.json",
     "scripts/build_jobs.py", "scripts/check_repo.py", "scripts/render_graphs.sh",
     "scripts/package_release.py", "tests/test_security_tools.py",
@@ -49,7 +50,13 @@ REQUIRED = {
     "assets/path/l-lane.svg", "assets/path/l-lane.png", "assets/path/l-lane.txt",
     "assets/path/career-expansion.dot", "assets/path/career-expansion.mmd",
     "assets/path/career-expansion.svg", "assets/path/career-expansion.png",
-    "assets/path/career-expansion.txt", "assets/path/render-manifest.json",
+    "assets/path/career-expansion.txt",
+    "assets/path/parallel-path.dot", "assets/path/parallel-path.mmd",
+    "assets/path/parallel-path.svg", "assets/path/parallel-path.png",
+    "assets/path/parallel-path.txt",
+    "assets/path/parallel-guide-packets.dot", "assets/path/parallel-guide-packets.mmd",
+    "assets/path/parallel-guide-packets.svg", "assets/path/parallel-guide-packets.png",
+    "assets/path/parallel-guide-packets.txt", "assets/path/render-manifest.json",
 }
 PROJECT_IDS = [f"P{i:02d}" for i in range(1, 25)]
 GUIDE_IDS = [f"G{i:02d}" for i in range(0, 15)]
@@ -271,7 +278,7 @@ def check_render_manifest(errors: list[str]) -> None:
     except (OSError, json.JSONDecodeError) as exc:
         errors.append(f"invalid render manifest: {exc}")
         return
-    for name in ("master-path", "l-lane", "career-expansion"):
+    for name in ("master-path", "l-lane", "career-expansion", "parallel-path", "parallel-guide-packets"):
         record = manifest.get(name)
         if not isinstance(record, dict):
             errors.append(f"missing graph manifest entry: {name}")

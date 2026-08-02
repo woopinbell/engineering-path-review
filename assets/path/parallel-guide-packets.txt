@@ -1,0 +1,17 @@
+가이드 패킷 선택 모델
+
+Guide branch
+  → 장·예제·누적 실습에서 의존성 폐쇄 Packet 정의
+  → 기억과 증거 점검
+     ├─ DONE: 본문 + 실습 + 검사
+     ├─ VERIFIED: 자료 없는 설명 + 좁은 검사 + 근거
+     └─ DEFERRED / MISSING: 프로젝트 진입 차단
+  → DONE / VERIFIED packet만 C·C++·WEB project slot에 제공
+  → 프로젝트에서 state·ownership·failure·verification evidence 생성
+  → Packet ledger 갱신
+  → 최종 Guide closure
+
+최종 조건
+- 필수 packet의 DEFERRED / MISSING = 0
+- 누적 실습은 중간 stage부터 적용하지 않음
+- 여기서 체리피킹은 Git cherry-pick이 아니라 가이드 내부 선택 복습을 의미
