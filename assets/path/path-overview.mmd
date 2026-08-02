@@ -1,0 +1,25 @@
+flowchart LR
+    B["BOOTSTRAP<br/>G00 Git → G01 C<br/>P 대기 · L 닫힘"]
+    C["C·POSIX<br/>P01→P06<br/>G02→G07 병렬<br/>G05 뒤 CT 개방"]
+    X["C++·SYSTEMS<br/>P07→P11<br/>알고리즘·구조·네트워크 감사<br/>P11 시스템 지원"]
+    W["WEB·FULLSTACK<br/>P12→P15<br/>P14 첫 일반 지원<br/>P15 풀스택·Node 확대"]
+    J["JAVA·BACKEND<br/>P16→P19<br/>P17 Java·Spring 지원"]
+    D["DISTRIBUTED·INTEGRATION<br/>P20→P24<br/>P20 분산 백엔드<br/>P22 API 경계·통합"]
+
+    B --> C --> X --> W --> J --> D
+
+    G01["G01 guide-c"] -.-> P01["P01"]
+    G03["G03 guide-cpp"] -.-> P07["P07"]
+    G08["G08 web-infrastructure"] -.-> P12["P12"]
+    G09["G09 web-applications"] -.-> P14["P14"]
+    G10["G10 frontend"] -.-> P14
+    G11["G11 database"] -.-> P15["P15"]
+    G12["G12 Java"] -.-> P16["P16"]
+    G13["G13 Spring Boot"] -.-> P17["P17"]
+    G14["G14 distributed"] -.-> P20["P20"]
+    G05["G05 algorithms"] -.-> CT["L: coding test"]
+
+    classDef phase fill:#EFF6FF,stroke:#2457A6,color:#102A43,stroke-width:1.5px;
+    classDef gate fill:#ECFDF5,stroke:#2F7D32,color:#173B19,stroke-width:1.2px;
+    class B,C,X,W,J,D phase;
+    class G01,G03,G05,G08,G09,G10,G11,G12,G13,G14,P01,P07,P12,P14,P15,P16,P17,P20,CT gate;

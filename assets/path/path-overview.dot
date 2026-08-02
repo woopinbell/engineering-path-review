@@ -1,0 +1,65 @@
+digraph EngineeringPath {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.5", ranksep="0.65", fontname="NanumSquare", labelloc="t", label="Engineering Path Review · P/G/L 선형·병렬 실행 지도", fontsize=24];
+  node [shape=plain, fontname="NanumSquare", fontsize=12];
+  edge [fontname="NanumSquare", fontsize=11, color="#404040", penwidth=1.6, arrowsize=0.8];
+
+  phase0 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#4B5563">
+      <TR><TD COLSPAN="2" BGCOLOR="#E5E7EB"><B>BOOTSTRAP</B></TD></TR>
+      <TR><TD BGCOLOR="#ECFDF5"><B>G</B></TD><TD ALIGN="LEFT">G00 guide-git<BR/>→ G01 guide-c</TD></TR>
+      <TR><TD BGCOLOR="#EFF6FF"><B>P</B></TD><TD ALIGN="LEFT">G01 완료 전에는 프로젝트 레인 대기</TD></TR>
+      <TR><TD BGCOLOR="#FFF7ED"><B>L</B></TD><TD ALIGN="LEFT">닫힘</TD></TR>
+    </TABLE>
+  >];
+
+  phase1 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#4B5563">
+      <TR><TD COLSPAN="2" BGCOLOR="#DBEAFE"><B>C · POSIX</B></TD></TR>
+      <TR><TD BGCOLOR="#EFF6FF"><B>P</B></TD><TD ALIGN="LEFT">P01 c-foundation [G01]<BR/>→ P02 buffered-line-reader<BR/>→ P03 format-printer<BR/>→ P04 signal-message-bus<BR/>→ P05 small-shell<BR/>→ P06 thread-dining</TD></TR>
+      <TR><TD BGCOLOR="#ECFDF5"><B>G</B></TD><TD ALIGN="LEFT">G02 Unix → G03 C++ → G04 OS<BR/>→ G05 Algorithms → G06 Architecture → G07 Networks</TD></TR>
+      <TR><TD BGCOLOR="#FFF7ED"><B>L</B></TD><TD ALIGN="LEFT">G05 완료 뒤 코딩 테스트 개방<BR/>C·OS 연결 감사</TD></TR>
+    </TABLE>
+  >];
+
+  phase2 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#4B5563">
+      <TR><TD COLSPAN="2" BGCOLOR="#DBEAFE"><B>C++ · SYSTEMS</B></TD></TR>
+      <TR><TD BGCOLOR="#EFF6FF"><B>P</B></TD><TD ALIGN="LEFT">P07 cpp-foundation [G03]<BR/>→ P08 stl-container<BR/>→ P09 stack-sort<BR/>→ P10 ray-scene-tracer<BR/>→ P11 irc-relay-server</TD></TR>
+      <TR><TD BGCOLOR="#ECFDF5"><B>G</B></TD><TD ALIGN="LEFT">G08 Web Infrastructure<BR/>→ G09 Web Applications → G10 Frontend<BR/>→ G11 Database → G12 Java</TD></TR>
+      <TR><TD BGCOLOR="#FFF7ED"><B>L</B></TD><TD ALIGN="LEFT">알고리즘·구조·네트워크 연결 감사</TD></TR>
+      <TR><TD BGCOLOR="#F3E8FF"><B>지원</B></TD><TD ALIGN="LEFT"><B>P11</B> C/C++ 시스템·서버 직군 개시</TD></TR>
+    </TABLE>
+  >];
+
+  phase3 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#4B5563">
+      <TR><TD COLSPAN="2" BGCOLOR="#DBEAFE"><B>WEB · FULLSTACK</B></TD></TR>
+      <TR><TD BGCOLOR="#EFF6FF"><B>P</B></TD><TD ALIGN="LEFT">P12 container-stack [G08]<BR/>→ P13 web-boundary-inspector<BR/>→ P14 portfolio-site [G09+G10]<BR/>→ P15 pong-pong [G11]</TD></TR>
+      <TR><TD BGCOLOR="#ECFDF5"><B>G</B></TD><TD ALIGN="LEFT">G13 Spring Boot → G14 Distributed Services<BR/>미완료 필수 가이드 정리</TD></TR>
+      <TR><TD BGCOLOR="#FFF7ED"><B>L</B></TD><TD ALIGN="LEFT">웹·네트워크·DB 연결 감사 + 코딩 테스트</TD></TR>
+      <TR><TD BGCOLOR="#F3E8FF"><B>지원</B></TD><TD ALIGN="LEFT"><B>P14</B> 첫 일반 지원·프런트엔드<BR/><B>P15</B> 풀스택·Node/TypeScript 확대</TD></TR>
+    </TABLE>
+  >];
+
+  phase4 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#4B5563">
+      <TR><TD COLSPAN="2" BGCOLOR="#DBEAFE"><B>JAVA · BACKEND FOUNDATION</B></TD></TR>
+      <TR><TD BGCOLOR="#EFF6FF"><B>P</B></TD><TD ALIGN="LEFT">P16 shared-protocol [G12]<BR/>→ P17 wallet [G13]<BR/>→ P18 risk<BR/>→ P19 odds-feed</TD></TR>
+      <TR><TD BGCOLOR="#ECFDF5"><B>G</B></TD><TD ALIGN="LEFT">G14 완료 여부 확인<BR/>필수 가이드 전체 완료</TD></TR>
+      <TR><TD BGCOLOR="#FFF7ED"><B>L</B></TD><TD ALIGN="LEFT">Sportsbook foundation 감사 + 코딩 테스트</TD></TR>
+      <TR><TD BGCOLOR="#F3E8FF"><B>지원</B></TD><TD ALIGN="LEFT"><B>P17</B> Java·Spring 백엔드 개시</TD></TR>
+    </TABLE>
+  >];
+
+  phase5 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" COLOR="#4B5563">
+      <TR><TD COLSPAN="2" BGCOLOR="#DBEAFE"><B>DISTRIBUTED · INTEGRATION</B></TD></TR>
+      <TR><TD BGCOLOR="#EFF6FF"><B>P</B></TD><TD ALIGN="LEFT">P20 betting [G14]<BR/>→ P21 settlement<BR/>→ P22 gateway<BR/>→ P23 admin-api<BR/>→ P24 orchestration</TD></TR>
+      <TR><TD BGCOLOR="#ECFDF5"><B>G</B></TD><TD ALIGN="LEFT">완료 · 필요한 문서 연결 감사만 수행</TD></TR>
+      <TR><TD BGCOLOR="#FFF7ED"><B>L</B></TD><TD ALIGN="LEFT">DB·분산·전체 연결 감사<BR/>최종 코딩 테스트 기준 확인</TD></TR>
+      <TR><TD BGCOLOR="#F3E8FF"><B>지원</B></TD><TD ALIGN="LEFT"><B>P20</B> 이벤트·분산 백엔드 확대<BR/><B>P22</B> API 경계·통합 역량 추가</TD></TR>
+    </TABLE>
+  >];
+
+  phase0 -> phase1 -> phase2 -> phase3 -> phase4 -> phase5;
+}

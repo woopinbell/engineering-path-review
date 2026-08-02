@@ -1,0 +1,626 @@
+{
+  "snapshot_date": "2026-08-03",
+  "timezone": "Asia/Seoul",
+  "candidate_profile": {
+    "education": "컴퓨터공학 학사",
+    "program": "42 과정 수료",
+    "military": "병역 만기 전역",
+    "english": "업무 영어가 약한 편",
+    "availability": "즉시 입사 가능",
+    "overseas_work": "해외근무 결격사유 없음",
+    "project_assumption": "각 공고의 최소 PATH 마일스톤까지 실제 프로젝트를 완료한 상태로 판정"
+  },
+  "grade_definitions": {
+    "즉시 지원": "해당 마일스톤에서 핵심 필수 요건과 프로젝트 증거가 직접 맞고, 명시적 경력 장벽이 낮다.",
+    "조건부 지원": "1~3년 요구, 넓은 제품 책임 또는 일부 운영 경험 공백이 있으나 프로젝트로 대체 설명할 수 있다.",
+    "향후 지원": "영어 또는 전문 도메인·현장·AI 시스템 경험이 핵심 장벽이므로 추가 준비 뒤 지원한다."
+  },
+  "active_jobs": [
+    {
+      "id": "twinny-cpp-199065",
+      "company": "트위니",
+      "title": "로봇 및 서버 소프트웨어 C++ 개발자",
+      "categories": [
+        "E",
+        "G"
+      ],
+      "milestone": "P11",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "대전",
+      "remote": "미표기",
+      "experience": "경력 무관",
+      "url": "https://twinny.career.greetinghr.com/ko/o/199065",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 경력 무관·정규직으로 표시됨",
+      "fit": "C++·Linux·네트워크·멀티스레드 요구가 irc-relay-server, ray-scene-tracer, thread-dining과 직접 연결된다.",
+      "gap": "로보틱스·ROS는 우대 사항이며, 영어 활용은 약점으로 남는다.",
+      "portfolio": [
+        "irc-relay-server",
+        "ray-scene-tracer",
+        "thread-dining"
+      ]
+    },
+    {
+      "id": "penta-cpp-247590",
+      "company": "펜타시큐리티",
+      "title": "C++ 소프트웨어 개발자(신입)",
+      "categories": [
+        "E"
+      ],
+      "milestone": "P11",
+      "grade": "즉시 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "신입",
+      "url": "https://www.wanted.co.kr/wd/247590",
+      "status_basis": "원티드에 상시채용으로 표시됨",
+      "fit": "HTTP/HTTPS 엔진과 C/C++ 요구가 네트워크·프로토콜·시스템 프로젝트와 맞는다.",
+      "gap": "보안 제품 도메인과 엔진 개발 경험을 프로젝트 설명으로 연결해야 한다.",
+      "portfolio": [
+        "irc-relay-server",
+        "web-boundary-inspector",
+        "small-shell"
+      ]
+    },
+    {
+      "id": "netcustomize-embedded-208508",
+      "company": "넷커스터마이즈",
+      "title": "임베디드 SW 개발자(신입)",
+      "categories": [
+        "E"
+      ],
+      "milestone": "P11",
+      "grade": "즉시 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "대전",
+      "remote": "미표기",
+      "experience": "신입",
+      "url": "https://www.wanted.co.kr/wd/208508",
+      "status_basis": "원티드에 상시채용으로 표시됨",
+      "fit": "C/C++ 설계·시험 요구에 시스템 과제와 검증 중심 devlog를 제시할 수 있다.",
+      "gap": "임베디드·위성통신·방산 환경 경험은 별도 준비가 필요하다.",
+      "portfolio": [
+        "small-shell",
+        "thread-dining",
+        "irc-relay-server"
+      ]
+    },
+    {
+      "id": "s2w-frontend-144959",
+      "company": "S2W",
+      "title": "Frontend Engineer (Product 3 팀)",
+      "categories": [
+        "A",
+        "G"
+      ],
+      "milestone": "P14",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "경기 성남",
+      "remote": "재택근무 가능",
+      "experience": "경력 무관",
+      "url": "https://s2w.career.greetinghr.com/ko/o/144959",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 경력 무관·정규직으로 표시됨",
+      "fit": "React·Next.js·SSR·Docker·테스트·성능 요구를 portfolio-site와 web-boundary-inspector로 증명할 수 있다.",
+      "gap": "주요 현업 스택 Angular/RxJS 경험은 부족할 수 있다.",
+      "portfolio": [
+        "portfolio-site",
+        "web-boundary-inspector",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "moliturn-developer-170296",
+      "company": "몰리턴",
+      "title": "개발자(신입/경력)",
+      "categories": [
+        "A",
+        "G"
+      ],
+      "milestone": "P14",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "상주",
+      "experience": "경력 무관",
+      "url": "https://loanfra.career.greetinghr.com/ko/o/170296",
+      "status_basis": "공식 채용 목록에 채용 중으로 표시됨",
+      "fit": "React·Next.js·TypeScript 요구는 P14에서 직접 충족하며, 작은 팀의 제품 개발 경험은 P15 이후 더 강해진다.",
+      "gap": "금융·자산가 도메인 관심과 AI 활용 방식을 지원서에서 구체화해야 한다.",
+      "portfolio": [
+        "portfolio-site",
+        "pong-pong"
+      ]
+    },
+    {
+      "id": "suncyan-frontend-191837",
+      "company": "선시안",
+      "title": "프론트엔드 엔지니어",
+      "categories": [
+        "A",
+        "G"
+      ],
+      "milestone": "P14",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "주 2회 재택",
+      "experience": "경력 무관",
+      "url": "https://suncyan.career.greetinghr.com/ko/o/191837",
+      "status_basis": "공식 채용 페이지에 채용시 마감·지원하기로 표시됨",
+      "fit": "React·Next.js·TypeScript와 CS 기본기, 팀 프로젝트 요구를 P14와 이전 시스템 프로젝트로 설명할 수 있다.",
+      "gap": "게임 콘텐츠 관심과 시각적 감각을 포트폴리오 표현으로 보완해야 한다.",
+      "portfolio": [
+        "portfolio-site",
+        "pong-pong",
+        "ray-scene-tracer"
+      ]
+    },
+    {
+      "id": "estgames-web-107360",
+      "company": "ESTgames",
+      "title": "웹 개발자 (TypeScript, Next.js, Java, Spring)",
+      "categories": [
+        "A",
+        "B",
+        "D",
+        "G"
+      ],
+      "milestone": "P14(FE) / P17(BE)",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "원격근무 지원",
+      "experience": "신입 또는 경력 3년 이상",
+      "url": "https://estfamily.career.greetinghr.com/ko/o/107360",
+      "status_basis": "공식 공고에 채용 시 마감·지원하기로 표시됨",
+      "fit": "프런트엔드는 P14, Java·Spring 백엔드는 P17 이후 각각 직접 대응한다.",
+      "gap": "게임 도메인 관심과 지원 분야를 한쪽으로 명확히 정해야 한다.",
+      "portfolio": [
+        "portfolio-site",
+        "pong-pong",
+        "sportsbook-wallet-service"
+      ]
+    },
+    {
+      "id": "graphic-frontend-intern-316006",
+      "company": "그래픽",
+      "title": "프론트엔드 엔지니어(React, Next) 전환형 인턴",
+      "categories": [
+        "A"
+      ],
+      "milestone": "P14",
+      "grade": "즉시 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직전환형",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "신입",
+      "url": "https://www.wanted.co.kr/wd/316006",
+      "status_basis": "원티드에 상시채용·3개월 정규직전환형으로 표시됨",
+      "fit": "React·Next.js·AWS 배포와 웹 생태계 이해를 P14 결과물로 제시할 수 있다.",
+      "gap": "실서비스 운영 경험은 배포·관측 문서와 검증 결과로 보완해야 한다.",
+      "portfolio": [
+        "portfolio-site",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "nextground-frontend-intern-259139",
+      "company": "넥스트그라운드",
+      "title": "프론트엔드 개발자 전환 가능 인턴",
+      "categories": [
+        "A"
+      ],
+      "milestone": "P14",
+      "grade": "즉시 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직전환형",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "신입",
+      "url": "https://www.wanted.co.kr/wd/259139",
+      "status_basis": "원티드에 인턴 후 평가에 따라 전환 가능으로 표시됨",
+      "fit": "트래픽 성장 서비스의 구조 개선 요구에 P14의 성능·접근성·리팩터링 근거를 제시할 수 있다.",
+      "gap": "공고의 세부 기술 스택은 지원 직전 원문에서 다시 확인해야 한다.",
+      "portfolio": [
+        "portfolio-site",
+        "web-boundary-inspector"
+      ]
+    },
+    {
+      "id": "suncyan-server-150336",
+      "company": "선시안",
+      "title": "서버 소프트웨어 엔지니어",
+      "categories": [
+        "C",
+        "G"
+      ],
+      "milestone": "P15",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "경력 무관",
+      "url": "https://suncyan.career.greetinghr.com/ko/o/150336",
+      "status_basis": "공식 채용 페이지에 채용시 마감·지원하기로 표시됨",
+      "fit": "Node.js·TypeScript·DB·네트워크 요구를 pong-pong과 시스템 프로젝트로 연결할 수 있다.",
+      "gap": "게임 서버 도메인과 장기 운영 경험은 부족할 수 있다.",
+      "portfolio": [
+        "pong-pong",
+        "irc-relay-server",
+        "web-boundary-inspector"
+      ]
+    },
+    {
+      "id": "kimcaddie-backend-206177",
+      "company": "김캐디",
+      "title": "백엔드 개발자(신입~3년차)",
+      "categories": [
+        "D",
+        "G"
+      ],
+      "milestone": "P17",
+      "grade": "즉시 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "월 2회 재택",
+      "experience": "신입~3년",
+      "url": "https://kimcaddie.career.greetinghr.com/o/206177",
+      "status_basis": "공식 공고에 신입·정규직·지원하기로 표시됨",
+      "fit": "Java/Kotlin·Spring Boot·Docker 요구에 P17이 직접 맞고, P20 이후 MSA·EDA·Kafka 우대까지 강화된다.",
+      "gap": "AWS 운영 경험은 프로젝트 배포 문서만으로 충분하지 않을 수 있다.",
+      "portfolio": [
+        "sportsbook-wallet-service",
+        "pong-pong",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "spool-java-215128",
+      "company": "스풀",
+      "title": "JAVA / Spring Boot 백엔드 신입 개발자",
+      "categories": [
+        "D"
+      ],
+      "milestone": "P17",
+      "grade": "즉시 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "신입",
+      "url": "https://www.wanted.co.kr/wd/215128",
+      "status_basis": "원티드에 상시채용으로 표시됨",
+      "fit": "Spring Boot API 개발 요구에 P17의 트랜잭션·원장·멱등성 프로젝트가 강한 증거가 된다.",
+      "gap": "공고 본문의 상세 기술·전형 조건은 지원 직전 원문에서 다시 확인해야 한다.",
+      "portfolio": [
+        "sportsbook-wallet-service"
+      ]
+    },
+    {
+      "id": "linkareer-frontend-208876",
+      "company": "링커리어",
+      "title": "프론트엔드 개발자",
+      "categories": [
+        "A"
+      ],
+      "milestone": "P14",
+      "grade": "조건부 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "1~3년 또는 준하는 프로젝트",
+      "url": "https://linkareer.career.greetinghr.com/ko/o/208876",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 1년 이상·정규직으로 표시됨",
+      "fit": "Next.js, SSR/ISR/CSR, Core Web Vitals, 문서화 요구가 P14와 직접 맞는다.",
+      "gap": "실무 경력 대신 프로젝트 규모·운영 근거를 설득력 있게 제시해야 한다.",
+      "portfolio": [
+        "portfolio-site",
+        "web-boundary-inspector",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "notifly-software-engineer-132807",
+      "company": "노티플라이",
+      "title": "Software Engineer",
+      "categories": [
+        "B",
+        "C",
+        "G"
+      ],
+      "milestone": "P15",
+      "grade": "조건부 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "상주 원칙",
+      "experience": "경력 무관, 2년 이상 우대",
+      "url": "https://notifly.career.greetinghr.com/ko/o/132807",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 경력 무관·정규직으로 표시됨",
+      "fit": "React·TypeScript·Node.js·Next.js와 메시징·데이터 흐름을 P15 및 이후 프로젝트로 연결할 수 있다.",
+      "gap": "AWS Serverless·데이터 파이프라인·2년 실무 우대가 남는다.",
+      "portfolio": [
+        "pong-pong",
+        "sportsbook-odds-feed-service"
+      ]
+    },
+    {
+      "id": "vws-product-engineer-162819",
+      "company": "VWS",
+      "title": "Product Engineer(주니어)",
+      "categories": [
+        "B",
+        "D",
+        "G"
+      ],
+      "milestone": "P15 / P17",
+      "grade": "조건부 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "경기 성남",
+      "remote": "미표기",
+      "experience": "1년 이상",
+      "url": "https://vwsai.career.greetinghr.com/ko/o/162819",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 1년 이상·정규직으로 표시됨",
+      "fit": "React·Next.js·TypeScript와 Java 17·Spring Boot를 P15·P17 양쪽에서 증명할 수 있다.",
+      "gap": "LLM 활용과 초기 제품의 기획→배포→개선 경험을 별도 사례로 준비해야 한다.",
+      "portfolio": [
+        "pong-pong",
+        "sportsbook-wallet-service",
+        "portfolio-site"
+      ]
+    },
+    {
+      "id": "conworth-backend-340256",
+      "company": "컨워스",
+      "title": "백엔드 주니어 개발자",
+      "categories": [
+        "C",
+        "D",
+        "G"
+      ],
+      "milestone": "P15(Node) / P17(Java)",
+      "grade": "조건부 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "신입~3년",
+      "url": "https://www.wanted.co.kr/wd/340256",
+      "status_basis": "원티드에 상시채용·신입~3년 주니어로 표시됨",
+      "fit": "Spring Boot 또는 NestJS, RDB, REST, Docker 요구가 P15/P17 이후 맞는다.",
+      "gap": "ETL·무중단 배포·대용량 원시 데이터 경험은 별도 확장이 필요하다.",
+      "portfolio": [
+        "pong-pong",
+        "sportsbook-wallet-service",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "posicube-node-240353",
+      "company": "포지큐브",
+      "title": "NodeJS 백엔드 주니어 개발자",
+      "categories": [
+        "C"
+      ],
+      "milestone": "P15",
+      "grade": "조건부 지원",
+      "source_type": "플랫폼",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "재택 가능",
+      "experience": "1~3년",
+      "url": "https://www.wanted.co.kr/wd/240353",
+      "status_basis": "원티드에 상시채용·1~3년으로 표시되고, 마감 표기의 이전 URL과 분리됨",
+      "fit": "Node.js 서버, 상태 머신, Docker, DB·네트워크·운영체제 요구가 P15와 이전 시스템 프로젝트에 맞는다.",
+      "gap": "MongoDB와 LLM 서버·오케스트레이션 도메인 경험은 추가 준비가 필요하다.",
+      "portfolio": [
+        "pong-pong",
+        "irc-relay-server",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "hyperaccel-system-210116",
+      "company": "하이퍼엑셀",
+      "title": "System Software Engineer 신입/경력",
+      "categories": [
+        "E",
+        "G"
+      ],
+      "milestone": "P20",
+      "grade": "향후 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "미표기",
+      "experience": "경력 무관",
+      "url": "https://hyperaccel.career.greetinghr.com/ko/o/210116",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 신입/경력·정규직으로 표시됨",
+      "fit": "C/C++·분산 시스템·동시성·동기화는 P11과 P20의 강점과 맞는다.",
+      "gap": "가속기 통신 런타임, NCCL/OpenMPI, 딥러닝 분산 학습 도메인이 핵심 공백이다.",
+      "portfolio": [
+        "irc-relay-server",
+        "thread-dining",
+        "sportsbook-orchestration"
+      ]
+    },
+    {
+      "id": "moreh-ai-system-158839",
+      "company": "MOREH",
+      "title": "AI System Software Engineer",
+      "categories": [
+        "E",
+        "G"
+      ],
+      "milestone": "P20",
+      "grade": "향후 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "서울",
+      "remote": "원격근무 가능",
+      "experience": "경력 무관",
+      "url": "https://moreh.career.greetinghr.com/o/158839",
+      "status_basis": "공식 채용 목록과 공고에 채용 중·지원하기로 표시됨",
+      "fit": "C++·Python·컴퓨터 시스템·분산 실행 환경은 시스템/분산 PATH와 연결된다.",
+      "gap": "LLM, GPU/NPU, PyTorch/vLLM, 저수준 통신 라이브러리 경험이 별도로 필요하다.",
+      "portfolio": [
+        "ray-scene-tracer",
+        "irc-relay-server",
+        "sportsbook-orchestration"
+      ]
+    },
+    {
+      "id": "s2w-ai-agent-204653",
+      "company": "S2W",
+      "title": "AI Agent Engineer (Full-Stack)",
+      "categories": [
+        "B",
+        "C",
+        "G"
+      ],
+      "milestone": "P20",
+      "grade": "향후 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "경기 성남",
+      "remote": "재택근무 가능",
+      "experience": "경력 무관",
+      "url": "https://s2w.career.greetinghr.com/ko/o/204653",
+      "status_basis": "공식 공고에 지원하기 버튼이 있고 경력 무관·정규직으로 표시됨",
+      "fit": "서버·데이터·오케스트레이션·검증 루프는 P20 이후 구조적 강점과 맞는다.",
+      "gap": "LLM 에이전트, RAG, 벡터 검색, Python 서비스 수준 구현이 필수 공백이다.",
+      "portfolio": [
+        "sportsbook-betting-service",
+        "sportsbook-orchestration",
+        "web-boundary-inspector"
+      ]
+    },
+    {
+      "id": "canonical-ubuntu-junior-6707669",
+      "company": "Canonical",
+      "title": "Junior Ubuntu Software Engineer",
+      "categories": [
+        "E",
+        "G"
+      ],
+      "milestone": "P11",
+      "grade": "향후 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "전 세계 원격",
+      "remote": "완전 원격",
+      "experience": "신입·초기 경력",
+      "url": "https://canonical.com/careers/6707669/junior-ubuntu-software-engineer-remote",
+      "status_basis": "공식 공고에 전 세계 원격·Apply 버튼으로 표시됨",
+      "fit": "Linux, C/C++, Git, 테스트·통합·문서화가 P11까지의 결과와 강하게 맞는다.",
+      "gap": "전문적인 영어 말하기·쓰기와 연 2회 해외 행사가 현재 가장 큰 장벽이다.",
+      "portfolio": [
+        "small-shell",
+        "irc-relay-server",
+        "container-stack"
+      ]
+    },
+    {
+      "id": "canonical-kernel-junior-5370815",
+      "company": "Canonical",
+      "title": "Junior Linux Kernel Engineer - Ubuntu",
+      "categories": [
+        "E"
+      ],
+      "milestone": "P11",
+      "grade": "향후 지원",
+      "source_type": "공식",
+      "status": "공고중",
+      "employment": "정규직",
+      "location": "전 세계 원격",
+      "remote": "완전 원격",
+      "experience": "졸업 예정·신입·초기 경력",
+      "url": "https://canonical.com/careers/5370815/junior-linux-kernel-engineer-ubuntu-remote",
+      "status_basis": "공식 공고에 모든 시간대 원격·Apply 버튼으로 표시됨",
+      "fit": "C, Git, 운영체제 원리, Linux 디버깅 기반은 P11까지 준비된다.",
+      "gap": "커널 패치·드라이버·Rust 경험과 전문 영어가 추가로 필요하다.",
+      "portfolio": [
+        "thread-dining",
+        "small-shell",
+        "irc-relay-server"
+      ]
+    }
+  ],
+  "expired_or_removed": [
+    {
+      "id": "paymint-backend-272871",
+      "company": "페이민트",
+      "title": "백엔드 주니어 개발자(Java/Kotlin)",
+      "status": "만료",
+      "url": "https://www.wanted.co.kr/wd/272871",
+      "reason": "마감일 2026-06-30으로 스냅숏 기준일 이전"
+    },
+    {
+      "id": "bigwalk-backend-51428",
+      "company": "빅워크",
+      "title": "백엔드(Java, Spring Boot) 개발",
+      "status": "만료",
+      "url": "https://www.wanted.co.kr/wd/51428",
+      "reason": "마감일 2022-12-01"
+    },
+    {
+      "id": "fanding-backend-266890",
+      "company": "팬딩",
+      "title": "백엔드 주니어 개발자(2년차 이상)",
+      "status": "만료",
+      "url": "https://www.wanted.co.kr/wd/266890",
+      "reason": "마감일 2025-03-31"
+    },
+    {
+      "id": "bomapp-backend-254702",
+      "company": "보맵",
+      "title": "백엔드 주니어 개발자",
+      "status": "만료",
+      "url": "https://www.wanted.co.kr/wd/254702",
+      "reason": "마감일 2024-12-31"
+    },
+    {
+      "id": "posicube-node-closed-216918",
+      "company": "포지큐브",
+      "title": "NodeJS 백엔드 주니어 개발자(마감)",
+      "status": "만료",
+      "url": "https://www.wanted.co.kr/wd/216918",
+      "reason": "공고 제목에 마감으로 표시된 이전 URL; 활성 공고 후보와 중복되므로 제외"
+    }
+  ]
+}
