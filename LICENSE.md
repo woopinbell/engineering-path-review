@@ -1,21 +1,36 @@
-# License
+# License policy
 
-이 저장소는 자료 유형에 따라 두 라이선스를 사용한다.
+Copyright © 2026 woopinbell
 
-## 문서와 도식
+이 문서는 `engineering-path-workbench`에서 직접 작성한 자료의 라이선스와 예외를 정한다.
 
-직접 작성한 Markdown 문서와 도식은 별도 표기가 없는 한 **Creative Commons Attribution 4.0 International (CC BY 4.0)** 조건으로 제공한다.
+## 문서·도식 — CC BY 4.0
 
-- License: <https://creativecommons.org/licenses/by/4.0/>
-- Legal code: <https://creativecommons.org/licenses/by/4.0/legalcode>
+별도 표시가 없는 직접 작성 README, Markdown 문서, 표, 다이어그램과 설명용 이미지는 **Creative Commons Attribution 4.0 International (`CC-BY-4.0`)**로 제공한다.
 
-이 자료를 공유하거나 변경할 때는 원 저작자와 출처를 합리적인 방식으로 표시하고, 변경 여부를 밝혀야 한다.
+- <https://creativecommons.org/licenses/by/4.0/>
+- <https://creativecommons.org/licenses/by/4.0/legalcode.ko>
+- SPDX: `CC-BY-4.0`
 
-## 코드와 자동화
+## 코드·스크립트 — MIT
 
-직접 작성한 스크립트, 테스트와 자동화 코드는 별도 표기가 없는 한 아래 MIT License를 따른다.
+별도 표시가 없는 직접 작성 생성기·검사기·빌드 스크립트와 설정은 아래 MIT License로 제공한다.
+
+## 제3자 자료와 채용 공고
+
+이 문서는 다음 자료에 새로운 이용 허락을 부여하지 않는다.
 
 ```text
+42 또는 다른 교육기관의 subject·평가표·로고·상표
+외부 저장소의 코드·문서·asset
+채용 기업과 플랫폼이 작성한 공고 본문·이미지·상표
+표준·RFC·공식 문서·논문에서 인용한 자료
+```
+
+채용 문서에는 원문 전문을 복제하지 않고 직접 작성한 요약과 원문 링크만 제공한다. 원문에는 각 권리자의 이용 조건이 적용된다.
+
+## MIT License
+
 MIT License
 
 Copyright (c) 2026 woopinbell
@@ -37,11 +52,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
-
-## 제3자 자료와 채용 공고
-
-- 채용 공고의 전문·이미지·상표는 이 저장소의 라이선스 대상이 아니다.
-- 공고 문서는 자체 작성한 짧은 요약과 원문 링크만 제공한다.
-- 42 subject, 평가표, 로고, 외부 명세, 인용문, third-party asset은 원 권리자의 조건을 따른다.
-- 이 저장소는 보유하지 않은 권리를 새로 부여하지 않는다.

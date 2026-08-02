@@ -1,0 +1,28 @@
+P/G는 선형 spine, L은 trigger 기반 한정 작업 큐다.
+
+W0
+  P: P01 c-foundation → P02 buffered-line-reader → P03 format-printer
+     → P04 signal-message-bus → P05 small-shell → P06 thread-dining
+  G: G00 Git → G01 C → G02 Unix systems → [Python? / Shell?]
+  L: L04 C 계열 감사 · L06 OS 연결 감사
+
+W1
+  P: P07 cpp-foundation → P08 stl-container → P09 stack-sort
+     → P10 ray-scene-tracer → P11 irc-relay-server
+  G: G03 C++ → G04 OS → G05 Algorithms → G06 Architecture → G07 Networks
+  L: L01~L03 코딩 테스트 · L05/L07/L09 연결 감사
+
+W2
+  P: P12 container-stack → P13 web-boundary-inspector → P14 portfolio-site → P15 pong-pong
+  G: G08 Web infrastructure → G09 Web applications → G10 React/Next.js → G11 Database
+  L: L08 Network · L10 Web · L14 첫 지원 준비
+
+W3
+  P: P16 shared-protocol → P17 wallet → P18 risk → P19 odds-feed
+  G: G12 Java → G13 Spring Boot → G14 Distributed services
+  L: L12 Sportsbook foundation · L15 지원 갱신
+
+W4
+  P: P20 betting → P21 settlement → P22 gateway → P23 admin-api → P24 orchestration
+  G: 필수 가이드 완료
+  L: L11 DB · L13 전체 감사 · L15 지원 갱신

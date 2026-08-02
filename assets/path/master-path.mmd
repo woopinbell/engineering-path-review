@@ -1,0 +1,33 @@
+flowchart TB
+  subgraph W0["W0 · 작업 기반과 C 계열"]
+    P0["P01→P06"]
+    G0["G00→G02 · Python?/Shell?"]
+    L0["L04 C 감사 · L06 OS 감사"]
+    G0 -. "G01→P01" .-> P0
+  end
+  subgraph W1["W1 · C++·알고리즘·시스템"]
+    P1["P07→P11"]
+    G1["G03→G07"]
+    L1["L01~L03 CT · L05/L07/L09 감사"]
+    G1 -. "G03→P07 · G05→L01" .-> P1
+  end
+  subgraph W2["W2 · 웹·프런트엔드·DB"]
+    P2["P12→P15"]
+    G2["G08→G11"]
+    L2["L08 · L10 · L14"]
+    G2 -. "G08→P12 · G09+G10→P14 · G11→P15" .-> P2
+  end
+  subgraph W3["W3 · Java·Spring·스포츠북 기반"]
+    P3["P16→P19"]
+    G3["G12→G14"]
+    L3["L12 · L15"]
+    G3 -. "G12→P16 · G13→P17" .-> P3
+  end
+  subgraph W4["W4 · 분산 조정·엣지·통합"]
+    P4["P20→P24"]
+    G4["필수 가이드 완료"]
+    L4["L11 · L13 · L15"]
+    G4 -. "G14→P20" .-> P4
+  end
+  P0 --> P1 --> P2 --> P3 --> P4
+  G0 --> G1 --> G2 --> G3 --> G4

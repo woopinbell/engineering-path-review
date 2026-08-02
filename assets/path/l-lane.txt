@@ -1,0 +1,11 @@
+L은 장기 spine이 아니다. 아래 trigger가 생겼을 때 한 작업만 열고 산출물을 남긴 뒤 닫는다.
+
+G05          → L01 유형 세트 → L02 혼합 모의 → 실패 시 L03 재현·회고
+P06+G02/G04  → L04 C 계열 감사 / L06 OS 연결 감사
+P10+G03/G05/G06 → L05 C++ / L07 Architecture / L09 Algorithms 감사
+P13/P15+G07~G11 → L08 Network / L10 Web 감사
+P14 공개·검증 → L14 첫 지원 준비
+P19+G12~G14 → L12 Sportsbook foundation 감사
+P21+G11     → L11 DB 감사
+P24         → L13 Sportsbook 전체 감사
+P15/P17/P20/P22 → L15 지원 파동 갱신

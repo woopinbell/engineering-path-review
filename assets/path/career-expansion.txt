@@ -1,0 +1,12 @@
+P11  시스템 프로젝트 완료
+  └─ 직접 일치 공고만: C/C++ 시스템·네트워크
+P14  portfolio 배포·검증
+  └─ 일반 첫 지원: Frontend·Web·Junior Software Engineer
+P15  pong-pong
+  └─ Full-stack·Node.js·TypeScript Backend
+P17  wallet
+  └─ Java·Spring Backend
+P20~P21  betting·settlement
+  └─ Distributed·Event-driven·Fintech·Settlement
+P22~P24  gateway·admin·orchestration
+  └─ Gateway·Platform·Integration

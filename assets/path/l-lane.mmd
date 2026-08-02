@@ -1,0 +1,10 @@
+flowchart TB
+  G05["G05 완료"] --> CT["L01 유형 세트 → L02 혼합 모의\n실패/부분 해결 → L03 재현·회고"]
+  P06["P06 + G02/G04"] --> C["L04 C 감사 · L06 OS 감사"]
+  P10["P10 + G03/G05/G06"] --> CPP["L05 C++ · L07 Architecture · L09 Algorithms"]
+  P15["P13/P15 + G07~G11"] --> WEB["L08 Network · L10 Web"]
+  P14["P14 공개·검증"] --> APPLY["L14 첫 지원 준비"]
+  P19["P19 + G12~G14"] --> BASE["L12 Sportsbook foundation"]
+  P21["P21 + G11"] --> DB["L11 Database"]
+  P24["P24"] --> FULL["L13 Sportsbook 전체"]
+  MILE["P15/P17/P20/P22"] --> WAVE["L15 지원 파동 갱신"]

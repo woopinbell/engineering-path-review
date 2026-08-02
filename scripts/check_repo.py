@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Validate repository structure, local links, graph assets and job data."""
+"""Security- and integrity-focused validation for the review repository."""
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -10,112 +11,338 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+MAX_FILE_SIZE = 5 * 1024 * 1024
+MAX_TOTAL_SIZE = 25 * 1024 * 1024
+BINARY_SUFFIXES = {".png"}
 REQUIRED = {
-    "README.md",
-    "LICENSE.md",
-    "Makefile",
-    "docs/PATH.md",
-    "docs/PROJECTS.md",
-    "docs/GUIDES.md",
-    "docs/REPOSITORY_STRATEGY.md",
-    "docs/APPLICATION_STRATEGY.md",
-    "docs/JOBS_2026-08-03.md",
-    "docs/REVIEW_CHECKLIST.md",
-    "docs/DECISIONS.md",
+    ".editorconfig", ".gitattributes", ".gitignore",
+    ".github/CODEOWNERS", ".github/dependabot.yml",
+    ".github/pull_request_template.md", ".github/workflows/verify.yml",
+    "README.md", "LICENSE.md", "SECURITY.md", "CONTRIBUTING.md", "Makefile",
+    "docs/01-PATH.md", "docs/02-L-LANE.md", "docs/03-REPOSITORY-STRATEGY.md",
+    "docs/04-APPLICATION-STRATEGY.md", "docs/05-JOBS-2026-08-03.md",
+    "docs/06-REVIEW-PROCESS.md", "docs/07-SECURITY-AND-INTEGRITY.md",
+    "docs/08-THREAT-MODEL.md", "docs/09-SOURCES.md", "docs/10-DECISIONS.md",
     "data/jobs-2026-08-03.json",
-    "assets/path/path-overview.mmd",
-    "assets/path/path-overview.dot",
-    "assets/path/path-overview.svg",
-    "assets/path/path-overview.png",
-    "scripts/build_jobs.py",
-    "scripts/check_repo.py",
+    "scripts/build_jobs.py", "scripts/check_repo.py", "scripts/render_graphs.sh",
+    "scripts/package_release.py", "tests/test_security_tools.py",
+    "targets/42-main/.editorconfig", "targets/42-main/.gitattributes", "targets/42-main/.gitignore",
+    "targets/42-main/README.md", "targets/42-main/LICENSE.md",
+    "targets/42-main/SECURITY.md", "targets/42-main/CONTRIBUTING.md",
+    "targets/42-main/REPOSITORY-SETTINGS.md", "targets/42-main/ORPHAN-BRANCH-BASELINE.md",
+    "targets/42-main/.github/CODEOWNERS", "targets/42-main/.github/dependabot.yml",
+    "targets/42-main/.github/pull_request_template.md",
+    "targets/42-main/.github/workflows/verify-main.yml",
+    "targets/42-main/scripts/check_main.py",
+    "targets/guides-main/.editorconfig", "targets/guides-main/.gitattributes", "targets/guides-main/.gitignore",
+    "targets/guides-main/README.md", "targets/guides-main/LICENSE.md",
+    "targets/guides-main/SECURITY.md", "targets/guides-main/CONTRIBUTING.md",
+    "targets/guides-main/REPOSITORY-SETTINGS.md", "targets/guides-main/ORPHAN-BRANCH-BASELINE.md",
+    "targets/guides-main/.github/CODEOWNERS", "targets/guides-main/.github/dependabot.yml",
+    "targets/guides-main/.github/pull_request_template.md",
+    "targets/guides-main/.github/workflows/verify-main.yml",
+    "targets/guides-main/scripts/check_main.py",
+    "assets/path/master-path.dot", "assets/path/master-path.mmd",
+    "assets/path/master-path.svg", "assets/path/master-path.png",
+    "assets/path/master-path.txt",
+    "assets/path/l-lane.dot", "assets/path/l-lane.mmd",
+    "assets/path/l-lane.svg", "assets/path/l-lane.png", "assets/path/l-lane.txt",
+    "assets/path/career-expansion.dot", "assets/path/career-expansion.mmd",
+    "assets/path/career-expansion.svg", "assets/path/career-expansion.png",
+    "assets/path/career-expansion.txt", "assets/path/render-manifest.json",
 }
-LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 PROJECT_IDS = [f"P{i:02d}" for i in range(1, 25)]
 GUIDE_IDS = [f"G{i:02d}" for i in range(0, 15)]
-VALID_GRADES = {"즉시 지원", "조건부 지원", "향후 지원"}
-VALID_SOURCES = {"공식", "플랫폼"}
+L_IDS = [f"L{i:02d}" for i in range(1, 16)]
+LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+AUTOLINK_RE = re.compile(r"<((?:https?|file|javascript|data|sandbox):[^>]+)>", re.I)
+HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
+ACTION_RE = re.compile(r"^\s*uses:\s*([^\s#]+)", re.M)
+FULL_SHA_RE = re.compile(r"^[^@\s]+@[0-9a-f]{40}$")
+SECRET_PATTERNS = {
+    "private key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"),
+    "GitHub token": re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})\b"),
+    "AWS access key": re.compile(r"\b(?:AKIA|ASIA)[A-Z0-9]{16}\b"),
+    "Slack token": re.compile(r"\bxox[baprs]-[A-Za-z0-9-]{10,}\b"),
+}
+CONTACT_RE = re.compile(
+    r"(?:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|"
+    r"(?<!\d)01[016789][ -]?\d{3,4}[ -]?\d{4}(?!\d))"
+)
+PROHIBITED_NAMES = {
+    ".git", ".env", "id_rsa", "id_ed25519", "credentials", "secrets",
+    "resume", "cv", "cover-letter", ".DS_Store",
+}
+PROHIBITED_SUFFIXES = {".pem", ".key", ".p12", ".pfx", ".jks", ".keystore", ".pyc", ".zip"}
+BIDI_OR_INVISIBLE = {chr(code) for code in [0x200B, 0x200E, 0x200F, 0x202A, 0x202B, 0x202C, 0x202D, 0x202E, 0x2066, 0x2067, 0x2068, 0x2069, 0xFEFF]}
+RUNTIME_MARKERS = ("/mnt/data/", "sandbox:/", "file://", "javascript:", "data:text/html")
+UNSAFE_WORKFLOW_TOKENS = (
+    "pull_request_target", "workflow_run", "issue_comment", "repository_dispatch",
+    "permissions: write-all", "self-hosted", "curl ", "wget ", "sudo ",
+    "apt-get ", "pip install", "npm install", "pnpm install",
+)
 
 
-def fail(errors: list[str], message: str) -> None:
-    errors.append(message)
+def rel(path: Path) -> str:
+    return path.relative_to(ROOT).as_posix()
+
+
+def is_ignored(path: Path) -> bool:
+    try:
+        relative = path.relative_to(ROOT)
+    except ValueError:
+        return False
+    return bool(relative.parts and relative.parts[0] == "dist")
+
+
+def iter_files() -> list[Path]:
+    return sorted(
+        (p for p in ROOT.rglob("*") if not is_ignored(p) and (p.is_file() or p.is_symlink())),
+        key=lambda p: rel(p),
+    )
+
+
+def strip_fences(text: str) -> str:
+    result: list[str] = []
+    fence: str | None = None
+    for line in text.splitlines():
+        stripped = line.lstrip()
+        if fence is None and (stripped.startswith("```") or stripped.startswith("~~~")):
+            fence = stripped[:3]
+            continue
+        if fence is not None and stripped.startswith(fence):
+            fence = None
+            continue
+        if fence is None:
+            result.append(line)
+    return "\n".join(result)
+
+
+def github_slug(text: str) -> str:
+    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"[`*_~]", "", text).strip().lower()
+    text = re.sub(r"[^\w\-\s가-힣]", "", text, flags=re.UNICODE)
+    return re.sub(r"[\s]+", "-", text).strip("-")
+
+
+def markdown_anchors(path: Path) -> set[str]:
+    anchors: set[str] = set()
+    counts: dict[str, int] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        match = HEADING_RE.match(line)
+        if not match:
+            continue
+        base = github_slug(match.group(2))
+        if not base:
+            continue
+        count = counts.get(base, 0)
+        counts[base] = count + 1
+        anchors.add(base if count == 0 else f"{base}-{count}")
+    return anchors
 
 
 def check_required(errors: list[str]) -> None:
-    for rel in sorted(REQUIRED):
-        if not (ROOT / rel).is_file():
-            fail(errors, f"missing required file: {rel}")
+    for item in sorted(REQUIRED):
+        if not (ROOT / item).is_file():
+            errors.append(f"missing required file: {item}")
+
+
+def check_filesystem(errors: list[str]) -> None:
+    total_size = 0
+    for path in sorted(ROOT.rglob("*"), key=lambda p: p.as_posix()):
+        if is_ignored(path):
+            continue
+        if any(char in BIDI_OR_INVISIBLE for char in path.name):
+            errors.append(f"invisible/bidirectional character in path: {rel(path)}")
+        if path.is_symlink():
+            errors.append(f"symlink is not allowed: {rel(path)}")
+            continue
+        name_lower = path.name.lower()
+        if any(part.lower() == ".git" for part in path.parts):
+            errors.append(f".git content is not allowed: {rel(path)}")
+        if path.is_file():
+            size = path.stat().st_size
+            total_size += size
+            if size > MAX_FILE_SIZE:
+                errors.append(f"file exceeds {MAX_FILE_SIZE} bytes: {rel(path)}")
+            if name_lower in PROHIBITED_NAMES or path.suffix.lower() in PROHIBITED_SUFFIXES:
+                errors.append(f"prohibited file name/type: {rel(path)}")
+            data = path.read_bytes()
+            if path.suffix.lower() == ".png" and not data.startswith(b"\x89PNG\r\n\x1a\n"):
+                errors.append(f"invalid PNG signature: {rel(path)}")
+            if b"\x00" in data and path.suffix.lower() not in BINARY_SUFFIXES:
+                errors.append(f"unexpected binary file: {rel(path)}")
+    if total_size > MAX_TOTAL_SIZE:
+        errors.append(f"repository content exceeds {MAX_TOTAL_SIZE} bytes")
+
+
+def check_text_security(errors: list[str]) -> None:
+    for path in iter_files():
+        if path.is_symlink() or path.suffix.lower() in BINARY_SUFFIXES:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            errors.append(f"non-UTF-8 text file: {rel(path)}")
+            continue
+        for label, pattern in SECRET_PATTERNS.items():
+            if pattern.search(text):
+                errors.append(f"possible {label}: {rel(path)}")
+        if CONTACT_RE.search(text):
+            errors.append(f"email/phone-like personal contact found: {rel(path)}")
+        if any(char in BIDI_OR_INVISIBLE for char in text):
+            errors.append(f"invisible/bidirectional Unicode control found: {rel(path)}")
+        if "\r" in text:
+            errors.append(f"CR line ending: {rel(path)}")
+        if text and not text.endswith("\n"):
+            errors.append(f"missing final newline: {rel(path)}")
 
 
 def check_markdown_links(errors: list[str]) -> None:
+    anchor_cache: dict[Path, set[str]] = {}
     for path in sorted(ROOT.rglob("*.md")):
-        text = path.read_text(encoding="utf-8")
-        if "/mnt/data/" in text or "sandbox:/" in text:
-            fail(errors, f"runtime-only path found: {path.relative_to(ROOT)}")
-        for raw in LINK_RE.findall(text):
+        text = strip_fences(path.read_text(encoding="utf-8"))
+        targets = LINK_RE.findall(text) + AUTOLINK_RE.findall(text)
+        for raw in targets:
             target = raw.strip().split()[0].strip("<>")
             parsed = urlparse(target)
-            if parsed.scheme in {"http", "https", "mailto"}:
-                continue
             if parsed.scheme:
-                fail(errors, f"unsupported link scheme in {path.relative_to(ROOT)}: {target}")
+                if parsed.scheme != "https":
+                    errors.append(f"non-HTTPS/unsafe link in {rel(path)}: {target}")
+                elif not parsed.netloc or parsed.username or parsed.password:
+                    errors.append(f"invalid HTTPS URL in {rel(path)}: {target}")
                 continue
-            local = unquote(parsed.path)
-            if not local:
-                continue
-            resolved = (path.parent / local).resolve()
+            local_path = unquote(parsed.path)
+            resolved = path if not local_path else (path.parent / local_path).resolve()
             try:
                 resolved.relative_to(ROOT.resolve())
             except ValueError:
-                fail(errors, f"link escapes repository in {path.relative_to(ROOT)}: {target}")
+                errors.append(f"link escapes repository in {rel(path)}: {target}")
                 continue
             if not resolved.exists():
-                fail(errors, f"broken local link in {path.relative_to(ROOT)}: {target}")
+                errors.append(f"broken local link in {rel(path)}: {target}")
+                continue
+            if parsed.fragment and resolved.suffix.lower() == ".md":
+                anchors = anchor_cache.setdefault(resolved, markdown_anchors(resolved))
+                if unquote(parsed.fragment).lower() not in anchors:
+                    errors.append(f"missing markdown anchor in {rel(path)}: {target}")
 
 
-def check_path_tables(errors: list[str]) -> None:
-    projects = (ROOT / "docs/PROJECTS.md").read_text(encoding="utf-8")
-    guides = (ROOT / "docs/GUIDES.md").read_text(encoding="utf-8")
-    for pid in PROJECT_IDS:
-        count = len(re.findall(rf"^\| {re.escape(pid)} \|", projects, flags=re.MULTILINE))
-        if count != 1:
-            fail(errors, f"{pid} must have exactly one table row in docs/PROJECTS.md (found {count})")
-    for gid in GUIDE_IDS:
-        count = len(re.findall(rf"^\| {re.escape(gid)} \|", guides, flags=re.MULTILINE))
-        if count != 1:
-            fail(errors, f"{gid} must have exactly one table row in docs/GUIDES.md (found {count})")
+def count_table_ids(text: str, prefix: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for line in text.splitlines():
+        match = re.match(rf"^\| ({prefix}\d{{2}}) \|", line)
+        if match:
+            counts[match.group(1)] = counts.get(match.group(1), 0) + 1
+    return counts
 
 
-def check_jobs(errors: list[str]) -> None:
-    path = ROOT / "data/jobs-2026-08-03.json"
+def check_path_ids(errors: list[str]) -> None:
+    path_text = (ROOT / "docs/01-PATH.md").read_text(encoding="utf-8")
+    project_section = path_text.split("## 프로젝트 레인 `P`", 1)[1].split("## 가이드 레인 `G`", 1)[0]
+    guide_section = path_text.split("## 가이드 레인 `G`", 1)[1].split("## 하드 게이트", 1)[0]
+    project_counts = count_table_ids(project_section, "P")
+    guide_counts = count_table_ids(guide_section, "G")
+    for item in PROJECT_IDS:
+        if project_counts.get(item, 0) != 1:
+            errors.append(f"{item} must appear once in P table")
+    for item in GUIDE_IDS:
+        if guide_counts.get(item, 0) != 1:
+            errors.append(f"{item} must appear once in G table")
+    l_text = (ROOT / "docs/02-L-LANE.md").read_text(encoding="utf-8")
+    l_counts = count_table_ids(l_text, "L")
+    for item in L_IDS:
+        if l_counts.get(item, 0) != 1:
+            errors.append(f"{item} must appear once in L table")
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def check_render_manifest(errors: list[str]) -> None:
+    manifest_path = ROOT / "assets/path/render-manifest.json"
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except Exception as exc:  # noqa: BLE001
-        fail(errors, f"invalid jobs JSON: {exc}")
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"invalid render manifest: {exc}")
         return
-    active = data.get("active_jobs", [])
-    ids = [job.get("id") for job in active]
-    urls = [job.get("url") for job in active]
-    if len(ids) != len(set(ids)):
-        fail(errors, "duplicate active job id")
-    if len(urls) != len(set(urls)):
-        fail(errors, "duplicate active job URL")
-    for job in active:
-        if job.get("grade") not in VALID_GRADES:
-            fail(errors, f"invalid grade: {job.get('id')} -> {job.get('grade')}")
-        if job.get("source_type") not in VALID_SOURCES:
-            fail(errors, f"invalid source type: {job.get('id')} -> {job.get('source_type')}")
-        if job.get("status") != "공고중":
-            fail(errors, f"active job is not marked 공고중: {job.get('id')}")
-        if not str(job.get("url", "")).startswith("https://"):
-            fail(errors, f"non-HTTPS job URL: {job.get('id')}")
-    expired_urls = {job.get("url") for job in data.get("expired_or_removed", [])}
-    overlap = set(urls) & expired_urls
-    if overlap:
-        fail(errors, f"active/expired URL overlap: {sorted(overlap)}")
+    for name in ("master-path", "l-lane", "career-expansion"):
+        record = manifest.get(name)
+        if not isinstance(record, dict):
+            errors.append(f"missing graph manifest entry: {name}")
+            continue
+        for suffix in ("dot", "svg", "png"):
+            path = ROOT / "assets/path" / f"{name}.{suffix}"
+            expected = record.get(f"{suffix}_sha256")
+            if not path.is_file() or expected != sha256(path):
+                errors.append(f"stale or mismatched graph asset: {name}.{suffix}")
+    for svg in sorted((ROOT / "assets/path").glob("*.svg")):
+        text = svg.read_text(encoding="utf-8")
+        lowered = text.lower()
+        for token in ("<script", "javascript:", "data:", "onload=", "onerror=", "<!entity"):
+            if token in lowered:
+                errors.append(f"unsafe SVG token {token!r}: {rel(svg)}")
+        if "<!doctype" in lowered:
+            errors.append(f"SVG DOCTYPE must be removed: {rel(svg)}")
+        external_href = re.search(r"(?:href|xlink:href)=[\"'](?:https?:|//)", text, re.I)
+        if external_href:
+            errors.append(f"external SVG reference: {rel(svg)}")
 
 
-def check_generated_jobs(errors: list[str]) -> None:
+def check_workflows(errors: list[str]) -> None:
+    workflows = sorted(ROOT.rglob(".github/workflows/*.yml")) + sorted(ROOT.rglob(".github/workflows/*.yaml"))
+    for path in workflows:
+        text = path.read_text(encoding="utf-8")
+        lowered = text.lower()
+        for token in UNSAFE_WORKFLOW_TOKENS:
+            if token.lower() in lowered:
+                errors.append(f"unsafe workflow token {token!r}: {rel(path)}")
+        if "permissions:\n  contents: read" not in text:
+            errors.append(f"workflow must declare read-only contents: {rel(path)}")
+        if "persist-credentials: false" not in text:
+            errors.append(f"workflow checkout must disable persisted credentials: {rel(path)}")
+        if "timeout-minutes:" not in text:
+            errors.append(f"workflow job needs timeout-minutes: {rel(path)}")
+        for action in ACTION_RE.findall(text):
+            if not FULL_SHA_RE.fullmatch(action):
+                errors.append(f"action is not pinned to full SHA in {rel(path)}: {action}")
+
+
+def check_source_syntax(errors: list[str]) -> None:
+    for path in sorted(ROOT.rglob("*.py")):
+        if is_ignored(path):
+            continue
+        try:
+            compile(path.read_text(encoding="utf-8"), rel(path), "exec")
+        except SyntaxError as exc:
+            errors.append(f"Python syntax error in {rel(path)}: {exc}")
+    for path in sorted(ROOT.rglob("*.sh")):
+        if is_ignored(path):
+            continue
+        result = subprocess.run(["bash", "-n", str(path)], text=True, capture_output=True, check=False)
+        if result.returncode:
+            errors.append(f"shell syntax error in {rel(path)}: {result.stderr.strip()}")
+
+
+def check_targets(errors: list[str]) -> None:
+    for target in (ROOT / "targets/42-main", ROOT / "targets/guides-main"):
+        result = subprocess.run(
+            [sys.executable, str(target / "scripts/check_main.py")],
+            cwd=target,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        if result.returncode:
+            errors.append(f"target check failed {target.name}: {result.stderr.strip() or result.stdout.strip()}")
+
+
+def check_generated(errors: list[str]) -> None:
     result = subprocess.run(
         [sys.executable, str(ROOT / "scripts/build_jobs.py"), "--check"],
         cwd=ROOT,
@@ -123,23 +350,68 @@ def check_generated_jobs(errors: list[str]) -> None:
         capture_output=True,
         check=False,
     )
-    if result.returncode != 0:
-        fail(errors, result.stderr.strip() or "generated job snapshot is stale")
+    if result.returncode:
+        errors.append(result.stderr.strip() or "generated jobs document is stale")
+
+
+def check_package_manifest(errors: list[str]) -> None:
+    path = ROOT / "MANIFEST.sha256"
+    if not path.exists():
+        return
+    expected_paths: set[str] = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        match = re.fullmatch(r"([0-9a-f]{64})  (.+)", line)
+        if not match:
+            errors.append("invalid MANIFEST.sha256 line")
+            continue
+        digest, item = match.groups()
+        if item == "MANIFEST.sha256":
+            errors.append("manifest must not list itself")
+            continue
+        target = (ROOT / item).resolve()
+        try:
+            target.relative_to(ROOT.resolve())
+        except ValueError:
+            errors.append(f"manifest path escapes repository: {item}")
+            continue
+        if not target.is_file() or target.is_symlink():
+            errors.append(f"manifest target missing/not regular: {item}")
+            continue
+        if sha256(target) != digest:
+            errors.append(f"manifest hash mismatch: {item}")
+        expected_paths.add(item)
+    actual = {
+        rel(item) for item in iter_files()
+        if not item.is_symlink() and rel(item) != "MANIFEST.sha256" and not rel(item).startswith("dist/")
+    }
+    if expected_paths != actual:
+        missing = sorted(actual - expected_paths)
+        extra = sorted(expected_paths - actual)
+        if missing:
+            errors.append(f"manifest missing files: {missing[:8]}")
+        if extra:
+            errors.append(f"manifest extra files: {extra[:8]}")
 
 
 def main() -> int:
     errors: list[str] = []
     check_required(errors)
+    check_filesystem(errors)
     if not errors:
+        check_text_security(errors)
         check_markdown_links(errors)
-        check_path_tables(errors)
-        check_jobs(errors)
-        check_generated_jobs(errors)
+        check_path_ids(errors)
+        check_render_manifest(errors)
+        check_workflows(errors)
+        check_source_syntax(errors)
+        check_targets(errors)
+        check_generated(errors)
+        check_package_manifest(errors)
     if errors:
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)
         return 1
-    print("repository structure, links, PATH tables and job snapshot: OK")
+    print("repository structure, links, PATH/L, targets, jobs, workflows and package integrity: OK")
     return 0
 
 

@@ -1,0 +1,54 @@
+digraph Path {
+  graph [rankdir=TB, bgcolor="white", pad="0.28", nodesep="0.18", ranksep="0.30",
+    fontname="Noto Sans CJK KR", fontsize=20,
+    label="P·G 선형 spine + L trigger queue", labelloc=t];
+  node [shape=plain, fontname="Noto Sans CJK KR"];
+  edge [color="#52616b", arrowsize=0.72, penwidth=1.1];
+
+  W0 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="9" COLOR="#8ba7c7">
+      <TR><TD COLSPAN="2" BGCOLOR="#f4f7fb"><FONT POINT-SIZE="15"><B>W0 · 작업 기반과 C 계열</B></FONT></TD></TR>
+      <TR><TD BGCOLOR="#2457a6"><FONT COLOR="white"><B>P</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#eaf2ff">P01 c-foundation → P02 buffered-line-reader → P03 format-printer<BR ALIGN="LEFT"/>→ P04 signal-message-bus → P05 small-shell → P06 thread-dining</TD></TR>
+      <TR><TD BGCOLOR="#2f7d32"><FONT COLOR="white"><B>G</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#edf8ef">G00 Git → G01 C → G02 Unix systems → [Python? / Shell?]</TD></TR>
+      <TR><TD BGCOLOR="#a66b00"><FONT COLOR="white"><B>L</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#fff6df">L04 C 계열 감사 · L06 OS 연결 감사</TD></TR>
+      <TR><TD BGCOLOR="#eef1f4"><B>GATE</B></TD><TD ALIGN="LEFT">G01 → P01</TD></TR>
+    </TABLE>
+  >];
+  W1 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="9" COLOR="#8ba7c7">
+      <TR><TD COLSPAN="2" BGCOLOR="#f4f7fb"><FONT POINT-SIZE="15"><B>W1 · C++·알고리즘·시스템</B></FONT></TD></TR>
+      <TR><TD BGCOLOR="#2457a6"><FONT COLOR="white"><B>P</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#eaf2ff">P07 cpp-foundation → P08 stl-container → P09 stack-sort<BR ALIGN="LEFT"/>→ P10 ray-scene-tracer → P11 irc-relay-server</TD></TR>
+      <TR><TD BGCOLOR="#2f7d32"><FONT COLOR="white"><B>G</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#edf8ef">G03 C++ → G04 OS → G05 Algorithms → G06 Architecture → G07 Networks</TD></TR>
+      <TR><TD BGCOLOR="#a66b00"><FONT COLOR="white"><B>L</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#fff6df">L01~L03 코딩 테스트 · L05/L07/L09 연결 감사</TD></TR>
+      <TR><TD BGCOLOR="#eef1f4"><B>GATE</B></TD><TD ALIGN="LEFT">G03 → P07 · G05 → L01</TD></TR>
+    </TABLE>
+  >];
+  W2 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="9" COLOR="#8ba7c7">
+      <TR><TD COLSPAN="2" BGCOLOR="#f4f7fb"><FONT POINT-SIZE="15"><B>W2 · 웹·프런트엔드·데이터베이스</B></FONT></TD></TR>
+      <TR><TD BGCOLOR="#2457a6"><FONT COLOR="white"><B>P</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#eaf2ff">P12 container-stack → P13 web-boundary-inspector<BR ALIGN="LEFT"/>→ <B>P14 portfolio-site</B> → P15 pong-pong</TD></TR>
+      <TR><TD BGCOLOR="#2f7d32"><FONT COLOR="white"><B>G</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#edf8ef">G08 Web infra → G09 Web apps → G10 React·Next.js → G11 Database</TD></TR>
+      <TR><TD BGCOLOR="#a66b00"><FONT COLOR="white"><B>L</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#fff6df">L08 Network · L10 Web · L14 첫 지원 준비</TD></TR>
+      <TR><TD BGCOLOR="#eef1f4"><B>GATE</B></TD><TD ALIGN="LEFT">G08→P12 · G09+G10→P14 · G11→P15</TD></TR>
+    </TABLE>
+  >];
+  W3 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="9" COLOR="#8ba7c7">
+      <TR><TD COLSPAN="2" BGCOLOR="#f4f7fb"><FONT POINT-SIZE="15"><B>W3 · Java·Spring·스포츠북 기반</B></FONT></TD></TR>
+      <TR><TD BGCOLOR="#2457a6"><FONT COLOR="white"><B>P</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#eaf2ff">P16 shared-protocol → P17 wallet → P18 risk → P19 odds-feed</TD></TR>
+      <TR><TD BGCOLOR="#2f7d32"><FONT COLOR="white"><B>G</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#edf8ef">G12 Java → G13 Spring Boot → G14 Distributed services</TD></TR>
+      <TR><TD BGCOLOR="#a66b00"><FONT COLOR="white"><B>L</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#fff6df">L12 Sportsbook foundation · L15 지원 갱신</TD></TR>
+      <TR><TD BGCOLOR="#eef1f4"><B>GATE</B></TD><TD ALIGN="LEFT">G12→P16 · G13→P17</TD></TR>
+    </TABLE>
+  >];
+  W4 [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="9" COLOR="#8ba7c7">
+      <TR><TD COLSPAN="2" BGCOLOR="#f4f7fb"><FONT POINT-SIZE="15"><B>W4 · 분산 조정·엣지·통합</B></FONT></TD></TR>
+      <TR><TD BGCOLOR="#2457a6"><FONT COLOR="white"><B>P</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#eaf2ff">P20 betting → P21 settlement → P22 gateway<BR ALIGN="LEFT"/>→ P23 admin-api → P24 orchestration</TD></TR>
+      <TR><TD BGCOLOR="#2f7d32"><FONT COLOR="white"><B>G</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#edf8ef">필수 가이드 완료 · P/G 수정 작업만 재개</TD></TR>
+      <TR><TD BGCOLOR="#a66b00"><FONT COLOR="white"><B>L</B></FONT></TD><TD ALIGN="LEFT" BGCOLOR="#fff6df">L11 DB · L13 전체 감사 · L15 지원 갱신</TD></TR>
+      <TR><TD BGCOLOR="#eef1f4"><B>GATE</B></TD><TD ALIGN="LEFT">G14 → P20</TD></TR>
+    </TABLE>
+  >];
+  W0 -> W1 -> W2 -> W3 -> W4;
+}
