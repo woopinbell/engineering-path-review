@@ -91,32 +91,36 @@
 <g id="node58" class="node">
 <title>SYNC</title>
 <path fill="#f8fafc" stroke="transparent" d="M704,-1613C704,-1613 470,-1613 470,-1613 464,-1613 458,-1607 458,-1601 458,-1601 458,-1488 458,-1488 458,-1482 464,-1476 470,-1476 470,-1476 704,-1476 704,-1476 710,-1476 716,-1482 716,-1488 716,-1488 716,-1601 716,-1601 716,-1607 710,-1613 704,-1613"/>
-<polygon fill="#fee2e2" stroke="transparent" points="459,-1584.5 459,-1611.5 715,-1611.5 715,-1584.5 459,-1584.5"/>
-<polygon fill="none" stroke="#dc2626" points="459,-1584.5 459,-1611.5 715,-1611.5 715,-1584.5 459,-1584.5"/>
+<polygon fill="#f8fafc" stroke="transparent" points="459,-1584.5 459,-1611.5 715,-1611.5 715,-1584.5 459,-1584.5"/>
+<polygon fill="none" stroke="#94a3b8" points="459,-1584.5 459,-1611.5 715,-1611.5 715,-1584.5 459,-1584.5"/>
 <text text-anchor="start" x="563" y="-1596.5" font-family="Noto Sans CJK KR" font-weight="bold" font-size="10.00">하드 동기화</text>
-<polygon fill="none" stroke="#dc2626" points="459,-1557.5 459,-1584.5 596,-1584.5 596,-1557.5 459,-1557.5"/>
+<polygon fill="#ede9fe" stroke="transparent" points="459,-1557.5 459,-1584.5 596,-1584.5 596,-1557.5 459,-1557.5"/>
+<polygon fill="none" stroke="#94a3b8" points="459,-1557.5 459,-1584.5 596,-1584.5 596,-1557.5 459,-1557.5"/>
 <text text-anchor="start" x="467" y="-1568.5" font-family="Noto Sans CJK KR" font-size="10.00">CPP&#45;G02 → C&#45;S01</text>
-<polygon fill="none" stroke="#dc2626" points="596,-1557.5 596,-1584.5 715,-1584.5 715,-1557.5 596,-1557.5"/>
+<polygon fill="none" stroke="#94a3b8" points="596,-1557.5 596,-1584.5 715,-1584.5 715,-1557.5 596,-1557.5"/>
 <text text-anchor="start" x="604" y="-1568.5" font-family="Noto Sans CJK KR" font-size="10.00">Algorithms 01~10</text>
-<polygon fill="none" stroke="#dc2626" points="459,-1530.5 459,-1557.5 596,-1557.5 596,-1530.5 459,-1530.5"/>
+<polygon fill="#ede9fe" stroke="transparent" points="459,-1530.5 459,-1557.5 596,-1557.5 596,-1530.5 459,-1530.5"/>
+<polygon fill="none" stroke="#94a3b8" points="459,-1530.5 459,-1557.5 596,-1557.5 596,-1530.5 459,-1530.5"/>
 <text text-anchor="start" x="467" y="-1541.5" font-family="Noto Sans CJK KR" font-size="10.00">CPP&#45;G05 → WEB&#45;S01</text>
-<polygon fill="none" stroke="#dc2626" points="596,-1530.5 596,-1557.5 715,-1557.5 715,-1530.5 596,-1530.5"/>
+<polygon fill="none" stroke="#94a3b8" points="596,-1530.5 596,-1557.5 715,-1557.5 715,-1530.5 596,-1530.5"/>
 <text text-anchor="start" x="604" y="-1541.5" font-family="Noto Sans CJK KR" font-size="10.00">Networks 01~11</text>
-<polygon fill="none" stroke="#dc2626" points="459,-1503.5 459,-1530.5 596,-1530.5 596,-1503.5 459,-1503.5"/>
+<polygon fill="#d1fae5" stroke="transparent" points="459,-1503.5 459,-1530.5 596,-1530.5 596,-1503.5 459,-1503.5"/>
+<polygon fill="none" stroke="#94a3b8" points="459,-1503.5 459,-1530.5 596,-1530.5 596,-1503.5 459,-1503.5"/>
 <text text-anchor="start" x="467" y="-1514.5" font-family="Noto Sans CJK KR" font-size="10.00">WEB&#45;G04 → SB&#45;S01</text>
-<polygon fill="none" stroke="#dc2626" points="596,-1503.5 596,-1530.5 715,-1530.5 715,-1503.5 596,-1503.5"/>
+<polygon fill="none" stroke="#94a3b8" points="596,-1503.5 596,-1530.5 715,-1530.5 715,-1503.5 596,-1503.5"/>
 <text text-anchor="start" x="604" y="-1514.5" font-family="Noto Sans CJK KR" font-size="10.00">Web Apps 07~08</text>
-<polygon fill="none" stroke="#dc2626" points="459,-1476.5 459,-1503.5 596,-1503.5 596,-1476.5 459,-1476.5"/>
+<polygon fill="#d1fae5" stroke="transparent" points="459,-1476.5 459,-1503.5 596,-1503.5 596,-1476.5 459,-1476.5"/>
+<polygon fill="none" stroke="#94a3b8" points="459,-1476.5 459,-1503.5 596,-1503.5 596,-1476.5 459,-1476.5"/>
 <text text-anchor="start" x="467" y="-1487.5" font-family="Noto Sans CJK KR" font-size="10.00">WEB&#45;G01·06·07 → SB&#45;S02</text>
-<polygon fill="none" stroke="#dc2626" points="596,-1476.5 596,-1503.5 715,-1503.5 715,-1476.5 596,-1476.5"/>
+<polygon fill="none" stroke="#94a3b8" points="596,-1476.5 596,-1503.5 715,-1503.5 715,-1476.5 596,-1476.5"/>
 <text text-anchor="start" x="604" y="-1487.5" font-family="Noto Sans CJK KR" font-size="10.00">Infra·DB·Networks 12</text>
-<polygon fill="none" stroke="#dc2626" points="458,-1476 458,-1613 716,-1613 716,-1476 458,-1476"/>
+<polygon fill="none" stroke="#94a3b8" points="458,-1476 458,-1613 716,-1613 716,-1476 458,-1476"/>
 </g>
 <!-- G00&#45;&gt;SYNC -->
 <g id="edge59" class="edge">
 <title>G00&#45;&gt;SYNC</title>
-<path fill="none" stroke="#dc2626" stroke-width="1.05" stroke-dasharray="5,2" d="M410.38,-1544.5C422.78,-1544.5 432.33,-1544.5 432.33,-1544.5 432.33,-1544.5 440.25,-1544.5 451.02,-1544.5"/>
-<polygon fill="#dc2626" stroke="#dc2626" stroke-width="1.05" points="451.26,-1546.74 457.66,-1544.5 451.26,-1542.26 451.26,-1546.74"/>
+<path fill="none" stroke="#94a3b8" stroke-width="1.05" stroke-dasharray="5,2" d="M410.38,-1544.5C422.78,-1544.5 432.33,-1544.5 432.33,-1544.5 432.33,-1544.5 440.25,-1544.5 451.02,-1544.5"/>
+<polygon fill="#94a3b8" stroke="#94a3b8" stroke-width="1.05" points="451.26,-1546.74 457.66,-1544.5 451.26,-1542.26 451.26,-1546.74"/>
 </g>
 <!-- C2 -->
 <g id="node3" class="node">
@@ -190,9 +194,9 @@
 <!-- C7 -->
 <g id="node8" class="node">
 <title>C7</title>
-<path fill="#fef3c7" stroke="#64748b" d="M109,-970C109,-970 45,-970 45,-970 39,-970 33,-964 33,-958 33,-958 33,-946 33,-946 33,-940 39,-934 45,-934 45,-934 109,-934 109,-934 115,-934 121,-940 121,-946 121,-946 121,-958 121,-958 121,-964 115,-970 109,-970"/>
-<text text-anchor="middle" x="77" y="-955" font-family="Noto Sans CJK KR" font-size="10.00">C&#45;S01</text>
-<text text-anchor="middle" x="77" y="-944" font-family="Noto Sans CJK KR" font-size="10.00">CPP&#45;G02 동기화</text>
+<path fill="#fff7ed" stroke="#d97706" stroke-width="2" d="M109,-970C109,-970 45,-970 45,-970 39,-970 33,-964 33,-958 33,-958 33,-946 33,-946 33,-940 39,-934 45,-934 45,-934 109,-934 109,-934 115,-934 121,-940 121,-946 121,-946 121,-958 121,-958 121,-964 115,-970 109,-970"/>
+<text text-anchor="middle" x="77" y="-955" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">C&#45;S01</text>
+<text text-anchor="middle" x="77" y="-944" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">CPP&#45;G02 동기화</text>
 </g>
 <!-- C6&#45;&gt;C7 -->
 <g id="edge6" class="edge">
@@ -566,9 +570,9 @@
 <!-- W10 -->
 <g id="node37" class="node">
 <title>W10</title>
-<path fill="#fef3c7" stroke="#64748b" d="M457,-749C457,-749 393,-749 393,-749 387,-749 381,-743 381,-737 381,-737 381,-725 381,-725 381,-719 387,-713 393,-713 393,-713 457,-713 457,-713 463,-713 469,-719 469,-725 469,-725 469,-737 469,-737 469,-743 463,-749 457,-749"/>
-<text text-anchor="middle" x="425" y="-734" font-family="Noto Sans CJK KR" font-size="10.00">WEB&#45;S01</text>
-<text text-anchor="middle" x="425" y="-723" font-family="Noto Sans CJK KR" font-size="10.00">CPP&#45;G05 동기화</text>
+<path fill="#fff7ed" stroke="#d97706" stroke-width="2" d="M457,-749C457,-749 393,-749 393,-749 387,-749 381,-743 381,-737 381,-737 381,-725 381,-725 381,-719 387,-713 393,-713 393,-713 457,-713 457,-713 463,-713 469,-719 469,-725 469,-725 469,-737 469,-737 469,-743 463,-749 457,-749"/>
+<text text-anchor="middle" x="425" y="-734" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">WEB&#45;S01</text>
+<text text-anchor="middle" x="425" y="-723" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">CPP&#45;G05 동기화</text>
 </g>
 <!-- W9&#45;&gt;W10 -->
 <g id="edge33" class="edge">
@@ -716,9 +720,9 @@
 <!-- S10 -->
 <g id="node50" class="node">
 <title>S10</title>
-<path fill="#fef3c7" stroke="#64748b" d="M612.5,-749C612.5,-749 545.5,-749 545.5,-749 539.5,-749 533.5,-743 533.5,-737 533.5,-737 533.5,-725 533.5,-725 533.5,-719 539.5,-713 545.5,-713 545.5,-713 612.5,-713 612.5,-713 618.5,-713 624.5,-719 624.5,-725 624.5,-725 624.5,-737 624.5,-737 624.5,-743 618.5,-749 612.5,-749"/>
-<text text-anchor="middle" x="579" y="-734" font-family="Noto Sans CJK KR" font-size="10.00">SB&#45;S01</text>
-<text text-anchor="middle" x="579" y="-723" font-family="Noto Sans CJK KR" font-size="10.00">WEB&#45;G04 동기화</text>
+<path fill="#fff7ed" stroke="#d97706" stroke-width="2" d="M612.5,-749C612.5,-749 545.5,-749 545.5,-749 539.5,-749 533.5,-743 533.5,-737 533.5,-737 533.5,-725 533.5,-725 533.5,-719 539.5,-713 545.5,-713 545.5,-713 612.5,-713 612.5,-713 618.5,-713 624.5,-719 624.5,-725 624.5,-725 624.5,-737 624.5,-737 624.5,-743 618.5,-749 612.5,-749"/>
+<text text-anchor="middle" x="579" y="-734" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">SB&#45;S01</text>
+<text text-anchor="middle" x="579" y="-723" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">WEB&#45;G04 동기화</text>
 </g>
 <!-- S9&#45;&gt;S10 -->
 <g id="edge45" class="edge">
@@ -781,9 +785,9 @@
 <!-- S15 -->
 <g id="node55" class="node">
 <title>S15</title>
-<path fill="#fef3c7" stroke="#64748b" d="M633,-309.5C633,-309.5 535,-309.5 535,-309.5 529,-309.5 523,-303.5 523,-297.5 523,-297.5 523,-285.5 523,-285.5 523,-279.5 529,-273.5 535,-273.5 535,-273.5 633,-273.5 633,-273.5 639,-273.5 645,-279.5 645,-285.5 645,-285.5 645,-297.5 645,-297.5 645,-303.5 639,-309.5 633,-309.5"/>
-<text text-anchor="middle" x="584" y="-294.5" font-family="Noto Sans CJK KR" font-size="10.00">SB&#45;S02</text>
-<text text-anchor="middle" x="584" y="-283.5" font-family="Noto Sans CJK KR" font-size="10.00">WEB&#45;G01·06·07 동기화</text>
+<path fill="#fff7ed" stroke="#d97706" stroke-width="2" d="M633,-309.5C633,-309.5 535,-309.5 535,-309.5 529,-309.5 523,-303.5 523,-297.5 523,-297.5 523,-285.5 523,-285.5 523,-279.5 529,-273.5 535,-273.5 535,-273.5 633,-273.5 633,-273.5 639,-273.5 645,-279.5 645,-285.5 645,-285.5 645,-297.5 645,-297.5 645,-303.5 639,-309.5 633,-309.5"/>
+<text text-anchor="middle" x="584" y="-294.5" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">SB&#45;S02</text>
+<text text-anchor="middle" x="584" y="-283.5" font-family="Noto Sans CJK KR" font-size="10.00" fill="#92400e">WEB&#45;G01·06·07 동기화</text>
 </g>
 <!-- S14&#45;&gt;S15 -->
 <g id="edge50" class="edge">

@@ -16,7 +16,7 @@ digraph ParallelTrackDetail {
     C4 [label="P02", fillcolor="#dbeafe", penwidth=2];
     C5 [label="C-G03\nC 05"];
     C6 [label="P03", fillcolor="#dbeafe", penwidth=2];
-    C7 [label="C-S01\nCPP-G02 동기화", fillcolor="#fef3c7"];
+    C7 [label="C-S01\nCPP-G02 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
     C8 [label="P09", fillcolor="#dbeafe", penwidth=2];
     C9 [label="C-G04\nC 08 + Unix 04"];
     C10 [label="P04", fillcolor="#dbeafe", penwidth=2];
@@ -55,7 +55,7 @@ digraph ParallelTrackDetail {
     W7 [label="WEB-G04\nWeb Apps 07~08"];
     W8 [label="WEB-G05\nWeb Apps 09\nG09 폐쇄"];
     W9 [label="WEB-G06\nDatabase 01~12\nG11 폐쇄"];
-    W10 [label="WEB-S01\nCPP-G05 동기화", fillcolor="#fef3c7"];
+    W10 [label="WEB-S01\nCPP-G05 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
     W11 [label="WEB-G07\nNetworks 12\nG07 폐쇄"];
     W12 [label="P15", fillcolor="#d1fae5", penwidth=2];
     W13 [label="WEB 완료", shape=octagon, fillcolor="#a7f3d0"];
@@ -73,12 +73,12 @@ digraph ParallelTrackDetail {
     S7 [label="SB-G03\nDistributed 01~07"];
     S8 [label="P20", fillcolor="#ffedd5", penwidth=2];
     S9 [label="P21", fillcolor="#ffedd5", penwidth=2];
-    S10 [label="SB-S01\nWEB-G04 동기화", fillcolor="#fef3c7"];
+    S10 [label="SB-S01\nWEB-G04 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
     S11 [label="P22", fillcolor="#ffedd5", penwidth=2];
     S12 [label="P23", fillcolor="#ffedd5", penwidth=2];
     S13 [label="SB-G04\nDistributed 08~10\nG14 폐쇄"];
     S14 [label="SB-G05\nShell 01~08\n조건 충족 필수"];
-    S15 [label="SB-S02\nWEB-G01·06·07 동기화", fillcolor="#fef3c7"];
+    S15 [label="SB-S02\nWEB-G01·06·07 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
     S16 [label="P24", fillcolor="#ffedd5", penwidth=2];
     S17 [label="SPORTSBOOK 완료", shape=octagon, fillcolor="#fed7aa"];
     S1 -> S2 -> S3 -> S4 -> S5 -> S6 -> S7 -> S8 -> S9 -> S10 -> S11 -> S12 -> S13 -> S14 -> S15 -> S16 -> S17;
@@ -93,15 +93,16 @@ digraph ParallelTrackDetail {
   W2 -> S2 [style=dashed, label="과거 경험 재사용", color="#94a3b8", constraint=false];
 
   SYNC [shape=plain, label=<
-    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7" COLOR="#dc2626">
-      <TR><TD BGCOLOR="#fee2e2" COLSPAN="2"><B>하드 동기화</B></TD></TR>
-      <TR><TD ALIGN="LEFT">CPP-G02 → C-S01</TD><TD ALIGN="LEFT">Algorithms 01~10</TD></TR>
-      <TR><TD ALIGN="LEFT">CPP-G05 → WEB-S01</TD><TD ALIGN="LEFT">Networks 01~11</TD></TR>
-      <TR><TD ALIGN="LEFT">WEB-G04 → SB-S01</TD><TD ALIGN="LEFT">Web Apps 07~08</TD></TR>
-      <TR><TD ALIGN="LEFT">WEB-G01·06·07 → SB-S02</TD><TD ALIGN="LEFT">Infra·DB·Networks 12</TD></TR>
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7" COLOR="#94a3b8">
+      <TR><TD BGCOLOR="#f8fafc" COLSPAN="2"><B>하드 동기화</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ede9fe">CPP-G02 → C-S01</TD><TD ALIGN="LEFT">Algorithms 01~10</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ede9fe">CPP-G05 → WEB-S01</TD><TD ALIGN="LEFT">Networks 01~11</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#d1fae5">WEB-G04 → SB-S01</TD><TD ALIGN="LEFT">Web Apps 07~08</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#d1fae5">WEB-G01·06·07 → SB-S02</TD><TD ALIGN="LEFT">Infra·DB·Networks 12</TD></TR>
     </TABLE>
   >];
-  G00 -> SYNC [style=dashed, color="#dc2626", constraint=false];
+  G00 -> SYNC [style=dashed, color="#94a3b8", constraint=false];
+
 
   MERGE [label="◇ 4트랙 완료\nP01~P24 + 필수 가이드 전체 커버리지", shape=diamond,
     fillcolor="#fde68a", color="#b45309", penwidth=2];
