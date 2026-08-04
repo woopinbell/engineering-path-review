@@ -16,8 +16,8 @@ digraph ParallelTrackDetail {
     C4 [label="P02", fillcolor="#dbeafe", penwidth=2];
     C5 [label="C-G03\nC 05"];
     C6 [label="P03", fillcolor="#dbeafe", penwidth=2];
-    C7 [label="C-S01\nCPP-G02 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
-    C8 [label="P09", fillcolor="#dbeafe", penwidth=2];
+    C7 [label="C-S01 · S1\nCPP-G02 동기화", fillcolor="#fce7f3", color="#db2777", fontcolor="#9d174d", penwidth=2.3];
+    C8 [label="P09 · S1", fillcolor="#fce7f3", color="#db2777", fontcolor="#9d174d", penwidth=2.3];
     C9 [label="C-G04\nC 08 + Unix 04"];
     C10 [label="P04", fillcolor="#dbeafe", penwidth=2];
     C11 [label="C-G05\nC 07·09 + Unix 05~06"];
@@ -26,19 +26,21 @@ digraph ParallelTrackDetail {
     C14 [label="P06", fillcolor="#dbeafe", penwidth=2];
     C15 [label="C-G07\nUnix 07~09 + OS 07~10\nG01·G02·G04 폐쇄"];
     C16 [label="C 완료", shape=octagon, fillcolor="#bfdbfe"];
-    C1 -> C2 -> C3 -> C4 -> C5 -> C6 -> C7 -> C8 -> C9 -> C10 -> C11 -> C12 -> C13 -> C14 -> C15 -> C16;
+    C1 -> C2 -> C3 -> C4 -> C5 -> C6 -> C7;
+    C7 -> C8 [color="#db2777", penwidth=2.2];
+    C8 -> C9 -> C10 -> C11 -> C12 -> C13 -> C14 -> C15 -> C16;
   }
 
   subgraph cluster_cpp {
     label="C++ TRACK"; color="#7c3aed"; penwidth=2; style="rounded";
     X1 [label="CPP-G01\nC++ 01~05"];
     X2 [label="P07", fillcolor="#ede9fe", penwidth=2];
-    X3 [label="CPP-G02\nAlgorithms 01~10"];
+    X3 [label="CPP-G02 · S1\nAlgorithms 01~10", fillcolor="#fce7f3", color="#db2777", fontcolor="#9d174d", penwidth=2.3];
     X4 [label="CPP-G03\nC++ 06~07 + Algorithms 11"];
     X5 [label="P08", fillcolor="#ede9fe", penwidth=2];
     X6 [label="CPP-G04\nAlgorithms 12~16 + Architecture 01~10\nG05·G06 폐쇄"];
     X7 [label="P10", fillcolor="#ede9fe", penwidth=2];
-    X8 [label="CPP-G05\nC++ 08~09 + Networks 01~11\nG03 폐쇄"];
+    X8 [label="CPP-G05 · S2\nC++ 08~09 + Networks 01~11\nG03 폐쇄", fillcolor="#fef3c7", color="#d97706", fontcolor="#92400e", penwidth=2.3];
     X9 [label="P11", fillcolor="#ede9fe", penwidth=2];
     X10 [label="C++ 완료", shape=octagon, fillcolor="#ddd6fe"];
     X1 -> X2 -> X3 -> X4 -> X5 -> X6 -> X7 -> X8 -> X9 -> X10;
@@ -46,20 +48,22 @@ digraph ParallelTrackDetail {
 
   subgraph cluster_web {
     label="WEB TRACK"; color="#059669"; penwidth=2; style="rounded";
-    W1 [label="WEB-G01\nWeb Infra 01~07\nG08 폐쇄"];
+    W1 [label="WEB-G01 · S4\nWeb Infra 01~07\nG08 폐쇄", fillcolor="#ecfccb", color="#65a30d", fontcolor="#3f6212", penwidth=2.3];
     W2 [label="P12", fillcolor="#d1fae5", penwidth=2];
     W3 [label="WEB-G02\nWeb Apps 00~06"];
     W4 [label="P13", fillcolor="#d1fae5", penwidth=2];
     W5 [label="WEB-G03\nFrontend 00~04\nG10 폐쇄"];
     W6 [label="P14", fillcolor="#d1fae5", penwidth=2];
-    W7 [label="WEB-G04\nWeb Apps 07~08"];
+    W7 [label="WEB-G04 · S3\nWeb Apps 07~08", fillcolor="#cffafe", color="#0891b2", fontcolor="#155e75", penwidth=2.3];
     W8 [label="WEB-G05\nWeb Apps 09\nG09 폐쇄"];
-    W9 [label="WEB-G06\nDatabase 01~12\nG11 폐쇄"];
-    W10 [label="WEB-S01\nCPP-G05 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
-    W11 [label="WEB-G07\nNetworks 12\nG07 폐쇄"];
+    W9 [label="WEB-G06 · S4\nDatabase 01~12\nG11 폐쇄", fillcolor="#ecfccb", color="#65a30d", fontcolor="#3f6212", penwidth=2.3];
+    W10 [label="WEB-S01 · S2\nCPP-G05 동기화", fillcolor="#fef3c7", color="#d97706", fontcolor="#92400e", penwidth=2.3];
+    W11 [label="WEB-G07 · S2·S4\nNetworks 12\nG07 폐쇄", fillcolor="#fef3c7:#ecfccb", gradientangle=90, color="#64748b", fontcolor="#334155", penwidth=2.8];
     W12 [label="P15", fillcolor="#d1fae5", penwidth=2];
     W13 [label="WEB 완료", shape=octagon, fillcolor="#a7f3d0"];
-    W1 -> W2 -> W3 -> W4 -> W5 -> W6 -> W7 -> W8 -> W9 -> W10 -> W11 -> W12 -> W13;
+    W1 -> W2 -> W3 -> W4 -> W5 -> W6 -> W7 -> W8 -> W9 -> W10;
+    W10 -> W11 [color="#d97706", penwidth=2.2];
+    W11 -> W12 -> W13;
   }
 
   subgraph cluster_sb {
@@ -73,15 +77,19 @@ digraph ParallelTrackDetail {
     S7 [label="SB-G03\nDistributed 01~07"];
     S8 [label="P20", fillcolor="#ffedd5", penwidth=2];
     S9 [label="P21", fillcolor="#ffedd5", penwidth=2];
-    S10 [label="SB-S01\nWEB-G04 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
-    S11 [label="P22", fillcolor="#ffedd5", penwidth=2];
+    S10 [label="SB-S01 · S3\nWEB-G04 동기화", fillcolor="#cffafe", color="#0891b2", fontcolor="#155e75", penwidth=2.3];
+    S11 [label="P22 · S3", fillcolor="#cffafe", color="#0891b2", fontcolor="#155e75", penwidth=2.3];
     S12 [label="P23", fillcolor="#ffedd5", penwidth=2];
     S13 [label="SB-G04\nDistributed 08~10\nG14 폐쇄"];
     S14 [label="SB-G05\nShell 01~08\n조건 충족 필수"];
-    S15 [label="SB-S02\nWEB-G01·06·07 동기화", fillcolor="#fff7ed", color="#d97706", fontcolor="#92400e", penwidth=2];
-    S16 [label="P24", fillcolor="#ffedd5", penwidth=2];
+    S15 [label="SB-S02 · S4\nWEB-G01·06·07 동기화", fillcolor="#ecfccb", color="#65a30d", fontcolor="#3f6212", penwidth=2.3];
+    S16 [label="P24 · S4", fillcolor="#ecfccb", color="#65a30d", fontcolor="#3f6212", penwidth=2.3];
     S17 [label="SPORTSBOOK 완료", shape=octagon, fillcolor="#fed7aa"];
-    S1 -> S2 -> S3 -> S4 -> S5 -> S6 -> S7 -> S8 -> S9 -> S10 -> S11 -> S12 -> S13 -> S14 -> S15 -> S16 -> S17;
+    S1 -> S2 -> S3 -> S4 -> S5 -> S6 -> S7 -> S8 -> S9 -> S10;
+    S10 -> S11 [color="#0891b2", penwidth=2.2];
+    S11 -> S12 -> S13 -> S14 -> S15;
+    S15 -> S16 [color="#65a30d", penwidth=2.2];
+    S16 -> S17;
   }
 
   G00 -> C1 [color="#2563eb"];
@@ -94,11 +102,11 @@ digraph ParallelTrackDetail {
 
   SYNC [shape=plain, label=<
     <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7" COLOR="#94a3b8">
-      <TR><TD BGCOLOR="#f8fafc" COLSPAN="2"><B>하드 동기화</B></TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ede9fe">CPP-G02 → C-S01</TD><TD ALIGN="LEFT">Algorithms 01~10</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ede9fe">CPP-G05 → WEB-S01</TD><TD ALIGN="LEFT">Networks 01~11</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#d1fae5">WEB-G04 → SB-S01</TD><TD ALIGN="LEFT">Web Apps 07~08</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#d1fae5">WEB-G01·06·07 → SB-S02</TD><TD ALIGN="LEFT">Infra·DB·Networks 12</TD></TR>
+      <TR><TD BGCOLOR="#f8fafc" COLSPAN="4"><B>관계별 하드 동기화 색상</B></TD></TR>
+      <TR><TD BGCOLOR="#fce7f3"><FONT COLOR="#9d174d"><B>S1 · CPP-G02</B></FONT></TD><TD>→</TD><TD BGCOLOR="#fce7f3"><FONT COLOR="#9d174d"><B>C-S01 · P09</B></FONT></TD><TD>Algorithms 01~10</TD></TR>
+      <TR><TD BGCOLOR="#fef3c7"><FONT COLOR="#92400e"><B>S2 · CPP-G05</B></FONT></TD><TD>→</TD><TD BGCOLOR="#fef3c7"><FONT COLOR="#92400e"><B>WEB-S01 · WEB-G07</B></FONT></TD><TD>Networks 01~11</TD></TR>
+      <TR><TD BGCOLOR="#cffafe"><FONT COLOR="#155e75"><B>S3 · WEB-G04</B></FONT></TD><TD>→</TD><TD BGCOLOR="#cffafe"><FONT COLOR="#155e75"><B>SB-S01 · P22</B></FONT></TD><TD>Web Apps 07~08</TD></TR>
+      <TR><TD BGCOLOR="#ecfccb"><FONT COLOR="#3f6212"><B>S4 · WEB-G01·06·07</B></FONT></TD><TD>→</TD><TD BGCOLOR="#ecfccb"><FONT COLOR="#3f6212"><B>SB-S02 · P24</B></FONT></TD><TD>Infra·DB·Networks 12</TD></TR>
     </TABLE>
   >];
   G00 -> SYNC [style=dashed, color="#94a3b8", constraint=false];

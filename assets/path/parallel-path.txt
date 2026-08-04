@@ -60,5 +60,10 @@ C-S01, WEB-S01, SB-S01, and SB-S02 are checkpoints, not learning blocks.
 WEB-G01 through WEB-G06 require only G00 and WEB-internal predecessors; the first external wait is WEB-S01 before WEB-G07.
 
 VISUAL LEGEND
-All synchronization checkpoint nodes share one amber palette.
-Hard-synchronization relations do not use one global red color; source cells retain the provider track color.
+Synchronization colors are relation-specific rather than global.
+S1: CPP-G02 · C-S01 · P09
+S2: CPP-G05 · WEB-S01 · WEB-G07
+S3: WEB-G04 · SB-S01 · P22
+S4: WEB-G01 · WEB-G06 · WEB-G07 · SB-S02 · P24
+Nodes in the same relation share one accent; different relations use different accents.
+WEB-G07 participates in S2 and S4, so it carries both accents. This is two directed gates, not a bidirectional dependency.
