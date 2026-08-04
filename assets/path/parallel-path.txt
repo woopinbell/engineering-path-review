@@ -9,7 +9,7 @@ C TRACK
 C-G01 guide-c 01~04·06 → P01
 → C-G02 guide-unix-systems 01~03 → P02
 → C-G03 guide-c 05 → P03
-→ C-S01 wait for CPP-G02 Algorithms 01~10 → P09
+→ P09 [requires completed CPP-G02]
 → C-G04 guide-c 08 + Unix 04 → P04
 → C-G05 guide-c 07·09 + Unix 05~06 → P05
 → C-G06 guide-c 10 + OS 01~06 → P06
@@ -29,41 +29,41 @@ WEB-G01 guide-web-infrastructure 01~07 → P12
 → WEB-G04 guide-web-applications 07~08
 → WEB-G05 guide-web-applications 09
 → WEB-G06 guide-database-systems 01~12
-→ WEB-S01 wait for CPP-G05 Networks 01~11
-→ WEB-G07 guide-computer-networks 12 → P15 → WEB complete
+→ WEB-G07 guide-computer-networks 12 [requires completed CPP-G05]
+→ P15 → WEB complete
 
 SPORTSBOOK TRACK
 SB-G01 guide-java 01~08 → P16
 → SB-G02 guide-backend-spring-boot 01~10 → P17 → P18 → P19
 → SB-G03 guide-distributed-services 01~07 → P20 → P21
-→ SB-S01 wait for WEB-G04 Web Apps 07~08 → P22 → P23
+→ P22 [requires completed WEB-G04] → P23
 → SB-G04 guide-distributed-services 08~10
 → SB-G05 guide-shell-scripting 01~08
-→ SB-S02 wait for WEB-G01 + WEB-G06 + WEB-G07 → P24 → SPORTSBOOK complete
+→ P24 [requires completed WEB-G01 + WEB-G06 + WEB-G07] → SPORTSBOOK complete
 
 HARD CROSS-TRACK SYNCHRONIZATION
-CPP-G02 → P09
-CPP-G05 → WEB-G07
-WEB-G04 → P22
-WEB-G01·WEB-G06·WEB-G07 → P24
+S1: CPP-G02 → P09
+S2: CPP-G05 → WEB-G07
+S3: WEB-G04 → P22
+S4: WEB-G01·WEB-G06·WEB-G07 → P24
 
 RULE
 Only projects are atomic. Guides may be split by chapter, but no mandatory chapter or exercise is skipped.
-A blocked track waits at its synchronization point; the other tracks continue.
+A blocked track waits at the actual consumer block; the other tracks continue.
 P09 executes after P03 without renumbering the project or changing the default PATH.
 
 SYNCHRONIZATION SEMANTICS
-A → B is a directed gate: B waits for A to be complete; A does not wait for B.
-Reaching or running A is insufficient. A's chapter, exercise, verification, and P0/P1 closure must be complete.
-The receiving track also keeps its own internal predecessors, so A alone is not a sufficient condition for B.
-C-S01, WEB-S01, SB-S01, and SB-S02 are checkpoints, not learning blocks.
-WEB-G01 through WEB-G06 require only G00 and WEB-internal predecessors; the first external wait is WEB-S01 before WEB-G07.
+A → B is a directed prerequisite gate, not a bidirectional rendezvous.
+B waits until A is complete; A never waits for B and may continue in its own track.
+A completion is an external necessary condition, not a sufficient condition by itself; B also keeps all internal predecessors.
+Reaching or running A is insufficient. The assigned chapters, exercises, verification, and P0/P1 closure must be complete.
+There are no synchronization-only checkpoint nodes. The prerequisite is recorded on B and drawn directly from A to B.
+WEB-G01 through WEB-G06 require only G00 and WEB-internal predecessors; WEB-G07 is the first externally gated WEB block.
 
-VISUAL LEGEND
-Synchronization colors are relation-specific rather than global.
-S1: CPP-G02 · C-S01 · P09
-S2: CPP-G05 · WEB-S01 · WEB-G07
-S3: WEB-G04 · SB-S01 · P22
-S4: WEB-G01 · WEB-G06 · WEB-G07 · SB-S02 · P24
-Nodes in the same relation share one accent; different relations use different accents.
-WEB-G07 participates in S2 and S4, so it carries both accents. This is two directed gates, not a bidirectional dependency.
+PAIR-COLOR LEGEND
+S1: CPP-G02 · P09
+S2: CPP-G05 · WEB-G07
+S3: WEB-G04 · P22
+S4: WEB-G01 · WEB-G06 · WEB-G07 · P24
+Only actual provider and consumer nodes of one relation share a color. Different relations use different colors.
+WEB-G07 shows S2 and S4 because it consumes S2 and provides S4.

@@ -1,73 +1,37 @@
-COMMON
-G00 guide-git 01~06
+COMMON GATE
+G00 guide-git 01~06 → C | C++ | WEB | SPORTSBOOK
 
 C TRACK
-C-G01 guide-c 01~04·06 → P01
-→ C-G02 Unix 01~03 → P02
-→ C-G03 C 05 → P03
-→ C-S01 wait Algorithms 01~10 → P09
-→ C-G04 C 08 + Unix 04 → P04
-→ C-G05 C 07·09 + Unix 05~06 → P05
-→ C-G06 C 10 + OS 01~06 → P06
-→ C-G07 Unix 07~09 + OS 07~10 → complete
+C-G01 → P01 → C-G02 → P02 → C-G03 → P03
+→ P09 [S1: CPP-G02 complete]
+→ C-G04 → P04 → C-G05 → P05 → C-G06 → P06 → C-G07 → C complete
 
 C++ TRACK
-CPP-G01 C++ 01~05 → P07
-→ CPP-G02 Algorithms 01~10
-→ CPP-G03 C++ 06~07 + Algorithms 11 → P08
-→ CPP-G04 Algorithms 12~16 + Architecture 01~10 → P10
-→ CPP-G05 C++ 08~09 + Networks 01~11 → P11 → complete
+CPP-G01 → P07 → CPP-G02 → CPP-G03 → P08
+→ CPP-G04 → P10 → CPP-G05 → P11 → C++ complete
 
 WEB TRACK
-WEB-G01 Web Infra 01~07 → P12
-→ WEB-G02 Web Apps 00~06 → P13
-→ WEB-G03 Frontend 00~04 → P14
-→ WEB-G04 Web Apps 07~08
-→ WEB-G05 Web Apps 09
-→ WEB-G06 Database 01~12
-→ WEB-S01 wait Networks 01~11
-→ WEB-G07 Networks 12 → P15 → complete
+WEB-G01 → P12 → WEB-G02 → P13 → WEB-G03 → P14
+→ WEB-G04 → WEB-G05 → WEB-G06
+→ WEB-G07 [S2: CPP-G05 complete] → P15 → WEB complete
 
 SPORTSBOOK TRACK
-SB-G01 Java 01~08 → P16
-→ SB-G02 Spring Boot 01~10 → P17 → P18 → P19
-→ SB-G03 Distributed 01~07 → P20 → P21
-→ SB-S01 wait Web Apps 07~08 → P22 → P23
-→ SB-G04 Distributed 08~10
-→ SB-G05 Shell 01~08
-→ SB-S02 wait Web Infra + Database + Networks 12
-→ P24 → complete
+SB-G01 → P16 → SB-G02 → P17 → P18 → P19
+→ SB-G03 → P20 → P21
+→ P22 [S3: WEB-G04 complete] → P23
+→ SB-G04 → SB-G05
+→ P24 [S4: WEB-G01 + WEB-G06 + WEB-G07 complete] → SPORTSBOOK complete
 
-GUIDE COVERAGE
-Git 01~06
-C 01~10
-Unix 01~09
-OS 01~10
-C++ 01~09
-Algorithms 01~16
-Architecture 01~10
-Networks 01~12
-Web Infrastructure 01~07
-Web Applications 00~09
-Frontend 00~04
-Database 01~12
-Java 01~08
-Spring Boot 01~10
-Distributed Services 01~10
-Shell Scripting 01~08
+DIRECT HARD GATES
+S1  CPP-G02 ─────────────▶ P09
+S2  CPP-G05 ─────────────▶ WEB-G07
+S3  WEB-G04 ─────────────▶ P22
+S4  WEB-G01 ─┐
+    WEB-G06 ─┼────────────▶ P24
+    WEB-G07 ─┘
 
-SYNCHRONIZATION SEMANTICS
-A → B is a directed gate: B waits for A to be complete; A does not wait for B.
-Reaching or running A is insufficient. A's chapter, exercise, verification, and P0/P1 closure must be complete.
-The receiving track also keeps its own internal predecessors, so A alone is not a sufficient condition for B.
-C-S01, WEB-S01, SB-S01, and SB-S02 are checkpoints, not learning blocks.
-WEB-G01 through WEB-G06 require only G00 and WEB-internal predecessors; the first external wait is WEB-S01 before WEB-G07.
-
-VISUAL LEGEND
-Synchronization colors are relation-specific rather than global.
-S1: CPP-G02 · C-S01 · P09
-S2: CPP-G05 · WEB-S01 · WEB-G07
-S3: WEB-G04 · SB-S01 · P22
-S4: WEB-G01 · WEB-G06 · WEB-G07 · SB-S02 · P24
-Nodes in the same relation share one accent; different relations use different accents.
-WEB-G07 participates in S2 and S4, so it carries both accents. This is two directed gates, not a bidirectional dependency.
+SEMANTICS
+A → B is a directed prerequisite gate. Only B waits.
+No synchronization-only checkpoint node exists.
+The actual provider and consumer nodes carry the same relation color.
+WEB-G07 carries S2 and S4 because it is a consumer in S2 and a provider in S4.

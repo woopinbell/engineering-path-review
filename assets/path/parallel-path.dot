@@ -20,7 +20,6 @@ digraph ParallelPathOverview {
             <TR><TD BGCOLOR="#dbeafe"><B>P02</B> buffered-line-reader</TD></TR>
             <TR><TD BGCOLOR="#f8fafc"><B>C-G03</B> C 05</TD></TR>
             <TR><TD BGCOLOR="#dbeafe"><B>P03</B> format-printer</TD></TR>
-            <TR><TD BGCOLOR="#fce7f3" BORDER="2" COLOR="#db2777"><FONT COLOR="#9d174d"><B>C-S01 · S1</B> CPP-G02 동기화</FONT></TD></TR>
             <TR><TD BGCOLOR="#fce7f3" BORDER="2" COLOR="#db2777"><FONT COLOR="#9d174d"><B>P09 · S1</B> stack-sort</FONT></TD></TR>
             <TR><TD BGCOLOR="#f8fafc"><B>C-G04</B> C 08 + Unix 04</TD></TR>
             <TR><TD BGCOLOR="#dbeafe"><B>P04</B> signal-message-bus</TD></TR>
@@ -59,7 +58,6 @@ digraph ParallelPathOverview {
             <TR><TD BGCOLOR="#cffafe" BORDER="2" COLOR="#0891b2"><FONT COLOR="#155e75"><B>WEB-G04 · S3</B> Web Apps 07~08</FONT></TD></TR>
             <TR><TD BGCOLOR="#f8fafc"><B>WEB-G05</B> Web Apps 09</TD></TR>
             <TR><TD BGCOLOR="#ecfccb" BORDER="2" COLOR="#65a30d"><FONT COLOR="#3f6212"><B>WEB-G06 · S4</B> Database 01~12</FONT></TD></TR>
-            <TR><TD BGCOLOR="#fef3c7" BORDER="2" COLOR="#d97706"><FONT COLOR="#92400e"><B>WEB-S01 · S2</B> CPP-G05 동기화</FONT></TD></TR>
             <TR><TD><TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3"><TR><TD BGCOLOR="#fef3c7" COLOR="#d97706"><FONT COLOR="#92400e"><B>WEB-G07 · S2</B> Networks 12</FONT></TD><TD BGCOLOR="#ecfccb" COLOR="#65a30d"><FONT COLOR="#3f6212"><B>S4</B></FONT></TD></TR></TABLE></TD></TR>
             <TR><TD BGCOLOR="#d1fae5"><B>P15</B> pong-pong</TD></TR>
             <TR><TD BGCOLOR="#a7f3d0"><B>WEB 완료</B></TD></TR>
@@ -77,12 +75,10 @@ digraph ParallelPathOverview {
             <TR><TD BGCOLOR="#f8fafc"><B>SB-G03</B> Distributed 01~07</TD></TR>
             <TR><TD BGCOLOR="#ffedd5"><B>P20</B> betting</TD></TR>
             <TR><TD BGCOLOR="#ffedd5"><B>P21</B> settlement</TD></TR>
-            <TR><TD BGCOLOR="#cffafe" BORDER="2" COLOR="#0891b2"><FONT COLOR="#155e75"><B>SB-S01 · S3</B> WEB-G04 동기화</FONT></TD></TR>
             <TR><TD BGCOLOR="#cffafe" BORDER="2" COLOR="#0891b2"><FONT COLOR="#155e75"><B>P22 · S3</B> gateway</FONT></TD></TR>
             <TR><TD BGCOLOR="#ffedd5"><B>P23</B> admin-api</TD></TR>
             <TR><TD BGCOLOR="#f8fafc"><B>SB-G04</B> Distributed 08~10</TD></TR>
             <TR><TD BGCOLOR="#f8fafc"><B>SB-G05</B> Shell 01~08</TD></TR>
-            <TR><TD BGCOLOR="#ecfccb" BORDER="2" COLOR="#65a30d"><FONT COLOR="#3f6212"><B>SB-S02 · S4</B> WEB-G01·06·07 동기화</FONT></TD></TR>
             <TR><TD BGCOLOR="#ecfccb" BORDER="2" COLOR="#65a30d"><FONT COLOR="#3f6212"><B>P24 · S4</B> orchestration</FONT></TD></TR>
             <TR><TD BGCOLOR="#fed7aa"><B>SPORTSBOOK 완료</B></TD></TR>
           </TABLE>
@@ -93,7 +89,7 @@ digraph ParallelPathOverview {
 
   SYNC [shape=plain, label=<
     <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7" COLOR="#94a3b8">
-      <TR><TD BGCOLOR="#f8fafc" COLSPAN="4"><B>관계별 동기화 색상 — 같은 관계의 A/B만 같은 색</B></TD></TR>
+      <TR><TD BGCOLOR="#f8fafc" COLSPAN="4"><B>동기화 관계 범례 — 실제 A/B 노드만 같은 색</B></TD></TR>
       <TR><TD BGCOLOR="#fce7f3"><FONT COLOR="#9d174d"><B>S1 · CPP-G02</B></FONT></TD><TD>→</TD><TD BGCOLOR="#fce7f3"><FONT COLOR="#9d174d"><B>P09</B></FONT></TD><TD ALIGN="LEFT">Algorithms 01~10</TD></TR>
       <TR><TD BGCOLOR="#fef3c7"><FONT COLOR="#92400e"><B>S2 · CPP-G05</B></FONT></TD><TD>→</TD><TD BGCOLOR="#fef3c7"><FONT COLOR="#92400e"><B>WEB-G07</B></FONT></TD><TD ALIGN="LEFT">Networks 01~11 → 12</TD></TR>
       <TR><TD BGCOLOR="#cffafe"><FONT COLOR="#155e75"><B>S3 · WEB-G04</B></FONT></TD><TD>→</TD><TD BGCOLOR="#cffafe"><FONT COLOR="#155e75"><B>P22</B></FONT></TD><TD ALIGN="LEFT">WebSocket·재연결·테스트</TD></TR>
@@ -106,6 +102,7 @@ digraph ParallelPathOverview {
   COMPLETE [label="◇ 4트랙 완료\nP01~P24 + 필수 가이드 전체 커버리지\nL04~L13 + P0/P1 해결", shape=diamond,
     fillcolor="#fde68a", color="#b45309", penwidth=2];
 
-  START -> TRACKS -> SYNC -> COMPLETE;
+  START -> TRACKS -> COMPLETE;
+  SYNC -> TRACKS [style=dashed, color="#94a3b8", constraint=false];
   RULE -> TRACKS [style=dashed, color="#94a3b8", constraint=false];
 }

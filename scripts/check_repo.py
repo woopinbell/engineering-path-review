@@ -301,7 +301,8 @@ def check_parallel_path(errors: list[str]) -> None:
         "양방향 rendezvous가 아니다",
         "A 블록이 완료",
         "WEB-G01부터 WEB-G06까지 외부 선행 없이",
-        "같은 관계의 제공 노드·checkpoint·소비 노드만 같은 동기화 강조색",
+        "별도의 동기화 전용 checkpoint 노드를 두지 않는다",
+        "같은 관계의 실제 제공 노드와 실제 소비 노드만 같은 동기화 강조색",
         "`WEB-G07`은 S2의 소비 노드이면서 S4의 제공 노드",
     )
     for phrase in required_phrases:
@@ -320,15 +321,19 @@ def check_parallel_path(errors: list[str]) -> None:
 
     overview_dot = (ROOT / "assets/path/parallel-path.dot").read_text(encoding="utf-8")
     detail_dot = (ROOT / "assets/path/parallel-guide-packets.dot").read_text(encoding="utf-8")
-    for sync_id in ("C-S01", "WEB-S01", "SB-S01", "SB-S02"):
-        if sync_id not in overview_dot or sync_id not in detail_dot:
-            errors.append(f"parallel graph missing synchronization node: {sync_id}")
+    overview_mmd = (ROOT / "assets/path/parallel-path.mmd").read_text(encoding="utf-8")
+    detail_mmd = (ROOT / "assets/path/parallel-guide-packets.mmd").read_text(encoding="utf-8")
+    graph_text = "\n".join((overview_dot, detail_dot, overview_mmd, detail_mmd))
+
+    for removed_id in ("C-S01", "WEB-S01", "SB-S01", "SB-S02", "CS1[", "WS1[", "SS1[", "SS2["):
+        if removed_id in graph_text:
+            errors.append(f"parallel graph contains removed synchronization-only node: {removed_id}")
 
     sync_palettes = (
-        ("S1", "#fce7f3", "#db2777", ("CPP-G02", "C-S01", "P09")),
-        ("S2", "#fef3c7", "#d97706", ("CPP-G05", "WEB-S01", "WEB-G07")),
-        ("S3", "#cffafe", "#0891b2", ("WEB-G04", "SB-S01", "P22")),
-        ("S4", "#ecfccb", "#65a30d", ("WEB-G01", "WEB-G06", "WEB-G07", "SB-S02", "P24")),
+        ("S1", "#fce7f3", "#db2777", ("CPP-G02", "P09")),
+        ("S2", "#fef3c7", "#d97706", ("CPP-G05", "WEB-G07")),
+        ("S3", "#cffafe", "#0891b2", ("WEB-G04", "P22")),
+        ("S4", "#ecfccb", "#65a30d", ("WEB-G01", "WEB-G06", "WEB-G07", "P24")),
     )
     if len({fill for _, fill, _, _ in sync_palettes}) != len(sync_palettes):
         errors.append("parallel synchronization relations must use distinct fill colors")
@@ -343,14 +348,44 @@ def check_parallel_path(errors: list[str]) -> None:
     if 'fillcolor="#fef3c7:#ecfccb"' not in detail_dot or "WEB-G07 · S2·S4" not in detail_dot:
         errors.append("WEB-G07 must display both S2 and S4 synchronization colors")
 
-    for mermaid_name in ("parallel-path.mmd", "parallel-guide-packets.mmd"):
-        mermaid = (ROOT / "assets/path" / mermaid_name).read_text(encoding="utf-8")
+    direct_dot_edges = (
+        "X3 -> C8",
+        "X8 -> W11",
+        "W7 -> S11",
+        "W1 -> S16",
+        "W9 -> S16",
+        "W11 -> S16",
+    )
+    for edge in direct_dot_edges:
+        if edge not in detail_dot:
+            errors.append(f"parallel detail graph missing direct hard-gate edge: {edge}")
+
+    expected_mermaid = (
+        "class X2,P09 sync1",
+        "class X5 sync2",
+        "class W4,P22 sync3",
+        "class W1,W6,P24 sync4",
+        "class W7 sync24",
+    )
+    direct_mermaid_edges = (
+        'X2 -. "S1 · Algorithms 01~10" .-> P09',
+        'X5 -. "S2 · Networks 01~11" .-> W7',
+        'W4 -. "S3 ·',
+        'W1 -. "S4 · Infra" .-> P24',
+        'W6 -. "S4 · Database" .-> P24',
+        'W7 -. "S4 ·',
+    )
+    for mermaid_name, mermaid in (("parallel-path.mmd", overview_mmd), ("parallel-guide-packets.mmd", detail_mmd)):
         for sync_id, fill, border, _ in sync_palettes:
             class_name = f"sync{sync_id[1:]}"
             if f"classDef {class_name} fill:{fill},stroke:{border}" not in mermaid:
                 errors.append(f"parallel Mermaid missing {sync_id} palette: {mermaid_name}")
-        if "class W7 sync24" not in mermaid:
-            errors.append(f"parallel Mermaid must mark WEB-G07 as S2·S4: {mermaid_name}")
+        for token in expected_mermaid:
+            if token not in mermaid:
+                errors.append(f"parallel Mermaid missing direct participant class in {mermaid_name}: {token}")
+        for edge in direct_mermaid_edges:
+            if edge not in mermaid:
+                errors.append(f"parallel Mermaid missing direct hard-gate edge in {mermaid_name}: {edge}")
 
 
 def sha256(path: Path) -> str:

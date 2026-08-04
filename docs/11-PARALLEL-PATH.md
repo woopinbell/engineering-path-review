@@ -67,9 +67,10 @@ G00 guide-git 01~06
 
 ```text
 C-G01 → P01 → C-G02 → P02 → C-G03 → P03
-→ [CPP-G02 동기화] → P09
-→ C-G04 → P04 → C-G05 → P05
+→ P09 → C-G04 → P04 → C-G05 → P05
 → C-G06 → P06 → C-G07
+
+P09 외부 선행: CPP-G02 완료
 ```
 
 | 순서 | 유형 | 범위 또는 프로젝트 | 역할·진입 조건 | 완료 결과 |
@@ -80,8 +81,7 @@ C-G01 → P01 → C-G02 → P02 → C-G03 → P03
 | P02 | P | `buffered-line-reader` | P01 + C-G02 | `LINE/EOF/AGAIN/ERROR`, FD별 context, reset·수명 검증 완료 |
 | C-G03 | G | `guide-c` 05 | 가변 인자와 형식 기반 API를 복습 | P03의 인자 타입·문법·길이·출력 계약을 설명 가능 |
 | P03 | P | `format-printer` | P02 + C-G03 | parser·두 순회·부분 출력·`EINTR/EPIPE` 검증 완료 |
-| C-S01 | 동기화 | CPP-G02의 `guide-algorithms` 01~10 | P09 시작 전에 문제 계약·분석·정렬·상환 범위를 완료 | C 트랙만 기다리고 다른 트랙은 계속 진행 |
-| P09 | P | `stack-sort` | P03 + C-S01 | rank·radix·명령 비용·독립 checker/oracle 검증 완료 |
+| P09 | P | `stack-sort` | P03 + CPP-G02 | rank·radix·명령 비용·독립 checker/oracle 검증 완료 |
 | C-G04 | G | `guide-c` 08 + `guide-unix-systems` 04 | signal, async-signal-safe 처리, process/thread 문맥을 복습 | handler와 main 문맥, signal 전달·상태 전이를 구분 가능 |
 | P04 | P | `signal-message-bus` | P09 + C-G04 | self-pipe·session·ACK·출력 확정의 모호성 검증 완료 |
 | C-G05 | G | `guide-c` 07·09 + `guide-unix-systems` 05~06 | process·FD·pipe·명령 실행기, memory·권한·환경을 복습 | shell의 parser/executor와 부모·자식·FD 수명을 설명 가능 |
@@ -125,7 +125,9 @@ P10과 P11은 코드 의존성이 약하지만 C++ 트랙 내부의 WIP를 하�
 ```text
 WEB-G01 → P12 → WEB-G02 → P13
 → WEB-G03 → P14 → WEB-G04 → WEB-G05 → WEB-G06
-→ [CPP-G05 동기화] → WEB-G07 → P15
+→ WEB-G07 → P15
+
+WEB-G07 외부 선행: CPP-G05 완료
 ```
 
 | 순서 | 유형 | 범위 또는 프로젝트 | 역할·진입 조건 | 완료 결과 |
@@ -139,8 +141,7 @@ WEB-G01 → P12 → WEB-G02 → P13
 | WEB-G04 | G | `guide-web-applications` 07~08 | WebSocket·재연결과 HTTP·DB·WebSocket·browser 테스트를 완료 | WEB-G02의 인증/보안 위에서 SPORTSBOOK P22의 직접 선행 범위 확보 |
 | WEB-G05 | G | `guide-web-applications` 09 | 앞 장의 기능을 하나의 종합 서비스 요구사항과 완료 조건으로 묶음 | web applications 필수 범위 전체 이수; P15 종합 구현 기준 확보 |
 | WEB-G06 | G | `guide-database-systems` 01~12 | 관계·저장·index·transaction·MVCC·WAL·query cost를 완료 | database 필수 범위 전체 이수; P15와 SPORTSBOOK DB 감사·P24 기반 확보 |
-| WEB-S01 | 동기화 | CPP-G05의 `guide-computer-networks` 01~11 | network 12장을 진행하기 전에 앞 장의 전송·경로 범위를 완료 | 가이드 내부 순서를 트랙 간에도 보존 |
-| WEB-G07 | G | `guide-computer-networks` 12 | DNS·HTTP·TLS·QUIC를 앞의 link·IP·TCP 모델 위에 연결 | network 필수 범위 전체 이수; P15와 SPORTSBOOK P24 기반 확보 |
+| WEB-G07 | G | `guide-computer-networks` 12 | WEB-G06 + CPP-G05. DNS·HTTP·TLS·QUIC를 앞의 link·IP·TCP 모델 위에 연결 | network 필수 범위 전체 이수; P15와 SPORTSBOOK P24 기반 확보 |
 | P15 | P | `pong-pong` | P12~P14 + WEB-G04~07 | session·API·DB·WebSocket·room·scheduler·reconnect·transaction·배포 검증 완료, WEB 트랙 완료 |
 
 기존 WEB-G04의 세 가이드 묶음은 직접 선행 관계가 달라 WEB-G04~07로 분리한다. WebSocket·테스트 07~08만 먼저 닫아 SPORTSBOOK P22를 개방하고, 종합 요구사항 09는 P15 쪽에 남긴다. Database 전체와 network 12장을 P22가 기다리지 않게 하며, network 12장만 CPP-G05를 기다리게 한다.
@@ -149,10 +150,11 @@ WEB-G01 → P12 → WEB-G02 → P13
 
 ```text
 SB-G01 → P16 → SB-G02 → P17 → P18 → P19
-→ SB-G03 → P20 → P21
-→ [WEB-G04 동기화] → P22 → P23
-→ SB-G04 → SB-G05
-→ [WEB-G01·WEB-G06·WEB-G07 동기화] → P24
+→ SB-G03 → P20 → P21 → P22 → P23
+→ SB-G04 → SB-G05 → P24
+
+P22 외부 선행: WEB-G04 완료
+P24 외부 선행: WEB-G01·WEB-G06·WEB-G07 완료
 ```
 
 | 순서 | 유형 | 범위 또는 프로젝트 | 역할·진입 조건 | 완료 결과 |
@@ -166,13 +168,11 @@ SB-G01 → P16 → SB-G02 → P17 → P18 → P19
 | SB-G03 | G | `guide-distributed-services` 01~07 | 서비스 경계·동기/비동기 판정·멱등성·outbox/saga·event order·late event·retry/DLQ를 완료 | P20~P23의 부분 실패·복구·전달 모델 확보 |
 | P20 | P | `sportsbook-betting-service` | P16~P19 + SB-G03 | risk 예약·wallet 차감·PENDING·보상·outbox·recovery 검증 완료 |
 | P21 | P | `sportsbook-settlement-service` | P20 + P17 | read model·wallet plan·lease/fencing·outbox·DLT·재실행 검증 완료 |
-| SB-S01 | 동기화 | WEB-G04의 `guide-web-applications` 07~08 | P22 전에 WEB-G02의 auth 기반 위에서 WebSocket·재연결·테스트 범위를 완료 | 사용자 data plane의 REST/STOMP 경계를 현재 회차 지식으로 재확인 |
-| P22 | P | `sportsbook-gateway` | P17 + P19~P21 + SB-S01 | JWT·trusted header·route·rate limit·Kafka→STOMP·readiness 검증 완료 |
+| P22 | P | `sportsbook-gateway` | P17 + P19~P21 + WEB-G04 | JWT·trusted header·route·rate limit·Kafka→STOMP·readiness 검증 완료 |
 | P23 | P | `sportsbook-admin-api` | P22 + 대상 서비스 운영 API | RBAC·IP allowlist·delegation·audit·비원자 위임 경계 검증 완료 |
 | SB-G04 | G | `guide-distributed-services` 08~10 | 다중 저장소 build/release, E2E·chaos와 성능 근거를 완료 | P24의 release·evidence plane 직접 선행 범위 확보, distributed services 전체 이수 |
 | SB-G05 | G | `guide-shell-scripting` 01~08 | P24가 다중 저장소 build·verify·release script를 직접 수정하므로 조건부 필수 조건이 성립 | 인자·실패 전파·임시 자원·signal 정리·이식성·repository auditor 검증 완료 |
-| SB-S02 | 동기화 | WEB-G01·WEB-G06·WEB-G07 | P24 전에 Compose/복구, DB 내부 모델, DNS·HTTP·TLS 종단 경로를 모두 완료 | runtime·data·network evidence를 통합할 선행 범위 확보 |
-| P24 | P | `sportsbook-orchestration` | P16~P23 + SB-G04~05 + SB-S02 | workspace verify·JAR generation·Compose·cold E2E·chaos·observability·release evidence 검증 완료, SPORTSBOOK 트랙 완료 |
+| P24 | P | `sportsbook-orchestration` | P16~P23 + SB-G04~05 + WEB-G01·WEB-G06·WEB-G07 | workspace verify·JAR generation·Compose·cold E2E·chaos·observability·release evidence 검증 완료, SPORTSBOOK 트랙 완료 |
 
 Distributed services 08~10은 P20의 접수·정산 상태 머신보다 P24의 다중 저장소 release와 E2E evidence에 직접 대응하므로 뒤로 이동한다. 01~07을 P20 전에 완료해 실패·복구 모델은 유지하면서 release·성능 범위가 P20을 불필요하게 막지 않게 한다.
 
@@ -191,40 +191,41 @@ B 시작 조건에 A 완료가 추가됨
 A 완료 조건에는 B가 포함되지 않음
 ```
 
-A 완료는 B의 외부 필요조건이지만 그것만으로 충분하지는 않다. B가 속한 트랙의 내부 선행도 함께 완료되어야 한다. 또한 A에 도착했거나 A를 진행 중인 상태는 충족으로 보지 않는다. 지정 장·실습·검증과 P0/P1 확인까지 끝나 **A 블록이 완료**되어야 동기화 노드를 통과한다.
+A 완료는 B의 외부 필요조건이지만 그것만으로 충분하지는 않다. B가 속한 트랙의 내부 선행도 함께 완료되어야 한다. 또한 A에 도착했거나 A를 진행 중인 상태는 충족으로 보지 않는다. 지정 장·실습·검증과 P0/P1 확인까지 끝나 **A 블록이 완료**되어야 B를 시작할 수 있다.
 
-동기화 노드인 C-S01·WEB-S01·SB-S01·SB-S02는 별도의 학습 블록이 아니라 완료 여부를 확인하는 checkpoint다. 생산 트랙이 먼저 선행 범위를 완료했다면 기다리는 트랙은 checkpoint를 즉시 통과한다. 기다리는 트랙이 먼저 도착했다면 그 트랙만 멈추고 나머지 트랙은 계속 진행한다.
+그래프와 실행표에는 별도의 동기화 전용 checkpoint 노드를 두지 않는다. 하드 게이트는 실제 소비 블록의 진입 조건과 제공 블록에서 소비 블록으로 향하는 교차 트랙 간선으로 직접 표현한다. 소비 트랙이 먼저 진입 조건 앞에 도착하면 그 트랙만 대기하고, 제공 트랙과 나머지 트랙은 계속 진행한다.
 
 예를 들어 P09의 시작 조건은 다음과 같다.
 
 ```text
 P03 완료
 + CPP-G02 완료
-→ C-S01 통과
 → P09 시작
 ```
 
 CPP-G02가 완료됐다는 사실은 C++ 트랙 내부 순서상 CPP-G01과 P07도 이미 완료됐음을 포함한다. 그러나 P09의 직접 외부 의존성은 그 전체 이력이 아니라 CPP-G02에 배치된 `guide-algorithms` 01~10이다. CPP-G02는 P09를 기다리지 않으므로 완료 뒤 CPP-G03으로 계속 진행한다.
 
-WEB 트랙은 공통 G00과 자기 트랙 내부 순서만 지키면 WEB-G01부터 WEB-G06까지 외부 선행 없이 진행할 수 있다. 첫 외부 대기는 WEB-G07 직전의 WEB-S01이며, 이때만 CPP-G05 완료 여부를 확인한다. `WEB-G04 → P22`도 WEB 트랙을 막지 않고 SPORTSBOOK 트랙의 P22만 기다리게 한다.
+WEB 트랙은 공통 G00과 자기 트랙 내부 순서만 지키면 WEB-G01부터 WEB-G06까지 외부 선행 없이 진행할 수 있다. 첫 외부 대기는 WEB-G07을 시작할 때이며, 이때 CPP-G05 완료 여부를 확인한다. `WEB-G04 → P22`도 WEB 트랙을 막지 않고 SPORTSBOOK 트랙의 P22만 기다리게 한다.
 
-그래프에서는 하드 동기화 전체를 하나의 공통색으로 칠하지 않는다. 각 관계에 `S1`~`S4`를 부여하고, **같은 관계의 제공 노드·checkpoint·소비 노드만 같은 동기화 강조색**을 사용한다. 서로 다른 관계는 서로 다른 색을 사용하므로 같은 색을 따라가면 어느 선행 범위가 어느 gate를 여는지 확인할 수 있다. 트랙의 기본 테두리 색은 소유 트랙을, 동기화 강조색은 관계를 뜻한다.
+### 그래프의 관계별 색상
 
-| 동기화 색상 ID | 같은 강조색을 사용하는 노드 | 방향 |
+그래프에서는 하드 동기화 전체를 하나의 공통색으로 칠하지 않는다. 각 관계에 `S1`~`S4`를 부여하고, **같은 관계의 실제 제공 노드와 실제 소비 노드만 같은 동기화 강조색**을 사용한다. 서로 다른 관계는 서로 다른 색을 사용하므로 같은 색과 직접 간선을 따라가면 어느 선행 범위가 어느 블록을 여는지 확인할 수 있다.
+
+| 동기화 색상 ID | 같은 강조색을 사용하는 실제 노드 | 방향 |
 |---|---|---|
-| S1 | `CPP-G02` · `C-S01` · `P09` | `CPP-G02 → P09` |
-| S2 | `CPP-G05` · `WEB-S01` · `WEB-G07` | `CPP-G05 → WEB-G07` |
-| S3 | `WEB-G04` · `SB-S01` · `P22` | `WEB-G04 → P22` |
-| S4 | `WEB-G01` · `WEB-G06` · `WEB-G07` · `SB-S02` · `P24` | `WEB-G01·WEB-G06·WEB-G07 → P24` |
+| S1 | `CPP-G02` · `P09` | `CPP-G02 → P09` |
+| S2 | `CPP-G05` · `WEB-G07` | `CPP-G05 → WEB-G07` |
+| S3 | `WEB-G04` · `P22` | `WEB-G04 → P22` |
+| S4 | `WEB-G01` · `WEB-G06` · `WEB-G07` · `P24` | `WEB-G01·WEB-G06·WEB-G07 → P24` |
 
 `WEB-G07`은 S2의 소비 노드이면서 S4의 제공 노드이므로 두 강조색을 함께 표시한다. DOT/SVG/PNG에서는 분할 채움, Mermaid에서는 S2 채움과 S4 테두리, 텍스트에서는 `S2·S4` 표기를 사용한다. 이는 양방향 의존성을 뜻하지 않고, 서로 다른 두 단방향 gate에 같은 완료 블록이 참여한다는 뜻이다.
 
 | 연결 | 직접 선행 관계 | 기다리는 트랙 | 처리 방식 |
 |---|---|---|---|
-| `CPP-G02 → P09` | Algorithms 01~10이 rank·radix·정확성·비용 설명의 선행 범위 | C | P03 뒤 C-S01에서 대기 |
-| `CPP-G05 → WEB-G07` | Networks 01~11 뒤에 12장을 진행해야 가이드 내부 순서 보존 | WEB | WEB-G06을 먼저 끝낸 뒤 WEB-S01에서 대기 |
-| `WEB-G04 → P22` | WEB-G02의 auth 기반 위에서 WebSocket·재연결·테스트가 gateway REST/STOMP 경계의 직접 선행 범위 | SPORTSBOOK | P21 뒤 SB-S01에서 대기 |
-| `WEB-G01·WEB-G06·WEB-G07 → P24` | Compose/복구·DB·종단 네트워크 모델이 통합 evidence의 직접 선행 범위 | SPORTSBOOK | P23와 SB-G04~05 뒤 SB-S02에서 대기 |
+| `CPP-G02 → P09` | Algorithms 01~10이 rank·radix·정확성·비용 설명의 선행 범위 | C | P03 완료 뒤 P09 진입 조건에서 대기 |
+| `CPP-G05 → WEB-G07` | Networks 01~11 뒤에 12장을 진행해야 가이드 내부 순서 보존 | WEB | WEB-G06 완료 뒤 WEB-G07 진입 조건에서 대기 |
+| `WEB-G04 → P22` | WEB-G02의 auth 기반 위에서 WebSocket·재연결·테스트가 gateway REST/STOMP 경계의 직접 선행 범위 | SPORTSBOOK | P21 완료 뒤 P22 진입 조건에서 대기 |
+| `WEB-G01·WEB-G06·WEB-G07 → P24` | Compose/복구·DB·종단 네트워크 모델이 통합 evidence의 직접 선행 범위 | SPORTSBOOK | P23와 SB-G04~05 완료 뒤 P24 진입 조건에서 대기 |
 
 따라서 강한 트랙 간 동기화는 네 곳이다.
 
@@ -338,7 +339,7 @@ WEB-G01~07 완료
 SPORTSBOOK TRACK:
 P16~P24 완료
 SB-G01~05 완료
-SB-S01~02 통과
+P22·P24 하드 동기화 진입 조건 충족
 ```
 
 전체 복습 PATH는 다음을 모두 충족해야 닫힌다.
