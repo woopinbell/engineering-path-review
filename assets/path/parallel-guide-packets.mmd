@@ -1,28 +1,43 @@
 flowchart TB
   G00["G00 guide-git 01~06"]
 
-  subgraph C["C TRACK — G/P 선형"]
-    direction TB
-    C1["C-G01: C 01~04·06"] --> C2["P01"] --> C3["C-G02: Unix 01~03"] --> C4["P02"] --> C5["C-G03: C 05"] --> C6["P03"] --> C7["C-G04: C 08 + Unix 04"] --> C8["P04"] --> C9["C-G05: C 07·09 + Unix 05~06"] --> C10["P05"] --> C11["C-G06: C 10 + OS 01~06"] --> C12["P06"] --> C13["C-G07: Unix 07~09 + OS 07~10"] --> C14["C-S01"] --> C15["P09"] --> C16["C 완료"]
+  subgraph C["C TRACK"]
+    C1["C-G01 C 01~04·06"] --> P01["P01"] --> C2["C-G02 Unix 01~03"] --> P02["P02"]
+    P02 --> C3["C-G03 C 05"] --> P03["P03"] --> CS1["C-S01"] --> P09["P09"]
+    P09 --> C4["C-G04 C 08 + Unix 04"] --> P04["P04"] --> C5["C-G05 C 07·09 + Unix 05~06"] --> P05["P05"]
+    P05 --> C6["C-G06 C 10 + OS 01~06"] --> P06["P06"] --> C7["C-G07 Unix 07~09 + OS 07~10"] --> CD["C 완료"]
   end
 
-  subgraph CPP["C++ TRACK — G/P 선형"]
-    direction TB
-    X1["CPP-G01: C++ 01~05"] --> X2["P07"] --> X3["CPP-G02: C++ 06~07 + Algorithms 01~11"] --> X4["P08"] --> X5["CPP-G03: Algorithms 12~16 + Architecture 01~10"] --> X6["P10"] --> X7["CPP-G04: C++ 08~09 + Networks 01~11"] --> X8["P11"] --> X9["C++ 완료"]
+  subgraph CPP["C++ TRACK"]
+    X1["CPP-G01 C++ 01~05"] --> P07["P07"] --> X2["CPP-G02 Algorithms 01~10"] --> X3["CPP-G03 C++ 06~07 + Algorithms 11"] --> P08["P08"]
+    P08 --> X4["CPP-G04 Algorithms 12~16 + Architecture 01~10"] --> P10["P10"]
+    P10 --> X5["CPP-G05 C++ 08~09 + Networks 01~11"] --> P11["P11"] --> XD["C++ 완료"]
   end
 
-  subgraph WEB["WEB TRACK — G/P 선형"]
-    direction TB
-    W1["WEB-G01: Web Infra 01~07"] --> W2["P12"] --> W3["WEB-G02: Web Apps 00~06"] --> W4["P13"] --> W5["WEB-G03: Frontend 00~04"] --> W6["P14"] --> W7["WEB-S01"] --> W8["WEB-G04: Networks 12 + Web Apps 07~09 + DB 01~12"] --> W9["P15"] --> W10["WEB 완료"]
+  subgraph WEB["WEB TRACK"]
+    W1["WEB-G01 Web Infra 01~07"] --> P12["P12"] --> W2["WEB-G02 Web Apps 00~06"] --> P13["P13"]
+    P13 --> W3["WEB-G03 Frontend 00~04"] --> P14["P14"] --> W4["WEB-G04 Web Apps 07~08"]
+    W4 --> W5["WEB-G05 Web Apps 09"] --> W6["WEB-G06 Database 01~12"] --> WS1["WEB-S01"] --> W7["WEB-G07 Networks 12"] --> P15["P15"] --> WD["WEB 완료"]
+  end
+
+  subgraph SB["SPORTSBOOK TRACK"]
+    S1["SB-G01 Java 01~08"] --> P16["P16"] --> S2["SB-G02 Spring Boot 01~10"] --> P17["P17"] --> P18["P18"] --> P19["P19"]
+    P19 --> S3["SB-G03 Distributed 01~07"] --> P20["P20"] --> P21["P21"] --> SS1["SB-S01"]
+    SS1 --> P22["P22"] --> P23["P23"] --> S4["SB-G04 Distributed 08~10"] --> S5["SB-G05 Shell 01~08"] --> SS2["SB-S02"] --> P24["P24"] --> SD["SPORTSBOOK 완료"]
   end
 
   G00 --> C1
   G00 --> X1
   G00 --> W1
-  X3 ==>|"Algorithms 01~10"| C14
-  X7 ==>|"Networks 01~11"| W7
-  M{"필수 G00~G11 전체 완료"}
-  C16 --> M
-  X9 --> M
-  W10 --> M
-  M --> POST["P16~P24 후속 PATH"]
+  G00 --> S1
+  X2 -. "Algorithms 01~10" .-> CS1
+  X5 -. "Networks 01~11" .-> WS1
+  W4 -. "Web Apps 07~08" .-> SS1
+  W1 -. "Infra" .-> SS2
+  W6 -. "Database" .-> SS2
+  W7 -. "Networks 12" .-> SS2
+
+  CD --> DONE["4트랙 완료"]
+  XD --> DONE
+  WD --> DONE
+  SD --> DONE

@@ -1,8 +1,8 @@
 digraph Career {
   graph [
-    rankdir=TB, bgcolor="white", pad="0.28", nodesep="0.16", ranksep="0.24",
+    rankdir=TB, bgcolor="white", pad="0.28", nodesep="0.22", ranksep="0.30",
     fontname="Noto Sans CJK KR", fontsize=20,
-    label="PATH 진행에 따른 채용 지원 범위 확장", labelloc=t
+    label="4트랙 PATH의 채용 지원 gate", labelloc=t
   ];
   node [shape=plain, fontname="Noto Sans CJK KR"];
   edge [color="#52616b", arrowsize=0.72, penwidth=1.1];
@@ -14,29 +14,34 @@ digraph Career {
   >];
   M14 [label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#2457a6">
-      <TR><TD BGCOLOR="#eaf2ff"><B>P14 · portfolio 배포·검증</B></TD><TD BGCOLOR="#e8f7ec"><B>일반 첫 지원 · Frontend·Web·Junior SW</B></TD></TR>
+      <TR><TD BGCOLOR="#eaf2ff"><B>P14 · portfolio 배포·검증 + L14</B></TD><TD BGCOLOR="#e8f7ec"><B>일반 첫 지원 개방</B></TD></TR>
+      <TR><TD COLSPAN="2" BGCOLOR="#f8fafc">이미 완료된 확장 마일스톤은 이 시점에 함께 반영</TD></TR>
     </TABLE>
   >];
   M15 [label=<
-    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#8ba7c7">
-      <TR><TD BGCOLOR="#eaf2ff"><B>P15 · pong-pong</B></TD><TD BGCOLOR="#e8f7ec">Full-stack · Node·TypeScript Backend</TD></TR>
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#059669">
+      <TR><TD BGCOLOR="#d1fae5"><B>P15 · pong-pong</B></TD><TD BGCOLOR="#e8f7ec">Full-stack · Node·TypeScript Backend</TD></TR>
     </TABLE>
   >];
   M17 [label=<
-    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#8ba7c7">
-      <TR><TD BGCOLOR="#eaf2ff"><B>P17 · wallet</B></TD><TD BGCOLOR="#e8f7ec">Java·Spring Backend</TD></TR>
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#c2410c">
+      <TR><TD BGCOLOR="#ffedd5"><B>P17 · wallet</B></TD><TD BGCOLOR="#e8f7ec">Java·Spring Backend</TD></TR>
     </TABLE>
   >];
   M20 [label=<
-    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#8ba7c7">
-      <TR><TD BGCOLOR="#eaf2ff"><B>P20~P21 · betting·settlement</B></TD><TD BGCOLOR="#e8f7ec">Distributed·Event-driven · Fintech·Settlement</TD></TR>
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#c2410c">
+      <TR><TD BGCOLOR="#ffedd5"><B>P20~P21 · betting·settlement</B></TD><TD BGCOLOR="#e8f7ec">Distributed·Event-driven · Fintech·Settlement</TD></TR>
     </TABLE>
   >];
   M24 [label=<
-    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#8ba7c7">
-      <TR><TD BGCOLOR="#eaf2ff"><B>P22~P24 · edge·control·orchestration</B></TD><TD BGCOLOR="#e8f7ec">Gateway·Platform·Integration</TD></TR>
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" COLOR="#c2410c">
+      <TR><TD BGCOLOR="#ffedd5"><B>P22~P24 · edge·control·orchestration</B></TD><TD BGCOLOR="#e8f7ec">Gateway·Platform·Integration</TD></TR>
     </TABLE>
   >];
 
-  M11 -> M14 -> M15 -> M17 -> M20 -> M24;
+  M11 -> M14;
+  M14 -> M15 [label="WEB 지원 반영", fontname="Noto Sans CJK KR", fontsize=9, color="#059669"];
+  M14 -> M17 [label="SPORTSBOOK 지원 반영", fontname="Noto Sans CJK KR", fontsize=9, color="#c2410c"];
+  M17 -> M20 -> M24 [color="#c2410c"];
+  { rank=same; M15; M17; }
 }

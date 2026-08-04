@@ -1,243 +1,327 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Title: ParallelPathOverview Pages: 1 -->
-<svg width="807pt" height="1081pt"
- viewBox="0.00 0.00 807.40 1081.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 1056.2)">
+<svg width="844pt" height="1037pt"
+ viewBox="0.00 0.00 844.40 1037.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 1012.2)">
 <title>ParallelPathOverview</title>
-<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-1056.2 782.2,-1056.2 782.2,25.2 -25.2,25.2"/>
-<text text-anchor="middle" x="378.5" y="-1009.4" font-family="Noto Sans CJK KR" font-size="22.00">C · C++ · WEB 3트랙 병렬 PATH</text>
+<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-1012.2 819.2,-1012.2 819.2,25.2 -25.2,25.2"/>
+<text text-anchor="middle" x="397" y="-965.4" font-family="Noto Sans CJK KR" font-size="22.00">C · C++ · WEB · SPORTSBOOK 4트랙 병렬 PATH</text>
 <!-- START -->
 <g id="node1" class="node">
 <title>START</title>
-<path fill="#e2e8f0" stroke="#475569" stroke-width="1.8" d="M433.5,-992.5C433.5,-992.5 323.5,-992.5 323.5,-992.5 317.5,-992.5 311.5,-986.5 311.5,-980.5 311.5,-980.5 311.5,-964.5 311.5,-964.5 311.5,-958.5 317.5,-952.5 323.5,-952.5 323.5,-952.5 433.5,-952.5 433.5,-952.5 439.5,-952.5 445.5,-958.5 445.5,-964.5 445.5,-964.5 445.5,-980.5 445.5,-980.5 445.5,-986.5 439.5,-992.5 433.5,-992.5"/>
-<text text-anchor="middle" x="378.5" y="-975.9" font-family="Noto Sans CJK KR" font-size="12.00">G00 guide&#45;git 01~06</text>
-<text text-anchor="middle" x="378.5" y="-962.9" font-family="Noto Sans CJK KR" font-size="12.00">세 트랙 공통 완료</text>
+<path fill="#e2e8f0" stroke="#475569" stroke-width="1.8" d="M445,-943C445,-943 349,-943 349,-943 343,-943 337,-937 337,-931 337,-931 337,-919 337,-919 337,-913 343,-907 349,-907 349,-907 445,-907 445,-907 451,-907 457,-913 457,-919 457,-919 457,-931 457,-931 457,-937 451,-943 445,-943"/>
+<text text-anchor="middle" x="397" y="-928.2" font-family="Noto Sans CJK KR" font-size="11.00">G00 guide&#45;git 01~06</text>
+<text text-anchor="middle" x="397" y="-916.2" font-family="Noto Sans CJK KR" font-size="11.00">네 트랙 공통 완료</text>
 </g>
 <!-- TRACKS -->
 <g id="node2" class="node">
 <title>TRACKS</title>
-<path fill="#f8fafc" stroke="transparent" d="M745,-906C745,-906 12,-906 12,-906 6,-906 0,-900 0,-894 0,-894 0,-347 0,-347 0,-341 6,-335 12,-335 12,-335 745,-335 745,-335 751,-335 757,-341 757,-347 757,-347 757,-894 757,-894 757,-900 751,-906 745,-906"/>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-849.5 19.5,-886.5 203.5,-886.5 203.5,-849.5 19.5,-849.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-849.5 19.5,-886.5 203.5,-886.5 203.5,-849.5 19.5,-849.5"/>
-<text text-anchor="start" x="76" y="-864.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="17.00">C TRACK</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-818.5 19.5,-849.5 203.5,-849.5 203.5,-818.5 19.5,-818.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-818.5 19.5,-849.5 203.5,-849.5 203.5,-818.5 19.5,-818.5"/>
-<text text-anchor="start" x="60.5" y="-831.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G01</text>
-<text text-anchor="start" x="94.5" y="-831.9" font-family="Noto Sans CJK KR" font-size="12.00"> C 01~04·06</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-787.5 19.5,-818.5 203.5,-818.5 203.5,-787.5 19.5,-787.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-787.5 19.5,-818.5 203.5,-818.5 203.5,-787.5 19.5,-787.5"/>
-<text text-anchor="start" x="62" y="-800.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P01</text>
-<text text-anchor="start" x="84" y="-800.9" font-family="Noto Sans CJK KR" font-size="12.00"> c&#45;foundation</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-756.5 19.5,-787.5 203.5,-787.5 203.5,-756.5 19.5,-756.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-756.5 19.5,-787.5 203.5,-787.5 203.5,-756.5 19.5,-756.5"/>
-<text text-anchor="start" x="61.5" y="-769.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G02</text>
-<text text-anchor="start" x="95.5" y="-769.9" font-family="Noto Sans CJK KR" font-size="12.00"> Unix 01~03</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-725.5 19.5,-756.5 203.5,-756.5 203.5,-725.5 19.5,-725.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-725.5 19.5,-756.5 203.5,-756.5 203.5,-725.5 19.5,-725.5"/>
-<text text-anchor="start" x="41.5" y="-738.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P02</text>
-<text text-anchor="start" x="63.5" y="-738.9" font-family="Noto Sans CJK KR" font-size="12.00"> buffered&#45;line&#45;reader</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-694.5 19.5,-725.5 203.5,-725.5 203.5,-694.5 19.5,-694.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-694.5 19.5,-725.5 203.5,-725.5 203.5,-694.5 19.5,-694.5"/>
-<text text-anchor="start" x="80.5" y="-707.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G03</text>
-<text text-anchor="start" x="114.5" y="-707.9" font-family="Noto Sans CJK KR" font-size="12.00"> C 05</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-663.5 19.5,-694.5 203.5,-694.5 203.5,-663.5 19.5,-663.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-663.5 19.5,-694.5 203.5,-694.5 203.5,-663.5 19.5,-663.5"/>
-<text text-anchor="start" x="58" y="-676.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P03</text>
-<text text-anchor="start" x="80" y="-676.9" font-family="Noto Sans CJK KR" font-size="12.00"> format&#45;printer</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-632.5 19.5,-663.5 203.5,-663.5 203.5,-632.5 19.5,-632.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-632.5 19.5,-663.5 203.5,-663.5 203.5,-632.5 19.5,-632.5"/>
-<text text-anchor="start" x="53.5" y="-645.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G04</text>
-<text text-anchor="start" x="87.5" y="-645.9" font-family="Noto Sans CJK KR" font-size="12.00"> C 08 + Unix 04</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-601.5 19.5,-632.5 203.5,-632.5 203.5,-601.5 19.5,-601.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-601.5 19.5,-632.5 203.5,-632.5 203.5,-601.5 19.5,-601.5"/>
-<text text-anchor="start" x="43" y="-614.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P04</text>
-<text text-anchor="start" x="65" y="-614.9" font-family="Noto Sans CJK KR" font-size="12.00"> signal&#45;message&#45;bus</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-570.5 19.5,-601.5 203.5,-601.5 203.5,-570.5 19.5,-570.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-570.5 19.5,-601.5 203.5,-601.5 203.5,-570.5 19.5,-570.5"/>
-<text text-anchor="start" x="33" y="-583.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G05</text>
-<text text-anchor="start" x="67" y="-583.9" font-family="Noto Sans CJK KR" font-size="12.00"> C 07·09 + Unix 05~06</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-539.5 19.5,-570.5 203.5,-570.5 203.5,-539.5 19.5,-539.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-539.5 19.5,-570.5 203.5,-570.5 203.5,-539.5 19.5,-539.5"/>
-<text text-anchor="start" x="67.5" y="-552.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P05</text>
-<text text-anchor="start" x="89.5" y="-552.9" font-family="Noto Sans CJK KR" font-size="12.00"> small&#45;shell</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-508.5 19.5,-539.5 203.5,-539.5 203.5,-508.5 19.5,-508.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-508.5 19.5,-539.5 203.5,-539.5 203.5,-508.5 19.5,-508.5"/>
-<text text-anchor="start" x="47.5" y="-521.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G06</text>
-<text text-anchor="start" x="81.5" y="-521.9" font-family="Noto Sans CJK KR" font-size="12.00"> C 10 + OS 01~06</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-477.5 19.5,-508.5 203.5,-508.5 203.5,-477.5 19.5,-477.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-477.5 19.5,-508.5 203.5,-508.5 203.5,-477.5 19.5,-477.5"/>
-<text text-anchor="start" x="60" y="-490.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P06</text>
-<text text-anchor="start" x="82" y="-490.9" font-family="Noto Sans CJK KR" font-size="12.00"> thread&#45;dining</text>
-<polygon fill="#f8fafc" stroke="transparent" points="19.5,-446.5 19.5,-477.5 203.5,-477.5 203.5,-446.5 19.5,-446.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-446.5 19.5,-477.5 203.5,-477.5 203.5,-446.5 19.5,-446.5"/>
-<text text-anchor="start" x="28.5" y="-459.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;G07</text>
-<text text-anchor="start" x="62.5" y="-459.9" font-family="Noto Sans CJK KR" font-size="12.00"> Unix 07~09 + OS 07~10</text>
-<polygon fill="#fef3c7" stroke="transparent" points="19.5,-415.5 19.5,-446.5 203.5,-446.5 203.5,-415.5 19.5,-415.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-415.5 19.5,-446.5 203.5,-446.5 203.5,-415.5 19.5,-415.5"/>
-<text text-anchor="start" x="50.5" y="-428.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C&#45;S01</text>
-<text text-anchor="start" x="83.5" y="-428.9" font-family="Noto Sans CJK KR" font-size="12.00"> CPP&#45;G02 동기화</text>
-<polygon fill="#dbeafe" stroke="transparent" points="19.5,-384.5 19.5,-415.5 203.5,-415.5 203.5,-384.5 19.5,-384.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-384.5 19.5,-415.5 203.5,-415.5 203.5,-384.5 19.5,-384.5"/>
-<text text-anchor="start" x="71.5" y="-397.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P09</text>
-<text text-anchor="start" x="93.5" y="-397.9" font-family="Noto Sans CJK KR" font-size="12.00"> stack&#45;sort</text>
-<polygon fill="#bfdbfe" stroke="transparent" points="19.5,-353.5 19.5,-384.5 203.5,-384.5 203.5,-353.5 19.5,-353.5"/>
-<polygon fill="none" stroke="#2563eb" points="19.5,-353.5 19.5,-384.5 203.5,-384.5 203.5,-353.5 19.5,-353.5"/>
-<text text-anchor="start" x="94.5" y="-366.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C 완료</text>
-<polygon fill="none" stroke="#2563eb" points="18.5,-352.5 18.5,-887.5 204.5,-887.5 204.5,-352.5 18.5,-352.5"/>
-<polygon fill="#ede9fe" stroke="transparent" points="223.5,-830.5 223.5,-886.5 458.5,-886.5 458.5,-830.5 223.5,-830.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-830.5 223.5,-886.5 458.5,-886.5 458.5,-830.5 223.5,-830.5"/>
-<text text-anchor="start" x="295.5" y="-855.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="17.00">C++ TRACK</text>
-<polygon fill="#f8fafc" stroke="transparent" points="223.5,-780.5 223.5,-830.5 458.5,-830.5 458.5,-780.5 223.5,-780.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-780.5 223.5,-830.5 458.5,-830.5 458.5,-780.5 223.5,-780.5"/>
-<text text-anchor="start" x="285.5" y="-803.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">CPP&#45;G01</text>
-<text text-anchor="start" x="335.5" y="-803.4" font-family="Noto Sans CJK KR" font-size="12.00"> C++ 01~05</text>
-<polygon fill="#ede9fe" stroke="transparent" points="223.5,-730.5 223.5,-780.5 458.5,-780.5 458.5,-730.5 223.5,-730.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-730.5 223.5,-780.5 458.5,-780.5 458.5,-730.5 223.5,-730.5"/>
-<text text-anchor="start" x="284" y="-753.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P07</text>
-<text text-anchor="start" x="306" y="-753.4" font-family="Noto Sans CJK KR" font-size="12.00"> cpp&#45;foundation</text>
-<polygon fill="#f8fafc" stroke="transparent" points="223.5,-669.5 223.5,-730.5 458.5,-730.5 458.5,-669.5 223.5,-669.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-669.5 223.5,-730.5 458.5,-730.5 458.5,-669.5 223.5,-669.5"/>
-<text text-anchor="start" x="316" y="-703.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">CPP&#45;G02</text>
-<text text-anchor="start" x="256.5" y="-691.4" font-family="Noto Sans CJK KR" font-size="12.00">C++ 06~07 + Algorithms 01~11</text>
-<polygon fill="#ede9fe" stroke="transparent" points="223.5,-620.5 223.5,-669.5 458.5,-669.5 458.5,-620.5 223.5,-620.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-620.5 223.5,-669.5 458.5,-669.5 458.5,-620.5 223.5,-620.5"/>
-<text text-anchor="start" x="292" y="-642.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P08</text>
-<text text-anchor="start" x="314" y="-642.9" font-family="Noto Sans CJK KR" font-size="12.00"> stl&#45;container</text>
-<polygon fill="#f8fafc" stroke="transparent" points="223.5,-560.5 223.5,-620.5 458.5,-620.5 458.5,-560.5 223.5,-560.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-560.5 223.5,-620.5 458.5,-620.5 458.5,-560.5 223.5,-560.5"/>
-<text text-anchor="start" x="316" y="-593.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">CPP&#45;G03</text>
-<text text-anchor="start" x="232.5" y="-581.9" font-family="Noto Sans CJK KR" font-size="12.00">Algorithms 12~16 + Architecture 01~10</text>
-<polygon fill="#ede9fe" stroke="transparent" points="223.5,-511.5 223.5,-560.5 458.5,-560.5 458.5,-511.5 223.5,-511.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-511.5 223.5,-560.5 458.5,-560.5 458.5,-511.5 223.5,-511.5"/>
-<text text-anchor="start" x="283" y="-533.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P10</text>
-<text text-anchor="start" x="305" y="-533.9" font-family="Noto Sans CJK KR" font-size="12.00"> ray&#45;scene&#45;tracer</text>
-<polygon fill="#f8fafc" stroke="transparent" points="223.5,-451.5 223.5,-511.5 458.5,-511.5 458.5,-451.5 223.5,-451.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-451.5 223.5,-511.5 458.5,-511.5 458.5,-451.5 223.5,-451.5"/>
-<text text-anchor="start" x="316" y="-484.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">CPP&#45;G04</text>
-<text text-anchor="start" x="260" y="-472.9" font-family="Noto Sans CJK KR" font-size="12.00">C++ 08~09 + Networks 01~11</text>
-<polygon fill="#ede9fe" stroke="transparent" points="223.5,-402.5 223.5,-451.5 458.5,-451.5 458.5,-402.5 223.5,-402.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-402.5 223.5,-451.5 458.5,-451.5 458.5,-402.5 223.5,-402.5"/>
-<text text-anchor="start" x="286" y="-424.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P11</text>
-<text text-anchor="start" x="308" y="-424.9" font-family="Noto Sans CJK KR" font-size="12.00"> irc&#45;relay&#45;server</text>
-<polygon fill="#ddd6fe" stroke="transparent" points="223.5,-353.5 223.5,-402.5 458.5,-402.5 458.5,-353.5 223.5,-353.5"/>
-<polygon fill="none" stroke="#7c3aed" points="223.5,-353.5 223.5,-402.5 458.5,-402.5 458.5,-353.5 223.5,-353.5"/>
-<text text-anchor="start" x="317.5" y="-375.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">C++ 완료</text>
-<polygon fill="none" stroke="#7c3aed" points="222.5,-352.5 222.5,-887.5 459.5,-887.5 459.5,-352.5 222.5,-352.5"/>
-<polygon fill="#d1fae5" stroke="transparent" points="478.5,-833.5 478.5,-886.5 738.5,-886.5 738.5,-833.5 478.5,-833.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-833.5 478.5,-886.5 738.5,-886.5 738.5,-833.5 478.5,-833.5"/>
-<text text-anchor="start" x="560" y="-856.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="17.00">WEB TRACK</text>
-<polygon fill="#f8fafc" stroke="transparent" points="478.5,-786.5 478.5,-833.5 738.5,-833.5 738.5,-786.5 478.5,-786.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-786.5 478.5,-833.5 738.5,-833.5 738.5,-786.5 478.5,-786.5"/>
-<text text-anchor="start" x="534.5" y="-807.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">WEB&#45;G01</text>
-<text text-anchor="start" x="588.5" y="-807.9" font-family="Noto Sans CJK KR" font-size="12.00"> Web Infra 01~07</text>
-<polygon fill="#d1fae5" stroke="transparent" points="478.5,-740.5 478.5,-786.5 738.5,-786.5 738.5,-740.5 478.5,-740.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-740.5 478.5,-786.5 738.5,-786.5 738.5,-740.5 478.5,-740.5"/>
-<text text-anchor="start" x="552" y="-761.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P12</text>
-<text text-anchor="start" x="574" y="-761.4" font-family="Noto Sans CJK KR" font-size="12.00"> container&#45;stack</text>
-<polygon fill="#f8fafc" stroke="transparent" points="478.5,-694.5 478.5,-740.5 738.5,-740.5 738.5,-694.5 478.5,-694.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-694.5 478.5,-740.5 738.5,-740.5 738.5,-694.5 478.5,-694.5"/>
-<text text-anchor="start" x="533.5" y="-715.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">WEB&#45;G02</text>
-<text text-anchor="start" x="587.5" y="-715.4" font-family="Noto Sans CJK KR" font-size="12.00"> Web Apps 00~06</text>
-<polygon fill="#d1fae5" stroke="transparent" points="478.5,-648.5 478.5,-694.5 738.5,-694.5 738.5,-648.5 478.5,-648.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-648.5 478.5,-694.5 738.5,-694.5 738.5,-648.5 478.5,-648.5"/>
-<text text-anchor="start" x="525" y="-669.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P13</text>
-<text text-anchor="start" x="547" y="-669.4" font-family="Noto Sans CJK KR" font-size="12.00"> web&#45;boundary&#45;inspector</text>
-<polygon fill="#f8fafc" stroke="transparent" points="478.5,-602.5 478.5,-648.5 738.5,-648.5 738.5,-602.5 478.5,-602.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-602.5 478.5,-648.5 738.5,-648.5 738.5,-602.5 478.5,-602.5"/>
-<text text-anchor="start" x="535.5" y="-623.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">WEB&#45;G03</text>
-<text text-anchor="start" x="589.5" y="-623.4" font-family="Noto Sans CJK KR" font-size="12.00"> Frontend 00~04</text>
-<polygon fill="#a7f3d0" stroke="transparent" points="478.5,-548.5 478.5,-602.5 738.5,-602.5 738.5,-548.5 478.5,-548.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-548.5 478.5,-602.5 738.5,-602.5 738.5,-548.5 478.5,-548.5"/>
-<text text-anchor="start" x="559" y="-577.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P14</text>
-<text text-anchor="start" x="581" y="-577.4" font-family="Noto Sans CJK KR" font-size="12.00"> portfolio&#45;site</text>
-<text text-anchor="start" x="585.5" y="-567.8" font-family="Noto Sans CJK KR" font-size="9.00">첫 일반 지원</text>
-<polygon fill="#fef3c7" stroke="transparent" points="478.5,-502.5 478.5,-548.5 738.5,-548.5 738.5,-502.5 478.5,-502.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-502.5 478.5,-548.5 738.5,-548.5 738.5,-502.5 478.5,-502.5"/>
-<text text-anchor="start" x="538" y="-523.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">WEB&#45;S01</text>
-<text text-anchor="start" x="590" y="-523.4" font-family="Noto Sans CJK KR" font-size="12.00"> CPP&#45;G04 동기화</text>
-<polygon fill="#f8fafc" stroke="transparent" points="478.5,-445.5 478.5,-502.5 738.5,-502.5 738.5,-445.5 478.5,-445.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-445.5 478.5,-502.5 738.5,-502.5 738.5,-445.5 478.5,-445.5"/>
-<text text-anchor="start" x="581.5" y="-477.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">WEB&#45;G04</text>
-<text text-anchor="start" x="487.5" y="-465.4" font-family="Noto Sans CJK KR" font-size="12.00">Networks 12 + Web Apps 07~09 + DB 01~12</text>
-<polygon fill="#d1fae5" stroke="transparent" points="478.5,-399.5 478.5,-445.5 738.5,-445.5 738.5,-399.5 478.5,-399.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-399.5 478.5,-445.5 738.5,-445.5 738.5,-399.5 478.5,-399.5"/>
-<text text-anchor="start" x="564" y="-420.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">P15</text>
-<text text-anchor="start" x="586" y="-420.4" font-family="Noto Sans CJK KR" font-size="12.00"> pong&#45;pong</text>
-<polygon fill="#a7f3d0" stroke="transparent" points="478.5,-353.5 478.5,-399.5 738.5,-399.5 738.5,-353.5 478.5,-353.5"/>
-<polygon fill="none" stroke="#059669" points="478.5,-353.5 478.5,-399.5 738.5,-399.5 738.5,-353.5 478.5,-353.5"/>
-<text text-anchor="start" x="582" y="-374.4" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">WEB 완료</text>
-<polygon fill="none" stroke="#059669" points="477.5,-352.5 477.5,-887.5 739.5,-887.5 739.5,-352.5 477.5,-352.5"/>
+<path fill="#f8fafc" stroke="transparent" d="M782,-858C782,-858 12,-858 12,-858 6,-858 0,-852 0,-846 0,-846 0,-334 0,-334 0,-328 6,-322 12,-322 12,-322 782,-322 782,-322 788,-322 794,-328 794,-334 794,-334 794,-846 794,-846 794,-852 788,-858 782,-858"/>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-809 13,-845 178,-845 178,-809 13,-809"/>
+<polygon fill="none" stroke="#2563eb" points="13,-809 13,-845 178,-845 178,-809 13,-809"/>
+<text text-anchor="start" x="62" y="-824.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="16.00">C TRACK</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-779 13,-809 178,-809 178,-779 13,-779"/>
+<polygon fill="none" stroke="#2563eb" points="13,-779 13,-809 178,-809 178,-779 13,-779"/>
+<text text-anchor="start" x="49" y="-792.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G01</text>
+<text text-anchor="start" x="82" y="-792.2" font-family="Noto Sans CJK KR" font-size="11.00"> C 01~04·06</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-749 13,-779 178,-779 178,-749 13,-749"/>
+<polygon fill="none" stroke="#2563eb" points="13,-749 13,-779 178,-779 178,-749 13,-749"/>
+<text text-anchor="start" x="49.5" y="-762.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P01</text>
+<text text-anchor="start" x="71.5" y="-762.2" font-family="Noto Sans CJK KR" font-size="11.00"> c&#45;foundation</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-719 13,-749 178,-749 178,-719 13,-719"/>
+<polygon fill="none" stroke="#2563eb" points="13,-719 13,-749 178,-749 178,-719 13,-719"/>
+<text text-anchor="start" x="50" y="-732.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G02</text>
+<text text-anchor="start" x="83" y="-732.2" font-family="Noto Sans CJK KR" font-size="11.00"> Unix 01~03</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-689 13,-719 178,-719 178,-689 13,-689"/>
+<polygon fill="none" stroke="#2563eb" points="13,-689 13,-719 178,-719 178,-689 13,-689"/>
+<text text-anchor="start" x="31.5" y="-702.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P02</text>
+<text text-anchor="start" x="53.5" y="-702.2" font-family="Noto Sans CJK KR" font-size="11.00"> buffered&#45;line&#45;reader</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-659 13,-689 178,-689 178,-659 13,-659"/>
+<polygon fill="none" stroke="#2563eb" points="13,-659 13,-689 178,-689 178,-659 13,-659"/>
+<text text-anchor="start" x="67" y="-672.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G03</text>
+<text text-anchor="start" x="100" y="-672.2" font-family="Noto Sans CJK KR" font-size="11.00"> C 05</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-629 13,-659 178,-659 178,-629 13,-629"/>
+<polygon fill="none" stroke="#2563eb" points="13,-629 13,-659 178,-659 178,-629 13,-629"/>
+<text text-anchor="start" x="46" y="-642.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P03</text>
+<text text-anchor="start" x="68" y="-642.2" font-family="Noto Sans CJK KR" font-size="11.00"> format&#45;printer</text>
+<polygon fill="#fef3c7" stroke="transparent" points="13,-599 13,-629 178,-629 178,-599 13,-599"/>
+<polygon fill="none" stroke="#2563eb" points="13,-599 13,-629 178,-629 178,-599 13,-599"/>
+<text text-anchor="start" x="41" y="-612.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;S01</text>
+<text text-anchor="start" x="72" y="-612.2" font-family="Noto Sans CJK KR" font-size="11.00"> CPP&#45;G02 동기화</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-569 13,-599 178,-599 178,-569 13,-569"/>
+<polygon fill="none" stroke="#2563eb" points="13,-569 13,-599 178,-599 178,-569 13,-569"/>
+<text text-anchor="start" x="58" y="-582.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P09</text>
+<text text-anchor="start" x="80" y="-582.2" font-family="Noto Sans CJK KR" font-size="11.00"> stack&#45;sort</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-539 13,-569 178,-569 178,-539 13,-539"/>
+<polygon fill="none" stroke="#2563eb" points="13,-539 13,-569 178,-569 178,-539 13,-539"/>
+<text text-anchor="start" x="43" y="-552.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G04</text>
+<text text-anchor="start" x="76" y="-552.2" font-family="Noto Sans CJK KR" font-size="11.00"> C 08 + Unix 04</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-509 13,-539 178,-539 178,-509 13,-509"/>
+<polygon fill="none" stroke="#2563eb" points="13,-509 13,-539 178,-539 178,-509 13,-509"/>
+<text text-anchor="start" x="32.5" y="-522.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P04</text>
+<text text-anchor="start" x="54.5" y="-522.2" font-family="Noto Sans CJK KR" font-size="11.00"> signal&#45;message&#45;bus</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-480 13,-509 178,-509 178,-480 13,-480"/>
+<polygon fill="none" stroke="#2563eb" points="13,-480 13,-509 178,-509 178,-480 13,-480"/>
+<text text-anchor="start" x="25" y="-492.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G05</text>
+<text text-anchor="start" x="58" y="-492.7" font-family="Noto Sans CJK KR" font-size="11.00"> C 07·09 + Unix 05~06</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-451 13,-480 178,-480 178,-451 13,-451"/>
+<polygon fill="none" stroke="#2563eb" points="13,-451 13,-480 178,-480 178,-451 13,-451"/>
+<text text-anchor="start" x="55.5" y="-463.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P05</text>
+<text text-anchor="start" x="77.5" y="-463.7" font-family="Noto Sans CJK KR" font-size="11.00"> small&#45;shell</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-422 13,-451 178,-451 178,-422 13,-422"/>
+<polygon fill="none" stroke="#2563eb" points="13,-422 13,-451 178,-451 178,-422 13,-422"/>
+<text text-anchor="start" x="38" y="-434.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G06</text>
+<text text-anchor="start" x="71" y="-434.7" font-family="Noto Sans CJK KR" font-size="11.00"> C 10 + OS 01~06</text>
+<polygon fill="#dbeafe" stroke="transparent" points="13,-393 13,-422 178,-422 178,-393 13,-393"/>
+<polygon fill="none" stroke="#2563eb" points="13,-393 13,-422 178,-422 178,-393 13,-393"/>
+<text text-anchor="start" x="48" y="-405.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P06</text>
+<text text-anchor="start" x="70" y="-405.7" font-family="Noto Sans CJK KR" font-size="11.00"> thread&#45;dining</text>
+<polygon fill="#f8fafc" stroke="transparent" points="13,-364 13,-393 178,-393 178,-364 13,-364"/>
+<polygon fill="none" stroke="#2563eb" points="13,-364 13,-393 178,-393 178,-364 13,-364"/>
+<text text-anchor="start" x="21" y="-376.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C&#45;G07</text>
+<text text-anchor="start" x="54" y="-376.7" font-family="Noto Sans CJK KR" font-size="11.00"> Unix 07~09 + OS 07~10</text>
+<polygon fill="#bfdbfe" stroke="transparent" points="13,-335 13,-364 178,-364 178,-335 13,-335"/>
+<polygon fill="none" stroke="#2563eb" points="13,-335 13,-364 178,-364 178,-335 13,-335"/>
+<text text-anchor="start" x="80.5" y="-347.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C 완료</text>
+<polygon fill="none" stroke="#2563eb" points="12,-334 12,-846 179,-846 179,-334 12,-334"/>
+<polygon fill="#ede9fe" stroke="transparent" points="192,-795 192,-845 404,-845 404,-795 192,-795"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-795 192,-845 404,-845 404,-795 192,-795"/>
+<text text-anchor="start" x="255" y="-817.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="16.00">C++ TRACK</text>
+<polygon fill="#f8fafc" stroke="transparent" points="192,-752 192,-795 404,-795 404,-752 192,-752"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-752 192,-795 404,-795 404,-752 192,-752"/>
+<text text-anchor="start" x="247" y="-771.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G01</text>
+<text text-anchor="start" x="295" y="-771.7" font-family="Noto Sans CJK KR" font-size="11.00"> C++ 01~05</text>
+<polygon fill="#ede9fe" stroke="transparent" points="192,-709 192,-752 404,-752 404,-709 192,-709"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-709 192,-752 404,-752 404,-709 192,-709"/>
+<text text-anchor="start" x="245.5" y="-728.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P07</text>
+<text text-anchor="start" x="267.5" y="-728.7" font-family="Noto Sans CJK KR" font-size="11.00"> cpp&#45;foundation</text>
+<polygon fill="#f8fafc" stroke="transparent" points="192,-666 192,-709 404,-709 404,-666 192,-666"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-666 192,-709 404,-709 404,-666 192,-666"/>
+<text text-anchor="start" x="228" y="-685.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G02</text>
+<text text-anchor="start" x="276" y="-685.7" font-family="Noto Sans CJK KR" font-size="11.00"> Algorithms 01~10</text>
+<polygon fill="#f8fafc" stroke="transparent" points="192,-613 192,-666 404,-666 404,-613 192,-613"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-613 192,-666 404,-666 404,-613 192,-613"/>
+<text text-anchor="start" x="274" y="-642.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G03</text>
+<text text-anchor="start" x="231.5" y="-631.7" font-family="Noto Sans CJK KR" font-size="11.00">C++ 06~07 + Algorithms 11</text>
+<polygon fill="#ede9fe" stroke="transparent" points="192,-570 192,-613 404,-613 404,-570 192,-570"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-570 192,-613 404,-613 404,-570 192,-570"/>
+<text text-anchor="start" x="253" y="-589.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P08</text>
+<text text-anchor="start" x="275" y="-589.7" font-family="Noto Sans CJK KR" font-size="11.00"> stl&#45;container</text>
+<polygon fill="#f8fafc" stroke="transparent" points="192,-517 192,-570 404,-570 404,-517 192,-517"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-517 192,-570 404,-570 404,-517 192,-517"/>
+<text text-anchor="start" x="274" y="-546.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G04</text>
+<text text-anchor="start" x="200" y="-535.7" font-family="Noto Sans CJK KR" font-size="11.00">Algorithms 12~16 + Architecture 01~10</text>
+<polygon fill="#ede9fe" stroke="transparent" points="192,-474 192,-517 404,-517 404,-474 192,-474"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-474 192,-517 404,-517 404,-474 192,-474"/>
+<text text-anchor="start" x="244.5" y="-493.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P10</text>
+<text text-anchor="start" x="266.5" y="-493.7" font-family="Noto Sans CJK KR" font-size="11.00"> ray&#45;scene&#45;tracer</text>
+<polygon fill="#f8fafc" stroke="transparent" points="192,-421 192,-474 404,-474 404,-421 192,-421"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-421 192,-474 404,-474 404,-421 192,-421"/>
+<text text-anchor="start" x="274" y="-450.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G05</text>
+<text text-anchor="start" x="225.5" y="-439.7" font-family="Noto Sans CJK KR" font-size="11.00">C++ 08~09 + Networks 01~11</text>
+<polygon fill="#ede9fe" stroke="transparent" points="192,-378 192,-421 404,-421 404,-378 192,-378"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-378 192,-421 404,-421 404,-378 192,-378"/>
+<text text-anchor="start" x="246.5" y="-397.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P11</text>
+<text text-anchor="start" x="268.5" y="-397.7" font-family="Noto Sans CJK KR" font-size="11.00"> irc&#45;relay&#45;server</text>
+<polygon fill="#ddd6fe" stroke="transparent" points="192,-335 192,-378 404,-378 404,-335 192,-335"/>
+<polygon fill="none" stroke="#7c3aed" points="192,-335 192,-378 404,-378 404,-335 192,-335"/>
+<text text-anchor="start" x="276.5" y="-354.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">C++ 완료</text>
+<polygon fill="none" stroke="#7c3aed" points="191,-334 191,-846 405,-846 405,-334 191,-334"/>
+<polygon fill="#d1fae5" stroke="transparent" points="418,-803 418,-845 586,-845 586,-803 418,-803"/>
+<polygon fill="none" stroke="#059669" points="418,-803 418,-845 586,-845 586,-803 418,-803"/>
+<text text-anchor="start" x="456" y="-821.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="16.00">WEB TRACK</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-767 418,-803 586,-803 586,-767 418,-767"/>
+<polygon fill="none" stroke="#059669" points="418,-767 418,-803 586,-803 586,-767 418,-767"/>
+<text text-anchor="start" x="435.5" y="-783.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G01</text>
+<text text-anchor="start" x="485.5" y="-783.2" font-family="Noto Sans CJK KR" font-size="11.00"> Web Infra 01~07</text>
+<polygon fill="#d1fae5" stroke="transparent" points="418,-731 418,-767 586,-767 586,-731 418,-731"/>
+<polygon fill="none" stroke="#059669" points="418,-731 418,-767 586,-767 586,-731 418,-731"/>
+<text text-anchor="start" x="450.5" y="-747.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P12</text>
+<text text-anchor="start" x="472.5" y="-747.2" font-family="Noto Sans CJK KR" font-size="11.00"> container&#45;stack</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-695 418,-731 586,-731 586,-695 418,-695"/>
+<polygon fill="none" stroke="#059669" points="418,-695 418,-731 586,-731 586,-695 418,-695"/>
+<text text-anchor="start" x="434.5" y="-711.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G02</text>
+<text text-anchor="start" x="484.5" y="-711.2" font-family="Noto Sans CJK KR" font-size="11.00"> Web Apps 00~06</text>
+<polygon fill="#d1fae5" stroke="transparent" points="418,-659 418,-695 586,-695 586,-659 418,-659"/>
+<polygon fill="none" stroke="#059669" points="418,-659 418,-695 586,-695 586,-659 418,-659"/>
+<text text-anchor="start" x="426" y="-675.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P13</text>
+<text text-anchor="start" x="448" y="-675.2" font-family="Noto Sans CJK KR" font-size="11.00"> web&#45;boundary&#45;inspector</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-623 418,-659 586,-659 586,-623 418,-623"/>
+<polygon fill="none" stroke="#059669" points="418,-623 418,-659 586,-659 586,-623 418,-623"/>
+<text text-anchor="start" x="436" y="-639.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G03</text>
+<text text-anchor="start" x="486" y="-639.2" font-family="Noto Sans CJK KR" font-size="11.00"> Frontend 00~04</text>
+<polygon fill="#a7f3d0" stroke="transparent" points="418,-580 418,-623 586,-623 586,-580 418,-580"/>
+<polygon fill="none" stroke="#059669" points="418,-580 418,-623 586,-623 586,-580 418,-580"/>
+<text text-anchor="start" x="456" y="-603.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P14</text>
+<text text-anchor="start" x="478" y="-603.7" font-family="Noto Sans CJK KR" font-size="11.00"> portfolio&#45;site</text>
+<text text-anchor="start" x="479" y="-594.3" font-family="Noto Sans CJK KR" font-size="9.00">첫 일반 지원</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-545 418,-580 586,-580 586,-545 418,-545"/>
+<polygon fill="none" stroke="#059669" points="418,-545 418,-580 586,-580 586,-545 418,-545"/>
+<text text-anchor="start" x="434.5" y="-560.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G04</text>
+<text text-anchor="start" x="484.5" y="-560.7" font-family="Noto Sans CJK KR" font-size="11.00"> Web Apps 07~08</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-510 418,-545 586,-545 586,-510 418,-510"/>
+<polygon fill="none" stroke="#059669" points="418,-510 418,-545 586,-545 586,-510 418,-510"/>
+<text text-anchor="start" x="443.5" y="-525.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G05</text>
+<text text-anchor="start" x="493.5" y="-525.7" font-family="Noto Sans CJK KR" font-size="11.00"> Web Apps 09</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-475 418,-510 586,-510 586,-475 418,-475"/>
+<polygon fill="none" stroke="#059669" points="418,-475 418,-510 586,-510 586,-475 418,-475"/>
+<text text-anchor="start" x="436" y="-490.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G06</text>
+<text text-anchor="start" x="486" y="-490.7" font-family="Noto Sans CJK KR" font-size="11.00"> Database 01~12</text>
+<polygon fill="#fef3c7" stroke="transparent" points="418,-440 418,-475 586,-475 586,-440 418,-440"/>
+<polygon fill="none" stroke="#059669" points="418,-440 418,-475 586,-475 586,-440 418,-440"/>
+<text text-anchor="start" x="438.5" y="-455.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;S01</text>
+<text text-anchor="start" x="487.5" y="-455.7" font-family="Noto Sans CJK KR" font-size="11.00"> CPP&#45;G05 동기화</text>
+<polygon fill="#f8fafc" stroke="transparent" points="418,-405 418,-440 586,-440 586,-405 418,-405"/>
+<polygon fill="none" stroke="#059669" points="418,-405 418,-440 586,-440 586,-405 418,-405"/>
+<text text-anchor="start" x="443.5" y="-420.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G07</text>
+<text text-anchor="start" x="493.5" y="-420.7" font-family="Noto Sans CJK KR" font-size="11.00"> Networks 12</text>
+<polygon fill="#d1fae5" stroke="transparent" points="418,-370 418,-405 586,-405 586,-370 418,-370"/>
+<polygon fill="none" stroke="#059669" points="418,-370 418,-405 586,-405 586,-370 418,-370"/>
+<text text-anchor="start" x="461.5" y="-385.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P15</text>
+<text text-anchor="start" x="483.5" y="-385.7" font-family="Noto Sans CJK KR" font-size="11.00"> pong&#45;pong</text>
+<polygon fill="#a7f3d0" stroke="transparent" points="418,-335 418,-370 586,-370 586,-335 418,-335"/>
+<polygon fill="none" stroke="#059669" points="418,-335 418,-370 586,-370 586,-335 418,-335"/>
+<text text-anchor="start" x="479" y="-350.7" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB 완료</text>
+<polygon fill="none" stroke="#059669" points="417,-334 417,-846 587,-846 587,-334 417,-334"/>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-811 600,-845 781,-845 781,-811 600,-811"/>
+<polygon fill="none" stroke="#c2410c" points="600,-811 600,-845 781,-845 781,-811 600,-811"/>
+<text text-anchor="start" x="608" y="-825.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="16.00">SPORTSBOOK TRACK</text>
+<polygon fill="#f8fafc" stroke="transparent" points="600,-783 600,-811 781,-811 781,-783 600,-783"/>
+<polygon fill="none" stroke="#c2410c" points="600,-783 600,-811 781,-811 781,-783 600,-783"/>
+<text text-anchor="start" x="641.5" y="-795.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;G01</text>
+<text text-anchor="start" x="681.5" y="-795.2" font-family="Noto Sans CJK KR" font-size="11.00"> Java 01~08</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-755 600,-783 781,-783 781,-755 600,-755"/>
+<polygon fill="none" stroke="#c2410c" points="600,-755 600,-783 781,-783 781,-755 600,-755"/>
+<text text-anchor="start" x="637" y="-767.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P16</text>
+<text text-anchor="start" x="659" y="-767.2" font-family="Noto Sans CJK KR" font-size="11.00"> shared&#45;protocol</text>
+<polygon fill="#f8fafc" stroke="transparent" points="600,-727 600,-755 781,-755 781,-727 600,-727"/>
+<polygon fill="none" stroke="#c2410c" points="600,-727 600,-755 781,-755 781,-727 600,-727"/>
+<text text-anchor="start" x="622" y="-739.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;G02</text>
+<text text-anchor="start" x="662" y="-739.2" font-family="Noto Sans CJK KR" font-size="11.00"> Spring Boot 01~10</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-699 600,-727 781,-727 781,-699 600,-699"/>
+<polygon fill="none" stroke="#c2410c" points="600,-699 600,-727 781,-727 781,-699 600,-699"/>
+<text text-anchor="start" x="662.5" y="-711.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P17</text>
+<text text-anchor="start" x="684.5" y="-711.2" font-family="Noto Sans CJK KR" font-size="11.00"> wallet</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-671 600,-699 781,-699 781,-671 600,-671"/>
+<polygon fill="none" stroke="#c2410c" points="600,-671 600,-699 781,-699 781,-671 600,-671"/>
+<text text-anchor="start" x="668.5" y="-683.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P18</text>
+<text text-anchor="start" x="690.5" y="-683.2" font-family="Noto Sans CJK KR" font-size="11.00"> risk</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-643 600,-671 781,-671 781,-643 600,-643"/>
+<polygon fill="none" stroke="#c2410c" points="600,-643 600,-671 781,-671 781,-643 600,-643"/>
+<text text-anchor="start" x="652" y="-655.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P19</text>
+<text text-anchor="start" x="674" y="-655.2" font-family="Noto Sans CJK KR" font-size="11.00"> odds&#45;feed</text>
+<polygon fill="#f8fafc" stroke="transparent" points="600,-615 600,-643 781,-643 781,-615 600,-615"/>
+<polygon fill="none" stroke="#c2410c" points="600,-615 600,-643 781,-643 781,-615 600,-615"/>
+<text text-anchor="start" x="624" y="-627.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;G03</text>
+<text text-anchor="start" x="664" y="-627.2" font-family="Noto Sans CJK KR" font-size="11.00"> Distributed 01~07</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-587 600,-615 781,-615 781,-587 600,-587"/>
+<polygon fill="none" stroke="#c2410c" points="600,-587 600,-615 781,-615 781,-587 600,-587"/>
+<text text-anchor="start" x="659.5" y="-599.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P20</text>
+<text text-anchor="start" x="681.5" y="-599.2" font-family="Noto Sans CJK KR" font-size="11.00"> betting</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-559 600,-587 781,-587 781,-559 600,-559"/>
+<polygon fill="none" stroke="#c2410c" points="600,-559 600,-587 781,-587 781,-559 600,-559"/>
+<text text-anchor="start" x="650" y="-571.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P21</text>
+<text text-anchor="start" x="672" y="-571.2" font-family="Noto Sans CJK KR" font-size="11.00"> settlement</text>
+<polygon fill="#fef3c7" stroke="transparent" points="600,-531 600,-559 781,-559 781,-531 600,-531"/>
+<polygon fill="none" stroke="#c2410c" points="600,-531 600,-559 781,-559 781,-531 600,-531"/>
+<text text-anchor="start" x="630" y="-543.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;S01</text>
+<text text-anchor="start" x="669" y="-543.2" font-family="Noto Sans CJK KR" font-size="11.00"> WEB&#45;G04 동기화</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-503 600,-531 781,-531 781,-503 600,-503"/>
+<polygon fill="none" stroke="#c2410c" points="600,-503 600,-531 781,-531 781,-503 600,-503"/>
+<text text-anchor="start" x="656.5" y="-515.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P22</text>
+<text text-anchor="start" x="678.5" y="-515.2" font-family="Noto Sans CJK KR" font-size="11.00"> gateway</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-475 600,-503 781,-503 781,-475 600,-475"/>
+<polygon fill="none" stroke="#c2410c" points="600,-475 600,-503 781,-503 781,-475 600,-475"/>
+<text text-anchor="start" x="652" y="-487.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P23</text>
+<text text-anchor="start" x="674" y="-487.2" font-family="Noto Sans CJK KR" font-size="11.00"> admin&#45;api</text>
+<polygon fill="#f8fafc" stroke="transparent" points="600,-447 600,-475 781,-475 781,-447 600,-447"/>
+<polygon fill="none" stroke="#c2410c" points="600,-447 600,-475 781,-475 781,-447 600,-447"/>
+<text text-anchor="start" x="624" y="-459.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;G04</text>
+<text text-anchor="start" x="664" y="-459.2" font-family="Noto Sans CJK KR" font-size="11.00"> Distributed 08~10</text>
+<polygon fill="#f8fafc" stroke="transparent" points="600,-419 600,-447 781,-447 781,-419 600,-419"/>
+<polygon fill="none" stroke="#c2410c" points="600,-419 600,-447 781,-447 781,-419 600,-419"/>
+<text text-anchor="start" x="640" y="-431.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;G05</text>
+<text text-anchor="start" x="680" y="-431.2" font-family="Noto Sans CJK KR" font-size="11.00"> Shell 01~08</text>
+<polygon fill="#fef3c7" stroke="transparent" points="600,-391 600,-419 781,-419 781,-391 600,-391"/>
+<polygon fill="none" stroke="#c2410c" points="600,-391 600,-419 781,-419 781,-391 600,-391"/>
+<text text-anchor="start" x="612" y="-403.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SB&#45;S02</text>
+<text text-anchor="start" x="651" y="-403.2" font-family="Noto Sans CJK KR" font-size="11.00"> WEB&#45;G01·06·07 동기화</text>
+<polygon fill="#ffedd5" stroke="transparent" points="600,-363 600,-391 781,-391 781,-363 600,-363"/>
+<polygon fill="none" stroke="#c2410c" points="600,-363 600,-391 781,-391 781,-363 600,-363"/>
+<text text-anchor="start" x="643" y="-375.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">P24</text>
+<text text-anchor="start" x="665" y="-375.2" font-family="Noto Sans CJK KR" font-size="11.00"> orchestration</text>
+<polygon fill="#fed7aa" stroke="transparent" points="600,-335 600,-363 781,-363 781,-335 600,-335"/>
+<polygon fill="none" stroke="#c2410c" points="600,-335 600,-363 781,-363 781,-335 600,-335"/>
+<text text-anchor="start" x="642" y="-347.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">SPORTSBOOK 완료</text>
+<polygon fill="none" stroke="#c2410c" points="599,-334 599,-846 782,-846 782,-334 599,-334"/>
 </g>
 <!-- START&#45;&gt;TRACKS -->
 <g id="edge1" class="edge">
 <title>START&#45;&gt;TRACKS</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M378.5,-952.43C378.5,-942.54 378.5,-929.25 378.5,-913.66"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="381.02,-913.55 378.5,-906.35 375.98,-913.55 381.02,-913.55"/>
+<path fill="none" stroke="#64748b" stroke-width="1.15" d="M397,-906.57C397,-896.38 397,-882.24 397,-865.56"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="399.52,-865.46 397,-858.26 394.48,-865.46 399.52,-865.46"/>
 </g>
 <!-- SYNC -->
 <g id="node3" class="node">
 <title>SYNC</title>
-<path fill="#f8fafc" stroke="transparent" d="M525.5,-295C525.5,-295 231.5,-295 231.5,-295 225.5,-295 219.5,-289 219.5,-283 219.5,-283 219.5,-212 219.5,-212 219.5,-206 225.5,-200 231.5,-200 231.5,-200 525.5,-200 525.5,-200 531.5,-200 537.5,-206 537.5,-212 537.5,-212 537.5,-283 537.5,-283 537.5,-289 531.5,-295 525.5,-295"/>
-<polygon fill="#fee2e2" stroke="transparent" points="220.5,-262.5 220.5,-293.5 536.5,-293.5 536.5,-262.5 220.5,-262.5"/>
-<polygon fill="none" stroke="#dc2626" points="220.5,-262.5 220.5,-293.5 536.5,-293.5 536.5,-262.5 220.5,-262.5"/>
-<text text-anchor="start" x="290.5" y="-275.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">트랙 간 하드 동기화는 두 곳만 유지</text>
-<polygon fill="none" stroke="#dc2626" points="220.5,-231.5 220.5,-262.5 359.5,-262.5 359.5,-231.5 220.5,-231.5"/>
-<text text-anchor="start" x="229.5" y="-244.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">CPP&#45;G02 → P09</text>
-<polygon fill="none" stroke="#dc2626" points="359.5,-231.5 359.5,-262.5 536.5,-262.5 536.5,-231.5 359.5,-231.5"/>
-<text text-anchor="start" x="368.5" y="-243.9" font-family="Noto Sans CJK KR" font-size="12.00">Algorithms 01~10 완료</text>
-<polygon fill="none" stroke="#dc2626" points="220.5,-200.5 220.5,-231.5 359.5,-231.5 359.5,-200.5 220.5,-200.5"/>
-<text text-anchor="start" x="229.5" y="-213.9" font-family="Noto Sans CJK KR" font-weight="bold" font-size="12.00">CPP&#45;G04 → WEB&#45;G04</text>
-<polygon fill="none" stroke="#dc2626" points="359.5,-200.5 359.5,-231.5 536.5,-231.5 536.5,-200.5 359.5,-200.5"/>
-<text text-anchor="start" x="368.5" y="-212.9" font-family="Noto Sans CJK KR" font-size="12.00">Networks 01~11 뒤 12장 진행</text>
-<polygon fill="none" stroke="#dc2626" points="219.5,-200 219.5,-295 537.5,-295 537.5,-200 219.5,-200"/>
+<path fill="#f8fafc" stroke="transparent" d="M542.5,-285C542.5,-285 251.5,-285 251.5,-285 245.5,-285 239.5,-279 239.5,-273 239.5,-273 239.5,-145 239.5,-145 239.5,-139 245.5,-133 251.5,-133 251.5,-133 542.5,-133 542.5,-133 548.5,-133 554.5,-139 554.5,-145 554.5,-145 554.5,-273 554.5,-273 554.5,-279 548.5,-285 542.5,-285"/>
+<polygon fill="#fee2e2" stroke="transparent" points="241,-254 241,-284 554,-284 554,-254 241,-254"/>
+<polygon fill="none" stroke="#dc2626" points="241,-254 241,-284 554,-284 554,-254 241,-254"/>
+<text text-anchor="start" x="343" y="-267.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">트랙 간 하드 동기화 네 곳</text>
+<polygon fill="none" stroke="#dc2626" points="241,-224 241,-254 386,-254 386,-224 241,-224"/>
+<text text-anchor="start" x="250" y="-237.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G02 → P09</text>
+<polygon fill="none" stroke="#dc2626" points="386,-224 386,-254 554,-254 554,-224 386,-224"/>
+<text text-anchor="start" x="395" y="-236.2" font-family="Noto Sans CJK KR" font-size="11.00">Algorithms 01~10 완료</text>
+<polygon fill="none" stroke="#dc2626" points="241,-194 241,-224 386,-224 386,-194 241,-194"/>
+<text text-anchor="start" x="250" y="-207.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">CPP&#45;G05 → WEB&#45;G07</text>
+<polygon fill="none" stroke="#dc2626" points="386,-194 386,-224 554,-224 554,-194 386,-194"/>
+<text text-anchor="start" x="395" y="-206.2" font-family="Noto Sans CJK KR" font-size="11.00">Networks 01~11 뒤 12장 진행</text>
+<polygon fill="none" stroke="#dc2626" points="241,-164 241,-194 386,-194 386,-164 241,-164"/>
+<text text-anchor="start" x="250" y="-177.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G04 → P22</text>
+<polygon fill="none" stroke="#dc2626" points="386,-164 386,-194 554,-194 554,-164 386,-164"/>
+<text text-anchor="start" x="395" y="-176.2" font-family="Noto Sans CJK KR" font-size="11.00">WebSocket·재연결·테스트 완료</text>
+<polygon fill="none" stroke="#dc2626" points="241,-134 241,-164 386,-164 386,-134 241,-134"/>
+<text text-anchor="start" x="250" y="-147.2" font-family="Noto Sans CJK KR" font-weight="bold" font-size="11.00">WEB&#45;G01·06·07 → P24</text>
+<polygon fill="none" stroke="#dc2626" points="386,-134 386,-164 554,-164 554,-134 386,-134"/>
+<text text-anchor="start" x="395" y="-146.2" font-family="Noto Sans CJK KR" font-size="11.00">인프라·DB·종단 네트워크 완료</text>
+<polygon fill="none" stroke="#dc2626" points="239.5,-133 239.5,-285 554.5,-285 554.5,-133 239.5,-133"/>
 </g>
 <!-- TRACKS&#45;&gt;SYNC -->
 <g id="edge2" class="edge">
 <title>TRACKS&#45;&gt;SYNC</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M378.5,-334.55C378.5,-323.07 378.5,-312.32 378.5,-302.56"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="381.02,-302.5 378.5,-295.3 375.98,-302.5 381.02,-302.5"/>
+<path fill="none" stroke="#64748b" stroke-width="1.15" d="M397,-321.92C397,-311.75 397,-301.94 397,-292.64"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="399.52,-292.5 397,-285.3 394.48,-292.5 399.52,-292.5"/>
 </g>
-<!-- MERGE -->
+<!-- COMPLETE -->
 <g id="node5" class="node">
-<title>MERGE</title>
-<path fill="#fde68a" stroke="#b45309" stroke-width="2" d="M366.71,-157.76C366.71,-157.76 179.29,-122.24 179.29,-122.24 173.4,-121.12 173.4,-118.88 179.29,-117.76 179.29,-117.76 366.71,-82.24 366.71,-82.24 372.6,-81.12 384.4,-81.12 390.29,-82.24 390.29,-82.24 577.71,-117.76 577.71,-117.76 583.6,-118.88 583.6,-121.12 577.71,-122.24 577.71,-122.24 390.29,-157.76 390.29,-157.76 384.4,-158.88 372.6,-158.88 366.71,-157.76"/>
-<text text-anchor="middle" x="378.5" y="-123.4" font-family="Noto Sans CJK KR" font-size="12.00">◇ 3트랙 합류</text>
-<text text-anchor="middle" x="378.5" y="-110.4" font-family="Noto Sans CJK KR" font-size="12.00">P01~P15 + G00~G11 필수 범위 완료</text>
+<title>COMPLETE</title>
+<path fill="#fde68a" stroke="#b45309" stroke-width="2" d="M385.37,-93.05C385.37,-93.05 219.63,-50.95 219.63,-50.95 213.82,-49.48 213.82,-46.52 219.63,-45.05 219.63,-45.05 385.37,-2.95 385.37,-2.95 391.18,-1.48 402.82,-1.48 408.63,-2.95 408.63,-2.95 574.37,-45.05 574.37,-45.05 580.18,-46.52 580.18,-49.48 574.37,-50.95 574.37,-50.95 408.63,-93.05 408.63,-93.05 402.82,-94.52 391.18,-94.52 385.37,-93.05"/>
+<text text-anchor="middle" x="397" y="-57.2" font-family="Noto Sans CJK KR" font-size="11.00">◇ 4트랙 완료</text>
+<text text-anchor="middle" x="397" y="-45.2" font-family="Noto Sans CJK KR" font-size="11.00">P01~P24 + 필수 가이드 전체 커버리지</text>
+<text text-anchor="middle" x="397" y="-33.2" font-family="Noto Sans CJK KR" font-size="11.00">L04~L13 + P0/P1 해결</text>
 </g>
-<!-- SYNC&#45;&gt;MERGE -->
+<!-- SYNC&#45;&gt;COMPLETE -->
 <g id="edge3" class="edge">
-<title>SYNC&#45;&gt;MERGE</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M378.5,-199.77C378.5,-189.34 378.5,-178.27 378.5,-167.84"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="381.02,-167.57 378.5,-160.37 375.98,-167.57 381.02,-167.57"/>
+<title>SYNC&#45;&gt;COMPLETE</title>
+<path fill="none" stroke="#64748b" stroke-width="1.15" d="M397,-132.69C397,-122.94 397,-113.1 397,-103.77"/>
+<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="399.52,-103.6 397,-96.4 394.48,-103.6 399.52,-103.6"/>
 </g>
 <!-- RULE -->
 <g id="node4" class="node">
 <title>RULE</title>
-<polygon fill="#f8fafc" stroke="#475569" points="621,-999 476,-999 476,-946 627,-946 627,-993 621,-999"/>
-<polyline fill="none" stroke="#475569" points="621,-999 621,-993 "/>
-<polyline fill="none" stroke="#475569" points="627,-993 621,-993 "/>
-<text text-anchor="middle" x="551.5" y="-982.4" font-family="Noto Sans CJK KR" font-size="12.00">P만 원자적</text>
-<text text-anchor="middle" x="551.5" y="-969.4" font-family="Noto Sans CJK KR" font-size="12.00">G는 장 단위 분할 가능</text>
-<text text-anchor="middle" x="551.5" y="-956.4" font-family="Noto Sans CJK KR" font-size="12.00">필수 G 장·실습 생략 금지</text>
+<polygon fill="#f8fafc" stroke="#475569" points="608.5,-955 483.5,-955 483.5,-895 614.5,-895 614.5,-949 608.5,-955"/>
+<polyline fill="none" stroke="#475569" points="608.5,-955 608.5,-949 "/>
+<polyline fill="none" stroke="#475569" points="614.5,-949 608.5,-949 "/>
+<text text-anchor="middle" x="549" y="-940.2" font-family="Noto Sans CJK KR" font-size="11.00">P만 원자적</text>
+<text text-anchor="middle" x="549" y="-928.2" font-family="Noto Sans CJK KR" font-size="11.00">G는 장 단위 분할 가능</text>
+<text text-anchor="middle" x="549" y="-916.2" font-family="Noto Sans CJK KR" font-size="11.00">필수 G 장·실습 생략 금지</text>
+<text text-anchor="middle" x="549" y="-904.2" font-family="Noto Sans CJK KR" font-size="11.00">막힌 트랙만 대기</text>
 </g>
 <!-- RULE&#45;&gt;TRACKS -->
-<g id="edge5" class="edge">
-<title>RULE&#45;&gt;TRACKS</title>
-<path fill="none" stroke="#94a3b8" stroke-width="1.15" stroke-dasharray="5,2" d="M538.78,-945.76C534.29,-936.69 528.8,-925.57 522.57,-912.97"/>
-<polygon fill="#94a3b8" stroke="#94a3b8" stroke-width="1.15" points="524.7,-911.59 519.25,-906.25 520.18,-913.82 524.7,-911.59"/>
-</g>
-<!-- POST -->
-<g id="node6" class="node">
-<title>POST</title>
-<path fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8" d="M493.5,-40C493.5,-40 263.5,-40 263.5,-40 257.5,-40 251.5,-34 251.5,-28 251.5,-28 251.5,-12 251.5,-12 251.5,-6 257.5,0 263.5,0 263.5,0 493.5,0 493.5,0 499.5,0 505.5,-6 505.5,-12 505.5,-12 505.5,-28 505.5,-28 505.5,-34 499.5,-40 493.5,-40"/>
-<text text-anchor="middle" x="378.5" y="-23.4" font-family="Noto Sans CJK KR" font-size="12.00">G12 → P16 → G13 → P17 → P18 → P19</text>
-<text text-anchor="middle" x="378.5" y="-10.4" font-family="Noto Sans CJK KR" font-size="12.00">→ G14 → P20 → P21 → P22 → P23 → P24</text>
-</g>
-<!-- MERGE&#45;&gt;POST -->
 <g id="edge4" class="edge">
-<title>MERGE&#45;&gt;POST</title>
-<path fill="none" stroke="#64748b" stroke-width="1.15" d="M378.5,-79.99C378.5,-69.1 378.5,-57.52 378.5,-47.53"/>
-<polygon fill="#64748b" stroke="#64748b" stroke-width="1.15" points="381.02,-47.44 378.5,-40.24 375.98,-47.44 381.02,-47.44"/>
+<title>RULE&#45;&gt;TRACKS</title>
+<path fill="none" stroke="#94a3b8" stroke-width="1.15" stroke-dasharray="5,2" d="M535.64,-894.74C531.74,-886.18 527.12,-876.06 521.98,-864.8"/>
+<polygon fill="#94a3b8" stroke="#94a3b8" stroke-width="1.15" points="524.17,-863.54 518.89,-858.03 519.59,-865.63 524.17,-863.54"/>
 </g>
 </g>
 </svg>

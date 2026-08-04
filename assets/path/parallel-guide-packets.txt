@@ -1,25 +1,57 @@
+COMMON
+G00 guide-git 01~06
+
 C TRACK
-C-G01 → P01 → C-G02 → P02 → C-G03 → P03
-→ C-G04 → P04 → C-G05 → P05 → C-G06 → P06
-→ C-G07 → C-S01 → P09
+C-G01 guide-c 01~04·06 → P01
+→ C-G02 Unix 01~03 → P02
+→ C-G03 C 05 → P03
+→ C-S01 wait Algorithms 01~10 → P09
+→ C-G04 C 08 + Unix 04 → P04
+→ C-G05 C 07·09 + Unix 05~06 → P05
+→ C-G06 C 10 + OS 01~06 → P06
+→ C-G07 Unix 07~09 + OS 07~10 → complete
 
 C++ TRACK
-CPP-G01 → P07 → CPP-G02 → P08 → CPP-G03 → P10 → CPP-G04 → P11
+CPP-G01 C++ 01~05 → P07
+→ CPP-G02 Algorithms 01~10
+→ CPP-G03 C++ 06~07 + Algorithms 11 → P08
+→ CPP-G04 Algorithms 12~16 + Architecture 01~10 → P10
+→ CPP-G05 C++ 08~09 + Networks 01~11 → P11 → complete
 
 WEB TRACK
-WEB-G01 → P12 → WEB-G02 → P13 → WEB-G03 → P14
-→ WEB-S01 → WEB-G04 → P15
+WEB-G01 Web Infra 01~07 → P12
+→ WEB-G02 Web Apps 00~06 → P13
+→ WEB-G03 Frontend 00~04 → P14
+→ WEB-G04 Web Apps 07~08
+→ WEB-G05 Web Apps 09
+→ WEB-G06 Database 01~12
+→ WEB-S01 wait Networks 01~11
+→ WEB-G07 Networks 12 → P15 → complete
+
+SPORTSBOOK TRACK
+SB-G01 Java 01~08 → P16
+→ SB-G02 Spring Boot 01~10 → P17 → P18 → P19
+→ SB-G03 Distributed 01~07 → P20 → P21
+→ SB-S01 wait Web Apps 07~08 → P22 → P23
+→ SB-G04 Distributed 08~10
+→ SB-G05 Shell 01~08
+→ SB-S02 wait Web Infra + Database + Networks 12
+→ P24 → complete
 
 GUIDE COVERAGE
-G00: guide-git 01~06
-G01: guide-c 01~10
-G02: guide-unix-systems 01~09
-G03: guide-cpp 01~09
-G04: guide-operating-systems 01~10
-G05: guide-algorithms 01~16
-G06: guide-computer-architecture 01~10
-G07: guide-computer-networks 01~12
-G08: guide-web-infrastructure 01~07
-G09: guide-web-applications 00~09
-G10: guide-frontend-react-nextjs 00~04
-G11: guide-database-systems 01~12
+Git 01~06
+C 01~10
+Unix 01~09
+OS 01~10
+C++ 01~09
+Algorithms 01~16
+Architecture 01~10
+Networks 01~12
+Web Infrastructure 01~07
+Web Applications 00~09
+Frontend 00~04
+Database 01~12
+Java 01~08
+Spring Boot 01~10
+Distributed Services 01~10
+Shell Scripting 01~08

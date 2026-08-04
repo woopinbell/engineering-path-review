@@ -74,9 +74,14 @@ PARALLEL_GUIDE_COVERAGE = {
     "guide-web-applications": "00~09 전체",
     "guide-frontend-react-nextjs": "00~04 전체",
     "guide-database-systems": "01~12 전체",
+    "guide-java": "01~08 전체",
+    "guide-backend-spring-boot": "01~10 전체",
+    "guide-distributed-services": "01~10 전체",
+    "guide-shell-scripting": "01~08 전체",
 }
 PARALLEL_FORBIDDEN_TERMS = (
     "`VERIFIED`", "`MISSING`", "`DEFERRED`", "가이드 풀", "개념 패킷 단위",
+    "C·C++·WEB 3트랙 병렬 PATH", "P16~P24는 기본 PATH",
 )
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 AUTOLINK_RE = re.compile(r"<((?:https?|file|javascript|data|sandbox):[^>]+)>", re.I)
@@ -284,12 +289,15 @@ def check_parallel_path(errors: list[str]) -> None:
     path = ROOT / "docs/11-PARALLEL-PATH.md"
     text = path.read_text(encoding="utf-8")
     required_phrases = (
-        "C·C++·WEB 3트랙 병렬 PATH",
+        "C·C++·WEB·SPORTSBOOK 4트랙 병렬 PATH",
         "프로젝트만 원자적으로 완료한다",
         "필수 범위는 생략하지 않고",
         "G와 P를 선형",
+        "P09를 P03 뒤",
         "CPP-G02 → P09",
-        "CPP-G04 → WEB-G04",
+        "CPP-G05 → WEB-G07",
+        "WEB-G04 → P22",
+        "WEB-G01·WEB-G06·WEB-G07 → P24",
     )
     for phrase in required_phrases:
         if phrase not in text:
@@ -301,7 +309,7 @@ def check_parallel_path(errors: list[str]) -> None:
         pattern = rf"^\| `{re.escape(guide)}` \| .* \| {re.escape(coverage)} \|$"
         if not re.search(pattern, text, re.M):
             errors.append(f"parallel PATH missing mandatory guide coverage: {guide} {coverage}")
-    for project in [f"P{i:02d}" for i in range(1, 16)]:
+    for project in PROJECT_IDS:
         if project not in text:
             errors.append(f"parallel PATH missing project: {project}")
 

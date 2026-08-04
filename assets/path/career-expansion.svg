@@ -1,106 +1,111 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Title: Career Pages: 1 -->
-<svg width="597pt" height="391pt"
- viewBox="0.00 0.00 597.32 391.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(20.16 371.16)">
+<svg width="880pt" height="405pt"
+ viewBox="0.00 0.00 880.32 405.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(20.16 385.16)">
 <title>Career</title>
-<polygon fill="white" stroke="transparent" points="-20.16,20.16 -20.16,-371.16 577.16,-371.16 577.16,20.16 -20.16,20.16"/>
-<text text-anchor="middle" x="278.5" y="-331" font-family="Noto Sans CJK KR" font-size="20.00">PATH 진행에 따른 채용 지원 범위 확장</text>
+<polygon fill="white" stroke="transparent" points="-20.16,20.16 -20.16,-385.16 860.16,-385.16 860.16,20.16 -20.16,20.16"/>
+<text text-anchor="middle" x="420" y="-345" font-family="Noto Sans CJK KR" font-size="20.00">4트랙 PATH의 채용 지원 gate</text>
 <!-- M11 -->
 <g id="node1" class="node">
 <title>M11</title>
-<polygon fill="#eaf2ff" stroke="transparent" points="52.5,-282.5 52.5,-319.5 235.5,-319.5 235.5,-282.5 52.5,-282.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="52.5,-282.5 52.5,-319.5 235.5,-319.5 235.5,-282.5 52.5,-282.5"/>
-<text text-anchor="start" x="63.5" y="-298.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P11 · 시스템 프로젝트 완료</text>
-<polygon fill="#fff6df" stroke="transparent" points="235.5,-282.5 235.5,-319.5 504.5,-319.5 504.5,-282.5 235.5,-282.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="235.5,-282.5 235.5,-319.5 504.5,-319.5 504.5,-282.5 235.5,-282.5"/>
-<text text-anchor="start" x="246.5" y="-297.3" font-family="Noto Sans CJK KR" font-size="14.00">직접 일치 공고만 · C/C++ 시스템·네트워크</text>
-<polygon fill="none" stroke="#8ba7c7" points="51.5,-282 51.5,-321 505.5,-321 505.5,-282 51.5,-282"/>
+<polygon fill="#eaf2ff" stroke="transparent" points="17.5,-296.5 17.5,-333.5 200.5,-333.5 200.5,-296.5 17.5,-296.5"/>
+<polygon fill="none" stroke="#8ba7c7" points="17.5,-296.5 17.5,-333.5 200.5,-333.5 200.5,-296.5 17.5,-296.5"/>
+<text text-anchor="start" x="28.5" y="-312.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P11 · 시스템 프로젝트 완료</text>
+<polygon fill="#fff6df" stroke="transparent" points="200.5,-296.5 200.5,-333.5 469.5,-333.5 469.5,-296.5 200.5,-296.5"/>
+<polygon fill="none" stroke="#8ba7c7" points="200.5,-296.5 200.5,-333.5 469.5,-333.5 469.5,-296.5 200.5,-296.5"/>
+<text text-anchor="start" x="211.5" y="-311.3" font-family="Noto Sans CJK KR" font-size="14.00">직접 일치 공고만 · C/C++ 시스템·네트워크</text>
+<polygon fill="none" stroke="#8ba7c7" points="16.5,-296 16.5,-335 470.5,-335 470.5,-296 16.5,-296"/>
 </g>
 <!-- M14 -->
 <g id="node2" class="node">
 <title>M14</title>
-<polygon fill="#eaf2ff" stroke="transparent" points="41.5,-225.5 41.5,-262.5 228.5,-262.5 228.5,-225.5 41.5,-225.5"/>
-<polygon fill="none" stroke="#2457a6" points="41.5,-225.5 41.5,-262.5 228.5,-262.5 228.5,-225.5 41.5,-225.5"/>
-<text text-anchor="start" x="52.5" y="-241.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P14 · portfolio 배포·검증</text>
-<polygon fill="#e8f7ec" stroke="transparent" points="228.5,-225.5 228.5,-262.5 515.5,-262.5 515.5,-225.5 228.5,-225.5"/>
-<polygon fill="none" stroke="#2457a6" points="228.5,-225.5 228.5,-262.5 515.5,-262.5 515.5,-225.5 228.5,-225.5"/>
-<text text-anchor="start" x="239.5" y="-241.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">일반 첫 지원 · Frontend·Web·Junior SW</text>
-<polygon fill="none" stroke="#2457a6" stroke-width="2" points="40.5,-225 40.5,-264 516.5,-264 516.5,-225 40.5,-225"/>
+<polygon fill="#eaf2ff" stroke="transparent" points="70.5,-234 70.5,-271 296.5,-271 296.5,-234 70.5,-234"/>
+<polygon fill="none" stroke="#2457a6" points="70.5,-234 70.5,-271 296.5,-271 296.5,-234 70.5,-234"/>
+<text text-anchor="start" x="81.5" y="-249.8" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P14 · portfolio 배포·검증 + L14</text>
+<polygon fill="#e8f7ec" stroke="transparent" points="296.5,-234 296.5,-271 417.5,-271 417.5,-234 296.5,-234"/>
+<polygon fill="none" stroke="#2457a6" points="296.5,-234 296.5,-271 417.5,-271 417.5,-234 296.5,-234"/>
+<text text-anchor="start" x="307.5" y="-249.8" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">일반 첫 지원 개방</text>
+<polygon fill="#f8fafc" stroke="transparent" points="70.5,-197 70.5,-234 417.5,-234 417.5,-197 70.5,-197"/>
+<polygon fill="none" stroke="#2457a6" points="70.5,-197 70.5,-234 417.5,-234 417.5,-197 70.5,-197"/>
+<text text-anchor="start" x="105.5" y="-211.8" font-family="Noto Sans CJK KR" font-size="14.00">이미 완료된 확장 마일스톤은 이 시점에 함께 반영</text>
+<polygon fill="none" stroke="#2457a6" stroke-width="2" points="69,-196 69,-272 418,-272 418,-196 69,-196"/>
 </g>
 <!-- M11&#45;&gt;M14 -->
 <g id="edge1" class="edge">
 <title>M11&#45;&gt;M14</title>
-<path fill="none" stroke="#52616b" stroke-width="1.1" d="M278.5,-281.88C278.5,-278.86 278.5,-275.69 278.5,-272.52"/>
-<polygon fill="#52616b" stroke="#52616b" stroke-width="1.1" points="281.02,-272.43 278.5,-265.23 275.98,-272.43 281.02,-272.43"/>
+<path fill="none" stroke="#52616b" stroke-width="1.1" d="M243.5,-295.66C243.5,-290.99 243.5,-285.78 243.5,-280.43"/>
+<polygon fill="#52616b" stroke="#52616b" stroke-width="1.1" points="246.02,-280.28 243.5,-273.08 240.98,-280.28 246.02,-280.28"/>
 </g>
 <!-- M15 -->
 <g id="node3" class="node">
 <title>M15</title>
-<polygon fill="#eaf2ff" stroke="transparent" points="75.5,-168.5 75.5,-205.5 213.5,-205.5 213.5,-168.5 75.5,-168.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="75.5,-168.5 75.5,-205.5 213.5,-205.5 213.5,-168.5 75.5,-168.5"/>
-<text text-anchor="start" x="86.5" y="-184.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P15 · pong&#45;pong</text>
-<polygon fill="#e8f7ec" stroke="transparent" points="213.5,-168.5 213.5,-205.5 482.5,-205.5 482.5,-168.5 213.5,-168.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="213.5,-168.5 213.5,-205.5 482.5,-205.5 482.5,-168.5 213.5,-168.5"/>
-<text text-anchor="start" x="224.5" y="-183.3" font-family="Noto Sans CJK KR" font-size="14.00">Full&#45;stack · Node·TypeScript Backend</text>
-<polygon fill="none" stroke="#8ba7c7" points="74,-168 74,-207 483,-207 483,-168 74,-168"/>
+<polygon fill="#d1fae5" stroke="transparent" points="1.5,-124.5 1.5,-161.5 139.5,-161.5 139.5,-124.5 1.5,-124.5"/>
+<polygon fill="none" stroke="#059669" points="1.5,-124.5 1.5,-161.5 139.5,-161.5 139.5,-124.5 1.5,-124.5"/>
+<text text-anchor="start" x="12.5" y="-140.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P15 · pong&#45;pong</text>
+<polygon fill="#e8f7ec" stroke="transparent" points="139.5,-124.5 139.5,-161.5 408.5,-161.5 408.5,-124.5 139.5,-124.5"/>
+<polygon fill="none" stroke="#059669" points="139.5,-124.5 139.5,-161.5 408.5,-161.5 408.5,-124.5 139.5,-124.5"/>
+<text text-anchor="start" x="150.5" y="-139.3" font-family="Noto Sans CJK KR" font-size="14.00">Full&#45;stack · Node·TypeScript Backend</text>
+<polygon fill="none" stroke="#059669" points="0,-124 0,-163 409,-163 409,-124 0,-124"/>
 </g>
 <!-- M14&#45;&gt;M15 -->
 <g id="edge2" class="edge">
 <title>M14&#45;&gt;M15</title>
-<path fill="none" stroke="#52616b" stroke-width="1.1" d="M278.5,-223.95C278.5,-220.9 278.5,-217.7 278.5,-214.52"/>
-<polygon fill="#52616b" stroke="#52616b" stroke-width="1.1" points="281.02,-214.45 278.5,-207.25 275.98,-214.45 281.02,-214.45"/>
+<path fill="none" stroke="#059669" stroke-width="1.1" d="M226.73,-194.95C223,-186.49 219.14,-177.72 215.7,-169.9"/>
+<polygon fill="#059669" stroke="#059669" stroke-width="1.1" points="217.88,-168.61 212.67,-163.04 213.27,-170.64 217.88,-168.61"/>
+<text text-anchor="middle" x="251.5" y="-176.8" font-family="Noto Sans CJK KR" font-size="9.00">WEB 지원 반영</text>
 </g>
 <!-- M17 -->
 <g id="node4" class="node">
 <title>M17</title>
-<polygon fill="#eaf2ff" stroke="transparent" points="143.5,-112.5 143.5,-149.5 249.5,-149.5 249.5,-112.5 143.5,-112.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="143.5,-112.5 143.5,-149.5 249.5,-149.5 249.5,-112.5 143.5,-112.5"/>
-<text text-anchor="start" x="154.5" y="-128.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P17 · wallet</text>
-<polygon fill="#e8f7ec" stroke="transparent" points="249.5,-112.5 249.5,-149.5 413.5,-149.5 413.5,-112.5 249.5,-112.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="249.5,-112.5 249.5,-149.5 413.5,-149.5 413.5,-112.5 249.5,-112.5"/>
-<text text-anchor="start" x="260.5" y="-127.3" font-family="Noto Sans CJK KR" font-size="14.00">Java·Spring Backend</text>
-<polygon fill="none" stroke="#8ba7c7" points="142.5,-112 142.5,-151 414.5,-151 414.5,-112 142.5,-112"/>
+<polygon fill="#ffedd5" stroke="transparent" points="426.5,-124.5 426.5,-161.5 532.5,-161.5 532.5,-124.5 426.5,-124.5"/>
+<polygon fill="none" stroke="#c2410c" points="426.5,-124.5 426.5,-161.5 532.5,-161.5 532.5,-124.5 426.5,-124.5"/>
+<text text-anchor="start" x="437.5" y="-140.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P17 · wallet</text>
+<polygon fill="#e8f7ec" stroke="transparent" points="532.5,-124.5 532.5,-161.5 696.5,-161.5 696.5,-124.5 532.5,-124.5"/>
+<polygon fill="none" stroke="#c2410c" points="532.5,-124.5 532.5,-161.5 696.5,-161.5 696.5,-124.5 532.5,-124.5"/>
+<text text-anchor="start" x="543.5" y="-139.3" font-family="Noto Sans CJK KR" font-size="14.00">Java·Spring Backend</text>
+<polygon fill="none" stroke="#c2410c" points="425.5,-124 425.5,-163 697.5,-163 697.5,-124 425.5,-124"/>
 </g>
-<!-- M15&#45;&gt;M17 -->
+<!-- M14&#45;&gt;M17 -->
 <g id="edge3" class="edge">
-<title>M15&#45;&gt;M17</title>
-<path fill="none" stroke="#52616b" stroke-width="1.1" d="M278.5,-167.92C278.5,-164.9 278.5,-161.72 278.5,-158.56"/>
-<polygon fill="#52616b" stroke="#52616b" stroke-width="1.1" points="281.02,-158.5 278.5,-151.3 275.98,-158.5 281.02,-158.5"/>
+<title>M14&#45;&gt;M17</title>
+<path fill="none" stroke="#c2410c" stroke-width="1.1" d="M380.21,-194.95C417.14,-184.68 455.71,-173.94 487.74,-165.03"/>
+<polygon fill="#c2410c" stroke="#c2410c" stroke-width="1.1" points="488.62,-167.4 494.89,-163.04 487.27,-162.54 488.62,-167.4"/>
+<text text-anchor="middle" x="498" y="-176.8" font-family="Noto Sans CJK KR" font-size="9.00">SPORTSBOOK 지원 반영</text>
 </g>
 <!-- M20 -->
 <g id="node5" class="node">
 <title>M20</title>
-<polygon fill="#eaf2ff" stroke="transparent" points="1.5,-56.5 1.5,-93.5 231.5,-93.5 231.5,-56.5 1.5,-56.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="1.5,-56.5 1.5,-93.5 231.5,-93.5 231.5,-56.5 1.5,-56.5"/>
-<text text-anchor="start" x="12.5" y="-72.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P20~P21 · betting·settlement</text>
-<polygon fill="#e8f7ec" stroke="transparent" points="231.5,-56.5 231.5,-93.5 556.5,-93.5 556.5,-56.5 231.5,-56.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="231.5,-56.5 231.5,-93.5 556.5,-93.5 556.5,-56.5 231.5,-56.5"/>
-<text text-anchor="start" x="242.5" y="-71.3" font-family="Noto Sans CJK KR" font-size="14.00">Distributed·Event&#45;driven · Fintech·Settlement</text>
-<polygon fill="none" stroke="#8ba7c7" points="0,-56 0,-95 557,-95 557,-56 0,-56"/>
+<polygon fill="#ffedd5" stroke="transparent" points="284.5,-62.5 284.5,-99.5 514.5,-99.5 514.5,-62.5 284.5,-62.5"/>
+<polygon fill="none" stroke="#c2410c" points="284.5,-62.5 284.5,-99.5 514.5,-99.5 514.5,-62.5 284.5,-62.5"/>
+<text text-anchor="start" x="295.5" y="-78.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P20~P21 · betting·settlement</text>
+<polygon fill="#e8f7ec" stroke="transparent" points="514.5,-62.5 514.5,-99.5 839.5,-99.5 839.5,-62.5 514.5,-62.5"/>
+<polygon fill="none" stroke="#c2410c" points="514.5,-62.5 514.5,-99.5 839.5,-99.5 839.5,-62.5 514.5,-62.5"/>
+<text text-anchor="start" x="525.5" y="-77.3" font-family="Noto Sans CJK KR" font-size="14.00">Distributed·Event&#45;driven · Fintech·Settlement</text>
+<polygon fill="none" stroke="#c2410c" points="283,-62 283,-101 840,-101 840,-62 283,-62"/>
 </g>
 <!-- M17&#45;&gt;M20 -->
 <g id="edge4" class="edge">
 <title>M17&#45;&gt;M20</title>
-<path fill="none" stroke="#52616b" stroke-width="1.1" d="M278.5,-111.92C278.5,-108.9 278.5,-105.72 278.5,-102.56"/>
-<polygon fill="#52616b" stroke="#52616b" stroke-width="1.1" points="281.02,-102.5 278.5,-95.3 275.98,-102.5 281.02,-102.5"/>
+<path fill="none" stroke="#c2410c" stroke-width="1.1" d="M561.5,-123.84C561.5,-119.04 561.5,-113.77 561.5,-108.66"/>
+<polygon fill="#c2410c" stroke="#c2410c" stroke-width="1.1" points="564.02,-108.55 561.5,-101.35 558.98,-108.55 564.02,-108.55"/>
 </g>
 <!-- M24 -->
 <g id="node6" class="node">
 <title>M24</title>
-<polygon fill="#eaf2ff" stroke="transparent" points="21.5,-0.5 21.5,-37.5 313.5,-37.5 313.5,-0.5 21.5,-0.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="21.5,-0.5 21.5,-37.5 313.5,-37.5 313.5,-0.5 21.5,-0.5"/>
-<text text-anchor="start" x="32.5" y="-16.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P22~P24 · edge·control·orchestration</text>
-<polygon fill="#e8f7ec" stroke="transparent" points="313.5,-0.5 313.5,-37.5 535.5,-37.5 535.5,-0.5 313.5,-0.5"/>
-<polygon fill="none" stroke="#8ba7c7" points="313.5,-0.5 313.5,-37.5 535.5,-37.5 535.5,-0.5 313.5,-0.5"/>
-<text text-anchor="start" x="324.5" y="-15.3" font-family="Noto Sans CJK KR" font-size="14.00">Gateway·Platform·Integration</text>
-<polygon fill="none" stroke="#8ba7c7" points="20.5,0 20.5,-39 536.5,-39 536.5,0 20.5,0"/>
+<polygon fill="#ffedd5" stroke="transparent" points="304.5,-0.5 304.5,-37.5 596.5,-37.5 596.5,-0.5 304.5,-0.5"/>
+<polygon fill="none" stroke="#c2410c" points="304.5,-0.5 304.5,-37.5 596.5,-37.5 596.5,-0.5 304.5,-0.5"/>
+<text text-anchor="start" x="315.5" y="-16.3" font-family="Noto Sans CJK KR" font-weight="bold" font-size="14.00">P22~P24 · edge·control·orchestration</text>
+<polygon fill="#e8f7ec" stroke="transparent" points="596.5,-0.5 596.5,-37.5 818.5,-37.5 818.5,-0.5 596.5,-0.5"/>
+<polygon fill="none" stroke="#c2410c" points="596.5,-0.5 596.5,-37.5 818.5,-37.5 818.5,-0.5 596.5,-0.5"/>
+<text text-anchor="start" x="607.5" y="-15.3" font-family="Noto Sans CJK KR" font-size="14.00">Gateway·Platform·Integration</text>
+<polygon fill="none" stroke="#c2410c" points="303.5,0 303.5,-39 819.5,-39 819.5,0 303.5,0"/>
 </g>
 <!-- M20&#45;&gt;M24 -->
 <g id="edge5" class="edge">
 <title>M20&#45;&gt;M24</title>
-<path fill="none" stroke="#52616b" stroke-width="1.1" d="M278.5,-55.92C278.5,-52.9 278.5,-49.72 278.5,-46.56"/>
-<polygon fill="#52616b" stroke="#52616b" stroke-width="1.1" points="281.02,-46.5 278.5,-39.3 275.98,-46.5 281.02,-46.5"/>
+<path fill="none" stroke="#c2410c" stroke-width="1.1" d="M561.5,-61.84C561.5,-57.04 561.5,-51.77 561.5,-46.66"/>
+<polygon fill="#c2410c" stroke="#c2410c" stroke-width="1.1" points="564.02,-46.55 561.5,-39.35 558.98,-46.55 564.02,-46.55"/>
 </g>
 </g>
 </svg>

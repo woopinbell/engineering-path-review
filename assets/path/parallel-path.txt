@@ -2,38 +2,52 @@ COMMON
 G00 guide-git 01~06
   ├─ C TRACK
   ├─ C++ TRACK
-  └─ WEB TRACK
+  ├─ WEB TRACK
+  └─ SPORTSBOOK TRACK
 
 C TRACK
 C-G01 guide-c 01~04·06 → P01
 → C-G02 guide-unix-systems 01~03 → P02
 → C-G03 guide-c 05 → P03
+→ C-S01 wait for CPP-G02 Algorithms 01~10 → P09
 → C-G04 guide-c 08 + Unix 04 → P04
 → C-G05 guide-c 07·09 + Unix 05~06 → P05
 → C-G06 guide-c 10 + OS 01~06 → P06
-→ C-G07 Unix 07~09 + OS 07~10
-→ C-S01 wait for CPP-G02 Algorithms 01~10 → P09 → C complete
+→ C-G07 Unix 07~09 + OS 07~10 → C complete
 
 C++ TRACK
 CPP-G01 guide-cpp 01~05 → P07
-→ CPP-G02 guide-cpp 06~07 + guide-algorithms 01~11 → P08
-→ CPP-G03 guide-algorithms 12~16 + guide-computer-architecture 01~10 → P10
-→ CPP-G04 guide-cpp 08~09 + guide-computer-networks 01~11 → P11 → C++ complete
+→ CPP-G02 guide-algorithms 01~10
+→ CPP-G03 guide-cpp 06~07 + guide-algorithms 11 → P08
+→ CPP-G04 guide-algorithms 12~16 + guide-computer-architecture 01~10 → P10
+→ CPP-G05 guide-cpp 08~09 + guide-computer-networks 01~11 → P11 → C++ complete
 
 WEB TRACK
 WEB-G01 guide-web-infrastructure 01~07 → P12
 → WEB-G02 guide-web-applications 00~06 → P13
 → WEB-G03 guide-frontend-react-nextjs 00~04 → P14
-→ WEB-S01 wait for CPP-G04 Networks 01~11
-→ WEB-G04 Networks 12 + Web Apps 07~09 + Database 01~12 → P15 → WEB complete
+→ WEB-G04 guide-web-applications 07~08
+→ WEB-G05 guide-web-applications 09
+→ WEB-G06 guide-database-systems 01~12
+→ WEB-S01 wait for CPP-G05 Networks 01~11
+→ WEB-G07 guide-computer-networks 12 → P15 → WEB complete
+
+SPORTSBOOK TRACK
+SB-G01 guide-java 01~08 → P16
+→ SB-G02 guide-backend-spring-boot 01~10 → P17 → P18 → P19
+→ SB-G03 guide-distributed-services 01~07 → P20 → P21
+→ SB-S01 wait for WEB-G04 Web Apps 07~08 → P22 → P23
+→ SB-G04 guide-distributed-services 08~10
+→ SB-G05 guide-shell-scripting 01~08
+→ SB-S02 wait for WEB-G01 + WEB-G06 + WEB-G07 → P24 → SPORTSBOOK complete
 
 HARD CROSS-TRACK SYNCHRONIZATION
 CPP-G02 → P09
-CPP-G04 → WEB-G04
-
-MERGE
-P01~P15 + mandatory G00~G11 coverage complete
-→ P16~P24 default Java·Spring·Sportsbook PATH
+CPP-G05 → WEB-G07
+WEB-G04 → P22
+WEB-G01·WEB-G06·WEB-G07 → P24
 
 RULE
 Only projects are atomic. Guides may be split by chapter, but no mandatory chapter or exercise is skipped.
+A blocked track waits at its synchronization point; the other tracks continue.
+P09 executes after P03 without renumbering the project or changing the default PATH.

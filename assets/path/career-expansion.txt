@@ -1,12 +1,14 @@
 P11  시스템 프로젝트 완료
   └─ 직접 일치 공고만: C/C++ 시스템·네트워크
-P14  portfolio 배포·검증
-  └─ 일반 첫 지원: Frontend·Web·Junior Software Engineer
-P15  pong-pong
-  └─ Full-stack·Node.js·TypeScript Backend
-P17  wallet
-  └─ Java·Spring Backend
-P20~P21  betting·settlement
-  └─ Distributed·Event-driven·Fintech·Settlement
-P22~P24  gateway·admin·orchestration
-  └─ Gateway·Platform·Integration
+
+P14  portfolio 배포·검증 + L14
+  └─ 일반 첫 지원 개방
+     ├─ P15 완료 증거 → Full-stack·Node.js·TypeScript Backend
+     └─ P17 완료 증거 → Java·Spring Backend
+          └─ P20~P21 → Distributed·Event-driven·Fintech·Settlement
+               └─ P22~P24 → Gateway·Platform·Integration
+
+RULE
+P15와 P17은 병렬 증거 gate다.
+P14 전에 완료된 확장 마일스톤은 L14에서 함께 반영한다.
+P14 뒤에는 실제 완료 순서대로 L15를 한 번씩 연다.

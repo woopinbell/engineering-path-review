@@ -1,31 +1,55 @@
-flowchart LR
-  G00["G00 guide-git 01~06"]
+flowchart TB
+  G00["G00 guide-git 01~06<br/>네 트랙 공통 완료"]
 
   subgraph C["C TRACK"]
-    direction LR
-    CG01["C-G01<br/>G01 01~04·06"] --> P01["P01"] --> CG02["C-G02<br/>G02 01~03"] --> P02["P02"] --> CG03["C-G03<br/>G01 05"] --> P03["P03"] --> CG04["C-G04<br/>G01 08 + G02 04"] --> P04["P04"] --> CG05["C-G05<br/>G01 07·09 + G02 05~06"] --> P05["P05"] --> CG06["C-G06<br/>G01 10 + G04 01~06"] --> P06["P06"] --> CG07["C-G07<br/>G02 07~09 + G04 07~10"] --> CS01["C-S01<br/>CPP-G02 동기화"] --> P09["P09"] --> CEND["C 완료"]
+    C1["C-G01 C 01~04·06"] --> P01["P01 c-foundation"]
+    P01 --> C2["C-G02 Unix 01~03"] --> P02["P02 buffered-line-reader"]
+    P02 --> C3["C-G03 C 05"] --> P03["P03 format-printer"]
+    P03 --> CS1["C-S01 CPP-G02 동기화"] --> P09["P09 stack-sort"]
+    P09 --> C4["C-G04 C 08 + Unix 04"] --> P04["P04 signal-message-bus"]
+    P04 --> C5["C-G05 C 07·09 + Unix 05~06"] --> P05["P05 small-shell"]
+    P05 --> C6["C-G06 C 10 + OS 01~06"] --> P06["P06 thread-dining"]
+    P06 --> C7["C-G07 Unix 07~09 + OS 07~10"] --> CDONE["C 완료"]
   end
 
   subgraph CPP["C++ TRACK"]
-    direction LR
-    XG01["CPP-G01<br/>G03 01~05"] --> P07["P07"] --> XG02["CPP-G02<br/>G03 06~07 + G05 01~11"] --> P08["P08"] --> XG03["CPP-G03<br/>G05 12~16 + G06 01~10"] --> P10["P10"] --> XG04["CPP-G04<br/>G03 08~09 + G07 01~11"] --> P11["P11"] --> XEND["C++ 완료"]
+    X1["CPP-G01 C++ 01~05"] --> P07["P07 cpp-foundation"]
+    P07 --> X2["CPP-G02 Algorithms 01~10"] --> X3["CPP-G03 C++ 06~07 + Algorithms 11"] --> P08["P08 stl-container"]
+    P08 --> X4["CPP-G04 Algorithms 12~16 + Architecture 01~10"] --> P10["P10 ray-scene-tracer"]
+    P10 --> X5["CPP-G05 C++ 08~09 + Networks 01~11"] --> P11["P11 irc-relay-server"] --> XDONE["C++ 완료"]
   end
 
   subgraph WEB["WEB TRACK"]
-    direction LR
-    WG01["WEB-G01<br/>G08 01~07"] --> P12["P12"] --> WG02["WEB-G02<br/>G09 00~06"] --> P13["P13"] --> WG03["WEB-G03<br/>G10 00~04"] --> P14["P14"] --> WS01["WEB-S01<br/>CPP-G04 동기화"] --> WG04["WEB-G04<br/>G07 12 + G09 07~09 + G11 01~12"] --> P15["P15"] --> WEND["WEB 완료"]
+    W1["WEB-G01 Web Infra 01~07"] --> P12["P12 container-stack"]
+    P12 --> W2["WEB-G02 Web Apps 00~06"] --> P13["P13 web-boundary-inspector"]
+    P13 --> W3["WEB-G03 Frontend 00~04"] --> P14["P14 portfolio-site"]
+    P14 --> W4["WEB-G04 Web Apps 07~08"] --> W5["WEB-G05 Web Apps 09"] --> W6["WEB-G06 Database 01~12"]
+    W6 --> WS1["WEB-S01 CPP-G05 동기화"] --> W7["WEB-G07 Networks 12"]
+    W7 --> P15["P15 pong-pong"] --> WDONE["WEB 완료"]
   end
 
-  G00 --> CG01
-  G00 --> XG01
-  G00 --> WG01
-  XG02 ==>|"Algorithms 01~10"| CS01
-  XG04 ==>|"Networks 01~11"| WS01
-  CG01 -.->|"C 기초 재사용"| XG01
-  P11 -.->|"event loop·partial I/O 비교"| P13
+  subgraph SB["SPORTSBOOK TRACK"]
+    S1["SB-G01 Java 01~08"] --> P16["P16 shared-protocol"]
+    P16 --> S2["SB-G02 Spring Boot 01~10"] --> P17["P17 wallet"] --> P18["P18 risk"] --> P19["P19 odds-feed"]
+    P19 --> S3["SB-G03 Distributed 01~07"] --> P20["P20 betting"] --> P21["P21 settlement"]
+    P21 --> SS1["SB-S01 WEB-G04 동기화"] --> P22["P22 gateway"] --> P23["P23 admin-api"]
+    P23 --> S4["SB-G04 Distributed 08~10"] --> S5["SB-G05 Shell 01~08"]
+    S5 --> SS2["SB-S02 WEB-G01·06·07 동기화"] --> P24["P24 orchestration"] --> SDONE["SPORTSBOOK 완료"]
+  end
 
-  M{"3트랙 합류<br/>P01~P15 + G00~G11 완료"}
-  CEND --> M
-  XEND --> M
-  WEND --> M
-  M --> POST["G12 → P16 → G13 → P17 → P18 → P19<br/>→ G14 → P20 → P21 → P22 → P23 → P24"]
+  G00 --> C1
+  G00 --> X1
+  G00 --> W1
+  G00 --> S1
+
+  X2 -. "Algorithms 01~10" .-> CS1
+  X5 -. "Networks 01~11" .-> WS1
+  W4 -. "WebSocket·테스트" .-> SS1
+  W1 -. "Infra" .-> SS2
+  W6 -. "Database" .-> SS2
+  W7 -. "DNS·HTTP·TLS" .-> SS2
+
+  CDONE --> DONE["4트랙 완료<br/>P01~P24 + 필수 G + 감사 + P0/P1"]
+  XDONE --> DONE
+  WDONE --> DONE
+  SDONE --> DONE
